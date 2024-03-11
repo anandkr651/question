@@ -82,7 +82,14 @@ class Trie{
 int main()
 {
     Trie *t=new Trie();
-    t->insertword("abcd");
-    cout<<t->searchword("abcd");
+    t->insertword("ABC");
+    t->insertword("DO");
+    t->insertword("TIME");
+    t->insertword("ANAND");
+    cout<<t->searchword("ABC")<<endl;
+    cout<<t->searchword("AB")<<endl;
     return 0;       
 }
+/*1
+0
+PS C:\Users\DELL\OneDrive\Desktop\question\STL>*/
