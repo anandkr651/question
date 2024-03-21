@@ -36,8 +36,6 @@ vector<int> prevsmaller(vector<int> &arr,int n)
     }
     return ans;
 }
-
-
 int largestarea(vector<int>&height)
 {
     int n=height.size();
