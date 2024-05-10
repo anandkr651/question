@@ -9,7 +9,7 @@ vector<int> waveprint(vector<vector<int>> &arr)
     for (int col = 0; col < h; col++)
     {
         // if (col & 1)    OR
-        if(col%2==1)
+        if (col % 2 == 1)
         {
             for (int row = g - 1; row >= 0; row--)
             {
@@ -69,5 +69,5 @@ heel
 1 2 3 4
 5 6 7 8
 9 10 11 12
-1 5 9 10 6 2 3 7 11 12 8 4 
+1 5 9 10 6 2 3 7 11 12 8 4
 PS C:\Users\DELL\OneDrive\Desktop\dsa in c++\question>*/

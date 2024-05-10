@@ -3,7 +3,7 @@
 using namespace std;
 void selectionsort(vector<int> &ans,int s)
 {
-    for(int i=0;i<s;i++)
+    for(int i=0;i<s-1;i++)
     {
         int minindex=i;
         for(int j=i+1;j<s;j++)

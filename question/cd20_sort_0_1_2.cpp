@@ -59,27 +59,27 @@ enter the combination of 1,2,0 number1
 hello55 0       0       1       1       1       2       2
 PS C:\Users\DELL\OneDrive\Desktop\new folder\array>*/
 
-// #include <iostream>
-// #include <array>
-// #include <algorithm>
-// using namespace std;
+#include <iostream>
+#include <array>
+#include <algorithm>
+using namespace std;
 
-// int main()
-// {
-//     array<int, 10> x;
-//     int i, p = x.size();
-//     cout << "enter the combination of 1,2,0 number";
-//     for (i = 0; i < p; i++)
-//     {
-//         cin >> x[i];
-//     }
-//     sort(x.begin(), x.end());
-//     cout << "sorted array" << endl;
-//     for (i = 0; i < p; i++)
-//     {
-//         cout << x[i];
-//     }
-// }
+int main()
+{
+    array<int, 10> x;
+    int i, p = x.size();
+    cout << "enter the combination of 1,2,0 number";
+    for (i = 0; i < p; i++)
+    {
+        cin >> x[i];
+    }
+    sort(x.begin(), x.end());
+    cout << "sorted array" << endl;
+    for (i = 0; i < p; i++)
+    {
+        cout << x[i];
+    }
+}
 /*enter the combination of 1,2,0 number2
 2
 1

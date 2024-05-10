@@ -1,23 +1,23 @@
-#include<iostream>
-#include<algorithm>
+#include <iostream>
+#include <algorithm>
 using namespace std;
 void reverse(string &ans)
 {
-    int i=0,j=ans.size()-1;
-    if(i<=j)
+    int i = 0, j = ans.size() - 1;
+    if (i <= j)
     {
-        swap(ans[i++],ans[j--]);
+        swap(ans[i++], ans[j--]);
     }
 }
 int main()
 {
-    string ans="anand";
+    string ans = "anand";
     reverse(ans);
-    cout<<"reverse of the ans"<<endl;
-    for(int i=0;i<ans.length();i++)
+    cout << "reverse of the ans" << endl;
+    for (int i = 0; i < ans.length(); i++)
     {
-        cout<<ans.at(i);
-    }  
+        cout << ans.at(i);
+    }
 }
 /*reverse of the ans
 dnana

@@ -17,9 +17,13 @@ int partition(int arr[], int s, int e)
     while (i < index && j > index)
     {
         while (arr[i] <= pivot)
-            {i++;}
+        {
+            i++;
+        }
         while (arr[j] > pivot)
-           { j--;}
+        {
+            j--;
+        }
         if (i < index && j > index)
         {
             swap(arr[i++], arr[j--]);
@@ -38,7 +42,7 @@ void quicksort(int *arr, int start, int end)
 }
 int main()
 {
-    int arr[7] = {0,9,-4,-9,-9,-7,9};
+    int arr[7] = {0, 9, -4, -9, -9, -7, 9};
     int s = 0, n = 7;
     quicksort(arr, s, n - 1);
     for (int i = 0; i < n; i++)
@@ -48,5 +52,5 @@ int main()
     cout << endl;
     return 0;
 }
-/*-9 -9 -7 -4 0 9 9 
+/*-9 -9 -7 -4 0 9 9
 PS C:\Users\DELL\OneDrive\Desktop\dsa in c++\question>*/

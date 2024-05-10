@@ -10,13 +10,12 @@ bool bsearch(int *arr, int s, int start, int end)
         return true;
     if (arr[mid] > s)
     {
-        return bsearch(arr,s,start,mid-1);
+        return bsearch(arr, s, start, mid - 1);
     }
     else
     {
-       return bsearch(arr,s,mid+1,end);
+        return bsearch(arr, s, mid + 1, end);
     }
-
 }
 int main()
 {

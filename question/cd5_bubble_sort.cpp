@@ -38,5 +38,5 @@ int main()
 8
 5
 1
-1 5 6 8 15 16 
+1 5 6 8 15 16
 PS C:\Users\DELL\OneDrive\Desktop\dsa in c++\question>*/
