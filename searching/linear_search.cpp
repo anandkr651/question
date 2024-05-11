@@ -1,4 +1,4 @@
-//function call
+// function call
 
 #include <iostream>
 using namespace std;
@@ -20,19 +20,19 @@ int l_search(int y[], int r, int s)
 int main()
 {
     int x[N], p, q, i, w;
-    cout<<"enter the size of an array";
-    cin>>p;
+    cout << "enter the size of an array";
+    cin >> p;
     for (i = 0; i < p; i++)
     {
-        cin>>x[i];
+        cin >> x[i];
     }
-    cout<<"enter the number you want to search";
-    cin>>q;
+    cout << "enter the number you want to search";
+    cin >> q;
     w = l_search(x, q, p);
     if (w == 1)
-        cout<<"number is found";
+        cout << "number is found";
     else
-        cout<<"number is not found";
+        cout << "number is not found";
 }
 /*enter the size of an array5
 3
@@ -44,7 +44,7 @@ enter the number you want to search2
 number is found
 PS C:\Users\DELL\OneDrive\Desktop\dsa in c++>*/
 
-//return s==1
+// return s==1
 
 #include <iostream>
 using namespace std;
@@ -52,14 +52,14 @@ using namespace std;
 int main()
 {
     int x[N], p, i, r, s;
-    cout<<"enter the size of an array";
-    cin>>p;
+    cout << "enter the size of an array";
+    cin >> p;
     for (i = 0; i < p; i++)
     {
-        cin>>x[i];
+        cin >> x[i];
     }
-    cout<<"enter the number you want to search";
-    cin>>r;
+    cout << "enter the number you want to search";
+    cin >> r;
     for (i = 0; i < p; i++)
     {
         if (r == x[i])
@@ -69,9 +69,9 @@ int main()
         }
     }
     if (s == 1)
-        cout<<"index number of that number is "<<i<<x[i];
+        cout << "index number of that number is " << i << x[i];
     else
-        cout<<r<<" is not found in this array";
+        cout << r << " is not found in this array";
     return 0;
 }
 /*enter the size of an array6
@@ -85,7 +85,7 @@ enter the number you want to search9
 9 is not found in this array
 PS C:\Users\DELL\OneDrive\Desktop\dsa in c>*/
 
-//p and array of that number
+// p and array of that number
 
 #include <iostream>
 using namespace std;
@@ -93,14 +93,14 @@ using namespace std;
 int main()
 {
     int x[N], p, i, r;
-    cout<<"enter the size of an array";
-    cin>>p;
+    cout << "enter the size of an array";
+    cin >> p;
     for (i = 0; i < p; i++)
     {
-        cin>>x[i];
+        cin >> x[i];
     }
-    cout<<"enter the number you want to search";
-    cin>>r;
+    cout << "enter the number you want to search";
+    cin >> r;
     for (i = 0; i < p; i++)
     {
         if (r == x[i])
@@ -109,9 +109,9 @@ int main()
         }
     }
     if (i == p)
-        cout<<r<<" is not found in this array";
+        cout << r << " is not found in this array";
     else
-        cout<<"index number of that number is "<<i<<x[i];
+        cout << "index number of that number is " << i << x[i];
     return 0;
 }
 /*enter the size of an array4

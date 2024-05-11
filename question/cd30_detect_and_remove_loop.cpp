@@ -1,45 +1,46 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-class node{
-    public:
+class node
+{
+public:
     int data;
-    node* next;
+    node *next;
 
-node(int d)
-{
-    this->data=d;
-    this->next=NULL;
-}
-~node()
-{
-    int value=this->data;
-    if(this->next!=NULL)
+    node(int d)
     {
-        delete next;
-        this->next=NULL;
+        this->data = d;
+        this->next = NULL;
     }
-    cout<<"your data delete "<<value<<endl;
-}
+    ~node()
+    {
+        int value = this->data;
+        if (this->next != NULL)
+        {
+            delete next;
+            this->next = NULL;
+        }
+        cout << "your data delete " << value << endl;
+    }
 };
-void insertathead(node* &head,int d)
+void insertathead(node *&head, int d)
 {
-    node* temp=new node(d);
-    temp->next=head;
-    head=temp;
+    node *temp = new node(d);
+    temp->next = head;
+    head = temp;
 }
 void print(node *head)
 {
-    if(head==NULL)
+    if (head == NULL)
     {
-        cout<<"list is empty"<<endl;
+        cout << "list is empty" << endl;
     }
-    node* temp=head;
-    while(temp!=NULL)
+    node *temp = head;
+    while (temp != NULL)
     {
-        cout<<temp->data<<" ";
-        temp=temp->next;
+        cout << temp->data << " ";
+        temp = temp->next;
     }
-    cout<<endl;
+    cout << endl;
 }
 node *floyddetectloop(node *head) // O(n)  time complexity
 {
@@ -104,18 +105,18 @@ void removeloop(node *head) // or code studio mi node* removeloop(node* head)
 }
 int main()
 {
- node* node1=new node(10);
- node *head=node1;
- node *tail=node1;
- insertathead(head,20);
- insertathead(head,30);
- insertathead(head,40);
- tail->next=head->next;
- insertathead(head,50);
- insertathead(head,60);
- insertathead(head,70);
-//  print(head);
-if (floyddetectloop(head))
+    node *node1 = new node(10);
+    node *head = node1;
+    node *tail = node1;
+    insertathead(head, 20);
+    insertathead(head, 30);
+    insertathead(head, 40);
+    tail->next = head->next;
+    insertathead(head, 50);
+    insertathead(head, 60);
+    insertathead(head, 70);
+    //  print(head);
+    if (floyddetectloop(head))
     {
         cout << "floyddetect the loop in linked list" << endl;
     }
@@ -126,7 +127,7 @@ if (floyddetectloop(head))
     node *loop = getstartingnode(head);
     cout << "loop starting " << loop->data << endl;
 
-    //for removing the loop
+    // for removing the loop
     removeloop(head);
     print(head);
 }
@@ -135,5 +136,5 @@ floyddetect the loop in linked list
 present on which elements 10
 loop starting 30
 present on which elements 10
-70 60 50 40 30 20 10 
+70 60 50 40 30 20 10
 PS C:\Users\DELL\OneDrive\Desktop\question\question> */

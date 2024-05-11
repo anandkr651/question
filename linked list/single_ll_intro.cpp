@@ -13,17 +13,17 @@ public:
         this->data = data;
         this->next = NULL;
     }
-    //destructor
+    // destructor
     ~node()
-{
-    int value=this->data;
-    if(this->next!=NULL)
     {
-        delete next;
-        this->next=NULL;
+        int value = this->data;
+        if (this->next != NULL)
+        {
+            delete next;
+            this->next = NULL;
+        }
+        cout << "your data delete " << value << endl;
     }
-    cout<<"your data delete "<<value<<endl;
-}
 };
 
 void insertathead(node *&head, int d)
@@ -211,24 +211,25 @@ void removeloop(node *head) // or code studio mi node* removeloop(node* head)
     // or code studio mi return head
 }
 
-void removedub(node* head)
+void removedub(node *head)
 {
-    if(head==NULL)
+    if (head == NULL)
     {
-        return ;
+        return;
     }
-    node*curr=head;
-    while(curr!=NULL)
+    node *curr = head;
+    while (curr != NULL)
     {
-        if((curr->next !=NULL)&&(curr->data==curr->next->data))
+        if ((curr->next != NULL) && (curr->data == curr->next->data))
         {
-            node* loop=curr->next->next;
-            node* deletedup= curr->next;
-             delete(deletedup);
-             curr->next=loop;
+            node *loop = curr->next->next;
+            node *deletedup = curr->next;
+            delete (deletedup);
+            curr->next = loop;
         }
-        else{
-            curr=curr->next;
+        else
+        {
+            curr = curr->next;
         }
     }
 }
@@ -298,8 +299,8 @@ int main()
     //    insertattail(tail,70);
     //    print(head);
 
-       inseratposition(tail,head,3,40);
-       print(head);
+    inseratposition(tail, head, 3, 40);
+    print(head);
 
     //    inseratposition(tail,head,1,10);       //  line 41 to 45
     //    print(head);
@@ -313,8 +314,8 @@ int main()
     // cout << "head" << head->data << endl;
     // cout << "tail" << tail->data << endl;
 
-       deletenode(3,head);
-       print(head);
+    deletenode(3, head);
+    print(head);
 
     //    deletenode(1,head);
     //    print(head);
@@ -334,7 +335,6 @@ int main()
     {
         cout << "linked list is not circular " << endl;
     }*/
-
 }
 
 /*  #############################  NOTE  ###################################*/
