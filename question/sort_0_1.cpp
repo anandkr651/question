@@ -1,35 +1,35 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 #define N 10
 
 int main()
 {
-    int x[N],p,i;
-    cout<<"enter the size of an array";
-    cin>>p;
-    cout<<"enter the binary number";
-    for(i=0;i<p;i++)
+    int x[N], p, i;
+    cout << "enter the size of an array";
+    cin >> p;
+    cout << "enter the binary number";
+    for (i = 0; i < p; i++)
     {
-        cin>>x[i];
+        cin >> x[i];
     }
-    int left=0,right=p-1;
-    while(left<right)
+    int left = 0, right = p - 1;
+    while (left < right)
     {
-        while(x[left]==0 &&left<right)
+        while (x[left] == 0 && left < right)
         {
             left++;
         }
-        while(x[right]==1&&left<right)
+        while (x[right] == 1 && left < right)
         {
             right--;
         }
-        swap(x[left],x[right]);
+        swap(x[left], x[right]);
         left++;
         right--;
     }
-    for(i=0;i<p;i++)
+    for (i = 0; i < p; i++)
     {
-        cout<<x[i];
+        cout << x[i];
     }
     return 0;
 }

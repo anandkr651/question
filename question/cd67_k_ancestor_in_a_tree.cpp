@@ -15,73 +15,74 @@ public:
 };
 node *buildtree(node *root)
 {
-  // cout << "enter the data " << endl;
+    // cout << "enter the data " << endl;
     int data;
     cin >> data;
-    root = new node(data);         //constructor call
+    root = new node(data); // constructor call
     if (data == -1)
     {
         return NULL;
     }
-   // cout << "enter data for inserting in left " << data << endl;
+    // cout << "enter data for inserting in left " << data << endl;
     root->left = buildtree(root->left);
-   // cout << "enter data for inserting in right " << data << endl;
+    // cout << "enter data for inserting in right " << data << endl;
     root->right = buildtree(root->right);
     return root;
 }
-node* solve(node* root,int &k,int nod)
+node *solve(node *root, int &k, int nod)
 {
-    if(root==NULL)
+    if (root == NULL)
     {
         return NULL;
     }
-    if(root->data==nod)
+    if (root->data == nod)
     {
         return root;
     }
-    node *leftans=solve(root->left,k,nod);
-    node *rightans=solve(root->right,k,nod);
-    
-    if(leftans !=NULL &&rightans==NULL)
+    node *leftans = solve(root->left, k, nod);
+    node *rightans = solve(root->right, k, nod);
+
+    if (leftans != NULL && rightans == NULL)
     {
         k--;
-        if(k<=0)
+        if (k <= 0)
         {
-            k=INT_MAX;
+            k = INT_MAX;
             return root;
         }
         return leftans;
     }
-    if(leftans ==NULL &&rightans!=NULL)
+    if (leftans == NULL && rightans != NULL)
     {
         k--;
-        if(k<=0)
+        if (k <= 0)
         {
-            k=INT_MAX;
+            k = INT_MAX;
             return root;
         }
         return rightans;
     }
     return NULL;
 }
-int kancestor(node *root,int k,int nod)
+int kancestor(node *root, int k, int nod)
 {
-    node *ans=solve(root,k,nod);
-    if(ans==NULL||ans->data==nod)
+    node *ans = solve(root, k, nod);
+    if (ans == NULL || ans->data == nod)
     {
-    return -1;
+        return -1;
     }
-    else{
-    return ans->data;
+    else
+    {
+        return ans->data;
     }
 }
 int main()
 {
     node *root = NULL;
     root = buildtree(root);
-    //5 2 -1 -1 3 -1 -1
-    int k=1,nod=3;
-    cout<<"boundary of the tree "<<kancestor(root,k,nod)<<endl;
+    // 5 2 -1 -1 3 -1 -1
+    int k = 1, nod = 3;
+    cout << "boundary of the tree " << kancestor(root, k, nod) << endl;
 }
 /*5 2 -1 -1 3 -1 -1
 boundary of the tree 5

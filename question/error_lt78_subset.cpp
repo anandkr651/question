@@ -1,26 +1,28 @@
-#include<iostream>
-#include<vector>
+#include <iostream>
+#include <vector>
 using namespace std;
-class solution {
-    void solve(vector<int>num,vector<int>output,int index,vector<vector<int>>&ans)
+class solution
+{
+    void solve(vector<int> &num, vector<int> &output, int index, vector<vector<int>> &ans)
     {
-        if(index>=num.size())
+        if (index >= num.size())
         {
             ans.push_back(output);
-            return ;
+            return;
         }
-        solve(num,output,index+1,ans);
-        int element=num[index];
+        solve(num, output, index + 1, ans);
+        int element = num[index];
         output.push_back(element);
-        solve(num,output,index+1,ans);
+        solve(num, output, index + 1, ans);
     }
-    public:
+
+public:
     vector<vector<int>> substring(vector<int> &num)
     {
         vector<vector<int>> ans;
         vector<int> output;
-        int index=0;
-        solve(num,output,index,ans);
+        int index = 0;
+        solve(num, output, index, ans);
         return ans;
     }
 };
@@ -31,5 +33,14 @@ int main()
     num.push_back(2);
     num.push_back(3);
     solution t;
-  vector<vector<int>> arr=t.substring(num);
+    vector<vector<int>> arr=t.substring(num);
+    cout << "display data" << endl;
+    for(const auto &vec:arr)
+    {
+        for(int num:vec)
+        {
+            cout<<num<<" ";
+        }
+        cout<<endl;
+    }
 }

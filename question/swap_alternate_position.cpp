@@ -7,7 +7,7 @@ void swapalt(int x[], int size)
     {
         if (i + 1 < size)
         {
-            swap(x[i], x[i + 1]);//to see
+            swap(x[i], x[i + 1]);
         }
     }
 }

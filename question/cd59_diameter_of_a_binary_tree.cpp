@@ -19,12 +19,12 @@ node *buildtree(node *root)
     cout << "enter the data " << endl;
     int data;
     cin >> data;
-    root = new node(data);         //constructor call
+    root = new node(data); // constructor call
     if (data == -1)
     {
         return NULL;
     }
-   cout << "enter data for inserting in left " << data << endl;
+    cout << "enter data for inserting in left " << data << endl;
     root->left = buildtree(root->left);
     cout << "enter data for inserting in right " << data << endl;
     root->right = buildtree(root->right);
@@ -54,23 +54,23 @@ int diameterofbinary(node *root)
     return ans;
 }*/
 //                  OR
-pair<int,int>diameterfast(node *root)
+pair<int, int> diameterfast(node *root)
 {
-    if(root==NULL)
+    if (root == NULL)
     {
-        pair<int,int>p=make_pair(0,0);
+        pair<int, int> p = make_pair(0, 0);
         return p;
     }
-    pair<int,int>leftchild=diameterfast(root->left);
-    pair<int,int>rightchild=diameterfast(root->right);
+    pair<int, int> leftchild = diameterfast(root->left);
+    pair<int, int> rightchild = diameterfast(root->right);
 
-    int opt1=leftchild.first;
-    int opt2=rightchild.first;
-    int opt3=leftchild.second+rightchild.second;
+    int opt1 = leftchild.first;
+    int opt2 = rightchild.first;
+    int opt3 = leftchild.second + rightchild.second;
 
-    pair<int,int>ans;
-    ans.first=max(opt1,max(opt2,opt3));
-    ans.second=max(leftchild.second,rightchild.second)+1;
+    pair<int, int> ans;
+    ans.first = max(opt1, max(opt2, opt3));
+    ans.second = max(leftchild.second, rightchild.second) + 1;
     return ans;
 }
 int diameterofbinary(node *root)
@@ -83,17 +83,17 @@ int main()
 
     // ceating a tree
     root = buildtree(root);
-    //1 2 3 -1 -1 -1 4 5 6 7 -1 -1 -1 -1 8 -1 9 -1 -1
+    // 1 2 3 -1 -1 -1 4 5 6 7 -1 -1 -1 -1 8 -1 9 -1 -1
 
-    cout<<"diameter of the tree "<<diameterofbinary(root);
+    cout << "diameter of the tree " << diameterofbinary(root);
 }
-/*enter the data 
+/*enter the data
 1
 enter data for inserting in left 1
-enter the data 
+enter the data
 2
 enter data for inserting in left 2
-enter the data 
+enter the data
 3
 enter data for inserting in left 3
 enter the data
@@ -146,14 +146,14 @@ enter the data
 diameter of the tree 6
 PS C:\Users\DELL\OneDrive\Desktop\question\question>*/
 
-/*enter the data 
+/*enter the data
 1 2 3 -1 -1 -1 4 5 6 7 -1 -1 -1 -1 8 -1 9 -1 -1
-enter data for inserting in left 1 
-enter the data 
-enter data for inserting in left 2 
-enter the data 
-enter data for inserting in left 3 
-enter the data 
+enter data for inserting in left 1
+enter the data
+enter data for inserting in left 2
+enter the data
+enter data for inserting in left 3
+enter the data
 enter data for inserting in right 3
 enter the data
 enter data for inserting in right 2

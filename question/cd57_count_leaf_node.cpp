@@ -19,7 +19,7 @@ node *buildtree(node *root)
     cout << "enter the data " << endl;
     int data;
     cin >> data;
-    root = new node(data);         //constructor call
+    root = new node(data); // constructor call
     if (data == -1)
     {
         return NULL;
@@ -30,44 +30,45 @@ node *buildtree(node *root)
     root->right = buildtree(root->right);
     return root;
 }
-void inorder(node* root,int &count)
+void inorder(node *root, int &count)
 {
-    //base case
-    if(root==NULL)
+    // base case
+    if (root == NULL)
     {
         return;
     }
-    inorder(root->left,count);
-    if(root->left==NULL&&root->right==NULL)
+    inorder(root->left, count);
+    if (root->left == NULL && root->right == NULL)
     {
         count++;
     }
-    cout<<root->data<<" ";
-    inorder(root->right,count);
+    cout << root->data << " ";
+    inorder(root->right, count);
 }
 int main()
 {
-    int count=0;
+    int count = 0;
     node *root = NULL;
 
     // ceating a tree
     root = buildtree(root);
     // 1 3 7 -1 -1 11 -1 -1 5 17 -1 -1 -1
 
-    cout<<"inorder traversal"<<endl;
-    inorder(root,count);
-    cout<<endl<<"number of leaf node "<<count<<endl;
+    cout << "inorder traversal" << endl;
+    inorder(root, count);
+    cout << endl
+         << "number of leaf node " << count << endl;
 }
-/*enter the data 
+/*enter the data
 1 3 7 -1 -1 11 -1 -1 5 17 -1 -1 -1
 enter data for inserting in left 1
-enter the data 
+enter the data
 enter data for inserting in left 3
-enter the data 
+enter the data
 enter data for inserting in left 7
-enter the data 
+enter the data
 enter data for inserting in right 7
-enter the data 
+enter the data
 enter data for inserting in right 3
 enter the data
 enter data for inserting in left 11

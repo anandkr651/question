@@ -7,24 +7,24 @@
               input x=-234  , output: -432
 */
 
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-class solution 
+class solution
 {
-    public:
+public:
     int reverse(int x)
     {
-        int ans=0;
-        while(x != 0)
+        int ans = 0;
+        while (x != 0)
         {
-            int d=x%10;
-            if((ans>INT_MAX/10)||(ans<INT_MIN/10))
+            int d = x % 10;
+            if ((ans > INT_MAX / 10) || (ans < INT_MIN / 10))
             {
                 return 0;
             }
-            ans=(ans*10)+d;
-            x=x/10;
+            ans = (ans * 10) + d;
+            x = x / 10;
         }
         return ans;
     }
@@ -41,8 +41,8 @@ PS C:\Users\DELL\OneDrive\Desktop\dsa in c++> */
 int main()
 {
     solution t;
-    int c=t.reverse(2147483639);        //because in this question the range between 2 power 31  so it can return 0
-    cout<<"reverse of the digit "<<c;
+    int c = t.reverse(2147483639); // because in this question the range between 2 power 31  so it can return 0
+    cout << "reverse of the digit " << c;
 }
 /*
 reverse of the digit 0
