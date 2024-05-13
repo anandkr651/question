@@ -48,6 +48,6 @@ int main()
 8
 2
 9
-9 2 8 5 4 
-9 2 5 4   
+9 2 8 5 4
+9 2 5 4
 PS C:\Users\DELL\OneDrive\Desktop\question\question> */

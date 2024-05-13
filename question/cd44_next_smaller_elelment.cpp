@@ -1,36 +1,36 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-#include<vector>
-#include<stack>
-vector<int> smallerelement(vector<int> &arr,int n)
+#include <vector>
+#include <stack>
+vector<int> smallerelement(vector<int> &arr, int n)
 {
-    vector<int>ans(n);
-    stack<int>s;
+    vector<int> ans(n);
+    stack<int> s;
     s.push(-1);
-    for(int i=n-1;i>=0;i--)
+    for (int i = n - 1; i >= 0; i--)
     {
-        int c=arr[i];
-        while(s.top()>=c)
+        int c = arr[i];
+        while (s.top() >= c)
         {
             s.pop();
         }
-       ans[i]=s.top();
-       s.push(c); 
+        ans[i] = s.top();
+        s.push(c);
     }
     return ans;
 }
 int main()
 {
-    vector<int>s(4);
-    cout<<"enter the element"<<endl;
-    for(int i=0;i<s.size();i++)
+    vector<int> s(4);
+    cout << "enter the element" << endl;
+    for (int i = 0; i < s.size(); i++)
     {
-        cin>>s[i];
+        cin >> s[i];
     }
-    vector<int>ans=smallerelement(s,4);
-    for(int i:ans)
+    vector<int> ans = smallerelement(s, 3);
+    for (int i : ans)
     {
-        cout<<i<<" ";
+        cout << i << " ";
     }
 }
 /*enter the element
@@ -38,5 +38,5 @@ int main()
 1
 4
 3
-1 -1 3 -1 
+1 -1 3 -1
 PS C:\Users\DELL\OneDrive\Desktop\question\question> */

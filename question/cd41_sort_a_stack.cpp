@@ -1,28 +1,28 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-#include<stack>
-void interchange(stack<int>&s,int x)
+#include <stack>
+void interchange(stack<int> &s, int x)
 {
-    if(s.empty()||(!s.empty()&&s.top()<x))
+    if (s.empty() || (!s.empty() && s.top() < x))
     {
-       s.push(x);
-       return;
+        s.push(x);
+        return;
     }
-    int num=s.top();
+    int num = s.top();
     s.pop();
-    interchange(s,x);
+    interchange(s, x);
     s.push(num);
 }
-void sort(stack<int>&s)
+void sort(stack<int> &s)
 {
-    if(s.empty())
+    if (s.empty())
     {
         return;
     }
-    int num=s.top();
+    int num = s.top();
     s.pop();
     sort(s);
-    interchange(s,num);
+    interchange(s, num);
 }
 void print(stack<int> &s)
 {
@@ -36,23 +36,23 @@ void print(stack<int> &s)
 }
 int main()
 {
-    stack<int>s;
+    stack<int> s;
     int c;
-    cout<<"enter the number";
-    for(int i=0;i<5;i++)
+    cout << "enter the number";
+    for (int i = 0; i < 5; i++)
     {
-       cin>>c;
-       s.push(c);
+        cin >> c;
+        s.push(c);
     }
- print(s);
- sort(s);
- print(s);
+    print(s);
+    sort(s);
+    print(s);
 }
 /*enter the number6
 4
 9
 1
 78
-78 1 9 4 6 
-78 9 6 4 1 
+78 1 9 4 6
+78 9 6 4 1
 PS C:\Users\DELL\OneDrive\Desktop\question\question>*/

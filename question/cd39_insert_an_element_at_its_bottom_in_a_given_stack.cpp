@@ -1,21 +1,21 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-#include<stack>
-void solve(stack<int>&s,int x)
+#include <stack>
+void solve(stack<int> &s, int x)
 {
-    if(s.empty())
+    if (s.empty())
     {
-       s.push(x);
-       return;
+        s.push(x);
+        return;
     }
-    int num=s.top();
+    int num = s.top();
     s.pop();
-    solve(s,x);
+    solve(s, x);
     s.push(num);
 }
-void pushbottom(stack<int>&s,int x)
+void pushbottom(stack<int> &s, int x)
 {
-    solve(s,x);
+    solve(s, x);
 }
 void print(stack<int> &s)
 {
@@ -29,16 +29,16 @@ void print(stack<int> &s)
 }
 int main()
 {
-    stack<int>s;
+    stack<int> s;
     int c;
-    cout<<"enter the number";
-    for(int i=0;i<5;i++)
+    cout << "enter the number";
+    for (int i = 0; i < 5; i++)
     {
-       cin>>c;
-       s.push(c);
+        cin >> c;
+        s.push(c);
     }
     print(s);
-    pushbottom(s,9);
+    pushbottom(s, 9);
     print(s);
 }
 /*enter the number4
@@ -46,6 +46,6 @@ int main()
 6
 7
 8
-8 7 6 5 4 
+8 7 6 5 4
 8 7 6 5 4 9
 PS C:\Users\DELL\OneDrive\Desktop\question\question>*/

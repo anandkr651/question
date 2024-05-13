@@ -1,41 +1,42 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-#include<stack>
+#include <stack>
 bool findredundant(string &s)
 {
-   stack<char>p;
-   for(int i=0;i<s.length();i++)
-   {
-    char ch=s[i];
-    if(ch=='('||ch=='+'||ch=='-'||ch=='*'||ch=='/')
+    stack<char> p;
+    for (int i = 0; i < s.length(); i++)
     {
-        p.push(ch);
-    }
-    else{
-        if(ch==')')
+        char ch = s[i];
+        if (ch == '(' || ch == '+' || ch == '-' || ch == '*' || ch == '/')
         {
-            bool anand=true;
-            while(p.top() !='(')
+            p.push(ch);
+        }
+        else
+        {
+            if (ch == ')')
             {
-                char tp=p.top();
-                if(tp =='+'||tp =='-'||tp =='*'||tp=='/')
-                anand=false;
+                bool anand = true;
+                while (p.top() != '(')
+                {
+                    char tp = p.top();
+                    if (tp == '+' || tp == '-' || tp == '*' || tp == '/')
+                        anand = false;
+                    p.pop();
+                }
+                if (anand == true)
+                    return true;
                 p.pop();
             }
-            if(anand==true)
-            return true;
-            p.pop();
         }
     }
-   }
-   return false;
+    return false;
 }
 int main()
 {
     string s;
-    cout<<"enter the parentheses (),{},[]"<<endl;
-    cin>>s;
-    cout<<findredundant(s);
+    cout << "enter the parentheses (),{},[]" << endl;
+    cin >> s;
+    cout << findredundant(s);
 }
 /*enter the parentheses (),{},[]
 ((a+b))
