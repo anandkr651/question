@@ -44,6 +44,10 @@ int solve(int p, vector<int> &dp)
     {
         return 1;
     }
+    if(dp[p]!=-1)
+    {
+        return dp[p];
+    }
     int ans = ((p - 1) % MOD * ((solve(p - 2, dp) % MOD) + solve(p - 1, dp) % MOD)) % MOD;
     dp[p] = ans;
     return dp[p];
