@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 #include <vector>
-#include<algorithm>
+#include <algorithm>
 
 int main()
 {
@@ -18,19 +18,19 @@ int main()
     cout << i << " ";
   }
   cout << endl;
-   
-  reverse(s.begin(),s.end());
-     for (int i : s)
+
+  reverse(s.begin(), s.end());
+  for (int i : s)
   {
     cout << i << " ";
   }
   cout << endl;
 }
-/*4 9 71 2 79 49 
-49 79 2 71 9 4 
+/*4 9 71 2 79 49
+49 79 2 71 9 4
 PS C:\Users\DELL\OneDrive\Desktop\dsa in c++\STL>*/
 
-//without algorithim header file
+// without algorithim header file
 #include <iostream>
 using namespace std;
 #include <vector>
@@ -72,10 +72,10 @@ int main()
     cout << i << " ";
   }
   cout << endl;
-   
+
   vector<int> ans = reverse(s);
   print(ans);
 }
-/*4 9 71 2 79 49 
-49 4 9 71 2 79 
+/*4 9 71 2 79 49
+49 4 9 71 2 79
 PS C:\Users\DELL\OneDrive\Desktop\dsa in c++\STL> */

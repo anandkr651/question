@@ -1,6 +1,3 @@
-// codestudio
-// Q. first and last position of an elements in sorted array
-
 #include <iostream>
 using namespace std;
 int first_occurance(int y[], int size, int number)

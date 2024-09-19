@@ -1,6 +1,6 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-#include<deque>
+#include <deque>
 
 int main()
 {
@@ -9,36 +9,36 @@ int main()
     d.push_front(2);
     d.push_front(1);
     d.push_back(6);
-    for(int i : d)
+    for (int i : d)
     {
-        cout<<i<<" ";   
+        cout << i << " ";
     }
-    cout<<endl;
+    cout << endl;
 
     d.pop_back();
     d.pop_front();
-    for(int i : d)
+    for (int i : d)
     {
-        cout<<i<<" ";
+        cout << i << " ";
     }
-    cout<<endl;
-    cout<<"elements at second index "<<d.at(1)<<endl;
-    cout<<"first elements "<<d.front()<<endl;
-    cout<<"last elements "<<d.back()<<endl;
+    cout << endl;
+    cout << "elements at second " << d.at(1) << endl;
+    cout << "first elements " << d.front() << endl;
+    cout << "last elements " << d.back() << endl;
 
-    cout<<"before erase "<<d.size()<<endl;
+    cout << "before erase " << d.size() << endl;
     d.erase(d.begin());
-    cout<<"after erase "<<d.size()<<endl;
+    cout << "after erase " << d.size() << endl;
 
-    for(int i : d)
+    for (int i : d)
     {
-        cout<<i<<" ";
+        cout << i << " ";
     }
-    cout<<endl;
+    cout << endl;
 }
-/*1 2 3 6 
+/*1 2 3 6
 2 3
-elements at second index 3
+elements at second 3
 first elements 2
 last elements 3
 before erase 2

@@ -1,21 +1,21 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-#include<array>
+#include <array>
 
 int main()
 {
-    int basic[4]={1,2,3,4};
+    int basic[4] = {1, 2, 3, 4};
 
-    array<int,4> a={9,8,7,6};
-    int sie=a.size();
-    for(int i=0;i<sie;i++)
+    array<int, 4> a = {9, 8, 7, 6};
+    int sie = a.size();
+    for (int i = 0; i < sie; i++)
     {
-            cout<<a[i]<<endl;
+        cout << a[i] << endl;
     }
-    cout<<"elements at second index "<<a.at(2)<<endl;
-    cout<<"empty or not "<<a.empty()<<endl;
-    cout<<"first elements "<<a.front()<<endl;
-    cout<<"last elements "<<a.back()<<endl;
+    cout << "elements at second index " << a.at(2) << endl;
+    cout << "empty or not " << a.empty() << endl;
+    cout << "first elements " << a.front() << endl;
+    cout << "last elements " << a.back() << endl;
 }
 /*9
 8

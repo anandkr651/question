@@ -1,6 +1,6 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-#include<list>
+#include <list>
 
 int main()
 {
@@ -9,37 +9,37 @@ int main()
     l.push_back(9);
     l.push_front(2);
     l.push_front(4);
-    cout<<"print l"<<endl;
-    for(int i:l)
+    cout << "print l" << endl;
+    for (int i : l)
     {
-        cout<<i<<" ";
+        cout << i << " ";
     }
-    cout<<endl;
+    cout << endl;
 
     list<int> n(l);
-    cout<<"print n"<<endl;
-    for(int i:n)
+    cout << "print n" << endl;
+    for (int i : n)
     {
-        cout<<i<<" ";
+        cout << i << " ";
     }
-    cout<<endl;
-    
-    list<int> p(5,100);
-    cout<<"print p"<<endl;
-    for(int i:p)
+    cout << endl;
+
+    list<int> p(5, 100);
+    cout << "print p" << endl;
+    for (int i : p)
     {
-        cout<<i<<" ";
+        cout << i << " ";
     }
-    cout<<endl;
-    
+    cout << endl;
+
     l.erase(l.begin());
-    cout<<"after erase"<<endl;
-    for(int i:l)
+    cout << "after erase" << endl;
+    for (int i : l)
     {
-        cout<<i<<" ";
+        cout << i << " ";
     }
-    cout<<endl;
-    cout<<"size "<<l.size()<<endl;
+    cout << endl;
+    cout << "size " << l.size() << endl;
 }
 /*print l
 4 2 6 9
