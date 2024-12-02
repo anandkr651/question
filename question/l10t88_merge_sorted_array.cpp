@@ -45,7 +45,7 @@ int main()
 /*1 2 3 4 5 6 8 9
 PS C:\Users\DELL\OneDrive\Desktop\dsa in c++\STL>*/
 
-// without used of additional size of ana array
+// without used of additional size of an array
 #include <iostream>
 using namespace std;
 #include <vector>
