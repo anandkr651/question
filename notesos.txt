@@ -1,0 +1,59 @@
+operating system is a system software which provide the interface between user and the computer hardware with the help of application software.
+
+A Process Control Block (PCB) is a data structure that contain all the information associated with a process.
+
+the process of removing an active task from the processor and replacing it with a new once is called scheduling.types of scheduling algorithim is :- fcfs,srtf,sjf,priority,round robin.
+
+in multiprogramming system a no. of process complete for a limitted no. of resource and if a resource is not available at that instance then the process enter in to wating state. if a process unable to changed its wating state infinitely because the resource requested by it are held by another wating process then system is said to be an deadlock.
+
+Paging is a memory management scheme that eliminates the need for a contiguous allocation of physical memory. The process of retrieving processes in the form of pages from the secondary storage into the main memory is known as paging.
+
+Demand paging is a technique used in virtual memory systems where pages enter main memory only when requested or needed by the CPU. In demand paging, the operating system loads only the necessary pages of a program into memory at runtime, instead of loading the entire program into memory at the start.
+
+Internal fragmentation happens when the memory is split into mounted-sized blocks. Whenever a method is requested for the memory, the mounted-sized block is allotted to the method. In the case where the memory allotted to the method is somewhat larger than the memory requested, then the difference between allotted and requested memory is called internal fragmentation. We fixed the sizes of the memory blocks, which has caused this issue. If we use dynamic partitioning to allot space to the process, this issue can be solved.
+External fragmentation happens when there’s a sufficient quantity of area within the memory to satisfy the memory request of a method. However, the process’s memory request cannot be fulfilled because the memory offered is in a non-contiguous manner
+
+Semaphores are a tool used in computer science to help manage how different processes (or programs) share resources, like memory or data, without causing conflicts.Semaphores are just normal variables used to coordinate the activities of multiple processes in a computer system.
+
+Binary semaphores are semaphores that can only assume the values 0 and 1. They are used for implementing the locks by using signaling mechanisms to achieve mutual exclusion. Here, if the value of the semaphore is 0, it means it is locked, so the lock is unavailable. If the value of the semaphore is 1 it means it is unlocked, so, the lock is available in binary semaphore.
+A mutex provides mutual exclusion, either the producer or consumer can have the key (mutex) and proceed with their work. As long as the buffer is filled by producer, the consumer needs to wait, and vice versa. At any point in time, only one thread can work with the entire buffer
+
+Processes are basically the programs that are dispatched from the ready state and are scheduled in the CPU for execution. PCB ( Process Control Block ) holds the context of process.The process can have the following states new, ready, running, waiting, terminated, and suspended.
+
+Thread is the segment of a process which means a process can have multiple threads and these multiple threads are contained within a process. A thread has three states: Running, Ready, and Blocked.
+
+A kernel is a central component of an operating system that manages the operations of computers and hardware. It basically manages operations of memory and CPU time. It is a core component of an operating system
+Types of Kernel
+1. Monolithic Kernel
+2. Micro Kernel
+3. Hybrid Kernel
+4. Exo Kernel
+5. Nano Kernel
+
+The shell is a command-line interface that allows the user to enter commands to interact with the operating system. It acts as an intermediary between the user and the kernel, interpreting commands entered by the user and translating them into instructions that the kernel can execute.
+
+Shell allows the users to communicate with the kernel.
+Kernel controls all the tasks of the system.
+Its types are – Bourne Shell, C shell, Korn Shell, etc.
+Its types are – Monolithic Kernel, Micro kernel, Hybrid kernel, etc.
+It is the outer layer of OS.
+It is the inner layer of OS.
+
+A monolithic kernel is a type of operating system architecture where the entire operating system, including core functions like memory management, process management, device drivers, and file systems, is integrated into a single large block of code running in a single address space. This design can make the system faster because all components can interact directly, but it can also make the system more complex and harder to maintain, as a bug in one part of the kernel can potentially affect the entire system.
+A microkernel is a minimalistic approach to designing an operating system. In a microkernel architecture, only the most essential functions are included in the kernel, such as basic communication between hardware and software, and simple process management. Other services like device drivers, file systems, and network protocols are run in user space as separate processes.
+
+A system call is a mechanism used by programs to request services from the operating system (OS).
+
+Virtual memory is a memory management technique used by operating systems to give the appearance of a large, continuous block of memory to applications, even if the physical memory (RAM) is limited. It allows the system to compensate for physical memory shortages, enabling larger applications to run on systems with less RAM.
+
+In paging, the program is divided into fixed or mounted size pages.
+In segmentation, the program is divided into variable size segments.
+Page size is determined by hardware.
+Here, the segment size is given by the user.
+It is faster in comparison to segmentation.
+Segmentation is slow.
+The size of the page needs always be equal to the size of frames.
+There is no constraint on the size of segments.
+
+Multiprogramming refers to the capability of a computer system to run multiple programs simultaneously by sharing system resources like CPU, memory, and I/O devices. It does not mean all programs execute at the same time but that the system switches between them to utilize idle resources efficiently
+Multitasking refers to the ability of an operating system to execute multiple tasks (processes or threads) seemingly at the same time by rapidly switching between them. This creates the illusion of parallelism on a single CPU.

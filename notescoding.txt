@@ -1,0 +1,187 @@
+23/11/24 = cd13,cd14,cd15,cd26,l18t,l21t samaj mai nahi aaya.
+cd25 tak dekh liye hai
+lt21 tak dekh liye hai
+
+27/11/24
+
+Variables is a name given to a memory location. It is the basic unit of storage in a program.The value stored in a variable can be changed during program execution.A variable is only a name given to a memory location, all the operations done on the variable effects that memory location.all the variables must be declared before use.
+
+All variables use data type during declaration to restrict the type of data to be stored. Therefore, we can say that data types are used to tell the variables the type of data they can store. the compiler allocates some memory for that variable based on the data type with which it is declared. Every data type requires a different amount of memory. 
+C++ supports the following data types:
+
+Primary or Built-in or Fundamental data type
+Derived data types
+User-defined data types
+Data Types in C++ are Mainly Divided into 3 Types: 
+1. Primitive Data Types: These data types are built-in or predefined data types and can be used directly by the user to declare variables. example: int, char, float, bool, etc. Primitive data types available in C++ are: 
+
+Integer
+Character
+Boolean
+Floating Point
+Double Floating Point
+Valueless or Void
+Wide Character
+2. Derived Data Types: Derived data types that are derived from the primitive or built-in datatypes are referred to as Derived Data Types. These can be of four types namely: 
+
+Function
+Array
+Pointer
+Reference
+3. Abstract or User-Defined Data Types: Abstract or User-Defined data types are defined by the user itself. Like, defining a class in C++ or a structure. C++ provides the following user-defined datatypes:  
+
+Class
+Structure
+Union
+Enumeration
+Typedef defined Datatype
+
+1. Function
+A Function is a block of code or program segment that is defined to perform a specific well-defined task. A function is generally defined to save the user from writing the same lines of code again and again for the same input. All the lines of code are put together inside a single function and this can be called anywhere required.it is identified by a name (identifire) followed by the parenthesis. main() is a default function that is defined in every program of C++.
+2. Array
+An Array is a collection of similar types of items stored at continuous memory locations. The idea of array is to represent many instances in one variable.
+3. Pointers
+an identifier preceded with * symbol is called pointer.it is a variable which hold the address of another variable.
+4. Reference
+When a variable is declared as reference, it becomes an alternative name for an existing variable. A variable can be declared as reference by putting ‘&’ in the declaration.
+
+1. Class
+It is a user-defined data type, which holds its own data members and member functions, which can be accessed and used by creating an instance of that class. A class is like a blueprint for an object.
+2. Structure
+A Structure is a user-defined data type. A structure creates a data type that can be used to group items of possibly different types into a single type.
+3. Union
+Union a user-defined data type. In union, all members share the same memory location.
+4. Enumeration
+Enumeration (or enum) is a user-defined data type. It is mainly used to assign names to integral constants, the names make a program easy to read and maintain.
+// Program to demonstrate working 
+// of enum in C++ 
+
+#include <iostream> 
+using namespace std; 
+
+enum week { Mon, Tue, Wed, Thur, Fri, Sat, Sun }; 
+
+int main() 
+{ 
+	enum week day; 
+	day = Wed; 
+	cout << day; 
+	return 0; 
+}
+An operator is a symbol that operates on a value to perform specific mathematical or logical computations. 
+
+In C++ after the header files, we often use ‘using namespace std;‘. The reason behind it is that all of the standard library definitions are inside the namespace std. As the library functions are not defined at global scope, so in order to use them we use namespace std. So, that we don’t need to write STD:: at every line (eg. STD::cout etc.).
+insertion operator(<<)  extraction operator(>>)
+
+// C++ Program to demonstrate strings
+#include <iostream>
+using namespace std;
+int main()
+{
+    char s[] = "GeeksforGeeks";
+    cout << s << endl;
+    return 0;
+}
+
+// C++ program to create std::string objects
+#include <iostream>
+using namespace std;
+int main()
+{
+    string s = "GeeksforGeeks";
+    string str("GeeksforGeeks");
+    cout << str;
+    return 0;
+}
+
+// C++ Program to demonstrate string input using cin
+#include <iostream>
+using namespace std;
+
+int main() {
+    string s;
+    cout<<"Enter String"<<endl;
+    cin>>s;
+    cout<<"String is: "<<s<<endl;
+    return 0;
+}
+
+// C++ Program to demonstrate use of getline function
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    string s;
+    cout << "Enter String" << endl;
+    getline(cin, s);
+    cout << "String is: " << s << endl;
+    return 0;
+}
+
+// C++ Program to demonstrate use of stringstream object
+#include <iostream>
+#include <sstream>
+#include<string>
+using namespace std;
+
+int main()
+{
+    string s = " GeeksforGeeks to the Moon ";
+    stringstream obj(s);
+    // string to store words individually
+    string temp;
+    // >> operator will read from the stringstream object
+    while (obj >> temp) {
+        cout << temp << endl;
+    }
+    return 0;
+}
+
+Object-oriented programming – As the name suggests uses objects in programming. Object-oriented programming aims to implement real-world entities like inheritance, hiding, polymorphism, etc. in programming. The main aim of OOP is to bind together the data and the functions that operate on them so that no other part of the code can access this data except that function.
+
+Object
+An Object is an identifiable entity with some characteristics and behavior. An Object is an instance of a Class. When a class is defined, no memory is allocated but when it is instantiated (i.e. an object is created) memory is allocated.
+
+Encapsulation
+Encapsulation is defined as binding together the data and the functions that manipulate them.
+
+Abstraction
+providing only essential information about the data to the outside world, hiding the background details or implementation
+
+Polymorphism
+The word polymorphism means having many forms. the ability of a message to be displayed in more than one form.
+Operator Overloading: The process of making an operator exhibit different behaviors in different instances is known as operator overloading.
+Function Overloading: Function overloading is using a single function name to perform different types of tasks. Polymorphism is extensively used in implementing inheritance.
+
+Inheritance
+The capability of a class to derive properties and characteristics from another class is called Inheritance.
+
+Constructors
+Constructors are special class members which are called by the compiler every time an object of that class is instantiated. Constructors have the same name as the class and may be defined inside or outside the class definition.
+
+Destructors
+Destructor is another special member function that is called by the compiler when the scope of the object ends. It deallocates all the memory previously used by the object of the class so that there will be no memory leaks. The destructor also have the same name as the class but with tilde(~) as prefix.
+Characteristics of a Destructor
+A destructor is also a special member function like a constructor. Destructor destroys the class objects created by the constructor. 
+Destructor has the same name as their class name preceded by a tilde (~) symbol.
+It is not possible to define more than one destructor.
+The destructor is only one way to destroy the object created by the constructor. Hence, destructor cannot be overloaded.
+It cannot be declared static or const.
+Destructor neither requires any argument nor returns any value.
+It is automatically called when an object goes out of scope. 
+Destructor release memory space occupied by the objects created by the constructor.
+In destructor, objects are destroyed in the reverse of an object creation.
+
+Why do we give semicolons at the end of class?
+Many people might say that it’s a basic syntax and we should give a semicolon at the end of the class as its rule defines in cpp. But the main reason why semi-colons are there at the end of the class is compiler checks if the user is trying to create an instance of the class at the end of it. 
+Yes just like structure and union, we can also create the instance of a class at the end just before the semicolon. As a result, once execution reaches at that line, it creates a class and allocates memory to your instance.
+
+Features of Encapsulation
+Below are the features of encapsulation:
+
+We can not access any function from the class directly. We need an object to access that function that is using the member variables of that class. 
+The function which we are making inside the class must use only member variables, only then it is called encapsulation.
+If we don’t make a function inside the class which is using the member variable of the class then we don’t call it encapsulation.
+Encapsulation improves readability, maintainability, and security by grouping data and methods together.
+It helps to control the modification of our data members.
