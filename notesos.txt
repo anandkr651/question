@@ -49,7 +49,7 @@ Virtual memory is a memory management technique used by operating systems to giv
 In paging, the program is divided into fixed or mounted size pages.
 In segmentation, the program is divided into variable size segments.
 Page size is determined by hardware.
-Here, the segment size is given by the user.
+segment size is given by the user.
 It is faster in comparison to segmentation.
 Segmentation is slow.
 The size of the page needs always be equal to the size of frames.

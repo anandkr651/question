@@ -1,0 +1,14 @@
+binary tree --> allmost two child
+binary search tree --> node < root node <= node
+strictly binary tree --> each node has no child or two child
+complete binary tree --> all leaf nodes are places a same level
+extended binary tree --> by adding some additional node
+threaded binary tree --> implement the concept of thread
+expression tree --> represent the arithmetic expression
+heap tree --> a complete binary tree in which each node has either greater value from its child node or less value from its child node. i. max heap ii.min heap.
+avl tree --> an optimal binary search tree,the difference between the height of left sub tree and right sub tree is 1,0,-1.
+m-way tree --> a multi way tree of order n is a tree that contains maximum (n-1) element.
+b tree
+b+ tree
+red black tree
+forest tree

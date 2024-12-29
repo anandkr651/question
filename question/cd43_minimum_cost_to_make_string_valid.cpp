@@ -1,5 +1,3 @@
-//*******************************  KUCH TO ERROR HAI first wala code mi ****************************************
-
 #include <iostream>
 using namespace std;
 #include <stack>
@@ -18,7 +16,7 @@ int minicost(string s)
         }
         else
         {
-            if (p.top() == '{' && !p.empty())
+            if (!p.empty()&& p.top()=='{')
             {
                 p.pop();
             }
@@ -60,7 +58,8 @@ PS C:\Users\DELL\OneDrive\Desktop\question\question>*/
 2
 PS C:\Users\DELL\OneDrive\Desktop\question\question>*/
 /*enter the curly braces {}
-}}}{{{
+}}}{{{             //******** this case give no output because in line no 19 we can first check the stack of top then we can check the stack is empty so it give no any output.
+4
 PS C:\Users\DELL\OneDrive\Desktop\question\question>*/
 
 #include <iostream>
