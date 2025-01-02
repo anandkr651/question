@@ -51,16 +51,24 @@ int main()
     int n;
     cout << "enter the number ";
     cin >> n;
-    vector<int> dp(n);
-    for (int i = 0; i <= n; i++)
-    {
-        dp[i] = -1;
+    vector<int> dp(n+1,-1);
+    cout<<"size of dp "<<sizeof(dp)<<endl;
+    for(auto i:dp){
+        cout<<i<<endl;
     }
     cout << fb(n, dp);
 }
 /*enter the number 6
+size of dp 24
+-1
+-1
+-1
+-1
+-1
+-1
+-1
 8
-PS C:\Users\DELL\OneDrive\Desktop\question\question>*/
+PS D:\question\question>*/
 
 // bottom - up approach
 

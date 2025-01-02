@@ -6,11 +6,12 @@ the process of removing an active task from the processor and replacing it with 
 
 in multiprogramming system a no. of process complete for a limitted no. of resource and if a resource is not available at that instance then the process enter in to wating state. if a process unable to changed its wating state infinitely because the resource requested by it are held by another wating process then system is said to be an deadlock.
 
-Paging is a memory management scheme that eliminates the need for a contiguous allocation of physical memory. The process of retrieving processes in the form of pages from the secondary storage into the main memory is known as paging.
+Paging is a memory management scheme that eliminates the need for a contiguous allocation of physical memory. The process of retrieving processes in the form of pages from the secondary storage into the main memory is known as paging. page repacement aglo is lru,fcfs,optimal page replacement.
 
 Demand paging is a technique used in virtual memory systems where pages enter main memory only when requested or needed by the CPU. In demand paging, the operating system loads only the necessary pages of a program into memory at runtime, instead of loading the entire program into memory at the start.
 
 Internal fragmentation happens when the memory is split into mounted-sized blocks. Whenever a method is requested for the memory, the mounted-sized block is allotted to the method. In the case where the memory allotted to the method is somewhat larger than the memory requested, then the difference between allotted and requested memory is called internal fragmentation. We fixed the sizes of the memory blocks, which has caused this issue. If we use dynamic partitioning to allot space to the process, this issue can be solved.
+
 External fragmentation happens when there’s a sufficient quantity of area within the memory to satisfy the memory request of a method. However, the process’s memory request cannot be fulfilled because the memory offered is in a non-contiguous manner
 
 Semaphores are a tool used in computer science to help manage how different processes (or programs) share resources, like memory or data, without causing conflicts.Semaphores are just normal variables used to coordinate the activities of multiple processes in a computer system.
@@ -57,3 +58,5 @@ There is no constraint on the size of segments.
 
 Multiprogramming refers to the capability of a computer system to run multiple programs simultaneously by sharing system resources like CPU, memory, and I/O devices. It does not mean all programs execute at the same time but that the system switches between them to utilize idle resources efficiently
 Multitasking refers to the ability of an operating system to execute multiple tasks (processes or threads) seemingly at the same time by rapidly switching between them. This creates the illusion of parallelism on a single CPU.
+
+device driver -- a driver provider a software interface to hardware device enabling o.s and other computer program to access hardware function without knowing the precise details about the hardware being used.

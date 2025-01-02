@@ -52,10 +52,13 @@ A Structure is a user-defined data type. A structure creates a data type that ca
 3. Union
 Union a user-defined data type. In union, all members share the same memory location.
 4. Enumeration
-Enumeration (or enum) is a user-defined data type. It is mainly used to assign names to integral constants, the names make a program easy to read and maintain.
+Enumeration (or enum) is a user-defined data type. It is mainly used to assign names to integral constants, the names make a program easy to read and maintain. It is used to define variables that can only take one of the predefined values,
+Practical Use Case
+Enums are often used for:
+Defining states (e.g., traffic light states).
+
 // Program to demonstrate working 
 // of enum in C++ 
-
 #include <iostream> 
 using namespace std; 
 
@@ -141,7 +144,7 @@ int main()
 Object-oriented programming – As the name suggests uses objects in programming. Object-oriented programming aims to implement real-world entities like inheritance, hiding, polymorphism, etc. in programming. The main aim of OOP is to bind together the data and the functions that operate on them so that no other part of the code can access this data except that function.
 
 Object
-An Object is an identifiable entity with some characteristics and behavior. An Object is an instance of a Class. When a class is defined, no memory is allocated but when it is instantiated (i.e. an object is created) memory is allocated.
+An Object is an entity with some characteristics and behavior. An Object is an instance of a Class. When a class is defined, no memory is allocated but when it is instantiated (i.e. an object is created) memory is allocated.
 
 Encapsulation
 Encapsulation is defined as binding together the data and the functions that manipulate them.
@@ -149,10 +152,46 @@ Encapsulation is defined as binding together the data and the functions that man
 Abstraction
 providing only essential information about the data to the outside world, hiding the background details or implementation
 
+
+#include <iostream>
+using namespace std;
+
+// Class demonstrating abstraction and encapsulation
+class Calculator {
+private:
+    // Encapsulation: Private data members
+    int a, b;
+
+public:
+    // Constructor to set values
+    Calculator(int x, int y) : a(x), b(y) {}
+
+    // Public method for abstraction: Exposes functionality without details
+    int add() {
+        return a + b;
+    }
+
+    int subtract() {
+        return a - b;
+    }
+};
+
+int main() {
+    // Creating a Calculator object
+    Calculator calc(10, 5);
+
+    // Abstraction: User interacts with high-level methods
+    cout << "Addition: " << calc.add() << endl;        // 10 + 5 = 15
+    cout << "Subtraction: " << calc.subtract() << endl; // 10 - 5 = 5
+
+    // Encapsulation: Can't directly access 'a' or 'b'
+    // cout << calc.a;  // Error: 'a' is private
+
+    return 0;
+}
+
 Polymorphism
 The word polymorphism means having many forms. the ability of a message to be displayed in more than one form.
-Operator Overloading: The process of making an operator exhibit different behaviors in different instances is known as operator overloading.
-Function Overloading: Function overloading is using a single function name to perform different types of tasks. Polymorphism is extensively used in implementing inheritance.
 
 Inheritance
 The capability of a class to derive properties and characteristics from another class is called Inheritance.
@@ -185,3 +224,86 @@ The function which we are making inside the class must use only member variables
 If we don’t make a function inside the class which is using the member variable of the class then we don’t call it encapsulation.
 Encapsulation improves readability, maintainability, and security by grouping data and methods together.
 It helps to control the modification of our data members.
+
+There are 3 types of access modifiers available in C++: 
+
+Public
+Private
+Protected
+
+Note: If we do not specify any access modifiers for the members inside the class, then by default the access modifier for the members will be Private. 
+
+1. Public: All the class members declared under the public specifier will be available to everyone. The data members and member functions declared as public can be accessed by other classes and functions too. 
+
+2. Private: The class members declared as private can be accessed only by the member functions inside the class. They are not allowed to be accessed directly by any object or function outside the class. Only the member functions or the friend functions/ friend class are allowed to access the private data members of the class. 
+
+3. Protected: The protected access modifier is similar to the private access modifier in the sense that it can’t be accessed outside of its class unless with the help of a friend class. The difference is that the class members declared as Protected can be accessed by any subclass (derived class) of that class as well. 
+
+Difference between Abstraction and Encapsulation:
+Abstraction is the process or method of gaining the information.
+While encapsulation is the process or method to contain the information.
+We can implement abstraction using abstract class and interfaces.
+Whereas encapsulation can be implemented using by access modifier i.e. private, protected and public.
+In abstraction, implementation complexities are hidden using abstract classes and interfaces.
+While in encapsulation, the data is hidden using methods of getters and setters.
+
+Types of Polymorphism
+Compile-time Polymorphism --A. Function Overloading  B. Operator Overloading
+Runtime Polymorphism -- A. Function Overriding B. Virtual Function
+A. Function Overloading
+When there are multiple functions with the same name but different parameters, then the functions are said to be overloaded, hence this is known as Function Overloading.
+
+B. Operator Overloading
+C++ has the ability to provide the operators with a special meaning for a data type, this ability is known as operator overloading.Operator overloading is when you define or change the behavior of an operator (like +, -, *, etc.) for a custom data type or class in programming.
+
+A. Function Overriding
+Function Overriding occurs when a derived class has a definition for one of the member functions of the base class. That base function is said to be overridden.
+// C++ program for function overriding with data members
+#include <bits/stdc++.h>
+using namespace std;
+
+//  base class declaration.
+class Animal {
+public:
+    string color = "Black";
+};
+
+// inheriting Animal class.
+class Dog : public Animal {
+public:
+    string color = "Grey";
+};
+
+// Driver code
+int main(void)
+{
+    Animal d = Dog(); // accessing the field by reference
+                      // variable which refers to derived
+    cout << d.color;
+}
+Output
+Black
+
+B. Virtual Function
+A virtual function is a member function that is declared in the base class using the keyword virtual and is re-defined (Overridden) in the derived class.
+
+Difference between Inheritance and Polymorphism:
+
+Inheritance is one in which a new class is created (derived class) that inherits the features from the already existing class(Base class).
+Whereas polymorphism is that which can be defined in multiple forms.
+It is basically applied to classes.
+Whereas it is basically applied to functions or methods.
+Inheritance supports the concept of reusability and reduces code length in object-oriented programming.	
+Polymorphism allows the object to decide which form of the function to implement at compile-time (overloading) as well as run-time (overriding).
+Inheritance can be single, hybrid, multiple, hierarchical and multilevel inheritance.
+Whereas it can be compiled-time polymorphism (overload) as well as run-time polymorphism (overriding).
+
+Vectors are a dynamic array-like data structure that stores elements of the same data type in a contiguous fashion that can resize itself automatically unlike arrays which mean vectors can grow when an element is inserted or shrink when an element is deleted.
+
+Types of Inheritance:
+
+Single Inheritance: When a derived class inherits the properties of a single base class, it is known as Single Inheritance.
+Multiple Inheritance: When a derived class inherits the properties of multiple base classes, it is known as Multiple Inheritance.
+Multilevel Inheritance: When a derived class inherits the properties of another derived class, it is known as Multilevel Inheritance.
+Hierarchical Inheritance: When more than one derived class inherits the properties of a single base class, it is known as Hierarchical Inheritance.
+Hybrid (Virtual) Inheritance: When we combine more than one type of inheritance, it is known as Hybrid (Virtual) Inheritance. Example: Combining Multilevel and Hierarchical inheritance.
