@@ -78,12 +78,12 @@ int main()
 /*pivot elements of index number 3 number is 1
 enter the number you want to search2
 number is found in the lower line of the graph 2
-PS C:\Users\DELL\OneDrive\Desktop\dsa in c++\searching> cd "c:\Users\DELL\OneDrive\Desktop\dsa in c++\searching\" ; if ($?) { g++ search_a_rotated_sorted_array.cpp -o search_a_rotated_sorted_array } ; if ($?) { .\search_a_rotated_sorted_array }
+PS C:\Users\DELL\OneDrive\Desktop\dsa in c++\searching>
 
 pivot elements of index number 3 number is 1
 enter the number you want to search8
 number is found in the upper line of the graph 8
-PS C:\Users\DELL\OneDrive\Desktop\dsa in c++\searching> cd "c:\Users\DELL\OneDrive\Desktop\dsa in c++\searching\" ; if ($?) { g++ search_a_rotated_sorted_array.cpp -o search_a_rotated_sorted_array } ; if ($?) { .\search_a_rotated_sorted_array }
+PS C:\Users\DELL\OneDrive\Desktop\dsa in c++\searching>
 
 pivot elements of index number 3 number is 1
 enter the number you want to search11

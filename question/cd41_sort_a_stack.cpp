@@ -1,3 +1,4 @@
+//the code is similar to reverse of stack
 #include <iostream>
 using namespace std;
 #include <stack>

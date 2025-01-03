@@ -29,8 +29,7 @@ int main()
         cin >> q;
         p.push(q);
     }
-    queue<int> z = reverseq(p);
-    queue<int> c = z;
+    queue<int> c = reverseq(p);
     while (!c.empty())
     {
         int element = c.front();

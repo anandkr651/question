@@ -1,3 +1,6 @@
 2/1/25
-In "sort012" question array has been sort by the method is ==> n=sizeof(a)/sizeof(a[0]) sort(a,a+n) ... a is array,n is the size of an array
+In "sort012" question array has been sort by the method is ==> n=sizeof(a)/sizeof(a[0])   sort(a,a+n) ... a is array,n is the size of an array
 but in vector sort(a.begin(),a.end());
+
+3/1/25
+"gfg01_kth_smallest" in this problem we can not use sort method so we can use this "priority queue" but we also use the sorting algo is use like bubble,selection,insertion sort. priority queue sort the data in the non-decending order.

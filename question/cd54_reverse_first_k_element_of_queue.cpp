@@ -33,16 +33,15 @@ int main()
    cout << "enter the data" << endl;
    for (int i = 0; i < 5; i++)
    {
-      cin >> a;
+      cin >> a; //we can insert the value in this types not in this type cin>>s[i].
       s.push(a);
    }
    int kgroup = 3;
    queue<int> p = reverseelement(s, kgroup);
-   queue<int> z = p;
-   while (!z.empty())
+   while (!p.empty())
    {
-      cout << z.front() << " ";
-      z.pop();
+      cout << p.front() << " ";
+      p.pop();
    }
    cout << endl;
 }

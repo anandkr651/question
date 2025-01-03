@@ -1,18 +1,26 @@
 #include <iostream>
 #include <algorithm>
 using namespace std;
-void reverse(string &ans)
+// void reverse(string &ans,int i,int j)  //the time complexity is o(n).
+// {
+//     while (i < j)
+//     {
+//         swap(ans[i++], ans[j--]);
+//     }
+// }
+void reverse(string &ans,int i,int j)  //the time complexity is o(1).
 {
-    int i = 0, j = ans.size() - 1;
-    if (i <= j)
+    if (i > j)
     {
-        swap(ans[i++], ans[j--]);
+        return;
     }
+    swap(ans[i++], ans[j--]);
+    reverse(ans,i,j);
 }
 int main()
 {
-    string ans = "anand";
-    reverse(ans);
+    string ans = "abcdef";
+    reverse(ans,0,ans.size()-1);
     cout << "reverse of the ans" << endl;
     for (int i = 0; i < ans.length(); i++)
     {
@@ -20,5 +28,5 @@ int main()
     }
 }
 /*reverse of the ans
-dnana
-PS C:\Users\DELL\OneDrive\Desktop\dsa in c++\question> */
+fedcba
+PS D:\question\question> */

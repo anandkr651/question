@@ -34,15 +34,15 @@ bool findredundant(string &s)
 int main()
 {
     string s;
-    cout << "enter the parentheses (),{},[]" << endl;
+    cout << "enter the parentheses ()" << endl;
     cin >> s;
     cout << findredundant(s);
 }
-/*enter the parentheses (),{},[]
+/*enter the parentheses ()
 ((a+b))
 1
 PS C:\Users\DELL\OneDrive\Desktop\question\question>*/
-/*enter the parentheses (),{},[]
+/*enter the parentheses ()
 (a+b)+(a-b)
 0
 PS C:\Users\DELL\OneDrive\Desktop\question\question>*/

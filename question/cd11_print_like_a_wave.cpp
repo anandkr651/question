@@ -37,14 +37,23 @@ int main()
             cin >> x[i][j];
         }
     }
-    cout << "heel" << endl;
-    for (int i = 0; i < 3; i++)
-    {
-        for (int j = 0; j < 4; j++)
-        {
-            cout << x[i][j] << " ";
+    cout <<"print the array "<< endl;
+    // for (int i = 0; i < 3; i++)
+    // {
+    //     for (int j = 0; j < 4; j++)
+    //     {
+    //         cout << x[i][j] << " ";
+    //     }
+    //     cout << endl;
+    // }
+       
+    //OR
+
+    for(auto i:x){
+        for(auto j:i){
+            cout<<j<<" ";
         }
-        cout << endl;
+        cout<<endl;
     }
     vector<int> f = waveprint(x);
     for (int i : f)
@@ -65,7 +74,7 @@ int main()
 10
 11
 12
-heel
+print the array 
 1 2 3 4
 5 6 7 8
 9 10 11 12
