@@ -3,7 +3,7 @@
 using namespace std;
 void reversearry(vector<int> &ans, int m)
 {
-  int start = m;
+  int start = m+1;
   int end = ans.size() - 1;
   while (start <= end)
   {
@@ -41,5 +41,5 @@ int main()
 8
 9
 10
-1 2 3 10 9 8 7 6 5 4
-PS C:\Users\DELL\OneDrive\Desktop\dsa in c++\question>*/
+1 2 3 4 10 9 8 7 6 5 
+PS D:\question\question>*/

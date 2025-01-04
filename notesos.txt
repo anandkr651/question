@@ -6,7 +6,7 @@ the process of removing an active task from the processor and replacing it with 
 
 in multiprogramming system a no. of process complete for a limitted no. of resource and if a resource is not available at that instance then the process enter in to wating state. if a process unable to changed its wating state infinitely because the resource requested by it are held by another wating process then system is said to be an deadlock.
 
-Paging is a memory management scheme that eliminates the need for a contiguous allocation of physical memory. The process of retrieving processes in the form of pages from the secondary storage into the main memory is known as paging. page repacement aglo is lru,fcfs,optimal page replacement.
+Paging is a memory management scheme that eliminates the need for a contiguous allocation of physical memory. The process of retrieving processes in the form of pages from the secondary storage into the main memory is known as paging. page repacement aglo is lru,fifo,optimal page replacement.
 
 Demand paging is a technique used in virtual memory systems where pages enter main memory only when requested or needed by the CPU. In demand paging, the operating system loads only the necessary pages of a program into memory at runtime, instead of loading the entire program into memory at the start.
 

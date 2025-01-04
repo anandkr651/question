@@ -42,6 +42,24 @@ queue<int> interleavequeue(queue<int> q)
     }
     return q;
 }
+//OR
+queue<int> interleavequeue(queue<int> q)
+{
+    queue<int> q1;
+    int n=q.size()/2;
+    for(int i=0;i<n;i++)
+    {
+        q1.push(q.front());
+        q.pop();
+    }
+    while(!q1.empty()){
+        q.push(q1.front());
+        q1.pop();
+        q.push(q.front());
+        q.pop();
+    }
+    return q;
+}
 int main()
 {
     int a;
@@ -51,8 +69,7 @@ int main()
         cin >> a;
         q.push(a);
     }
-    queue<int> p = interleavequeue(q);
-    queue<int> z = p;
+    queue<int> z = interleavequeue(q);
     while (!z.empty())
     {
         int val = z.front();

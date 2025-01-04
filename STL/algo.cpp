@@ -5,15 +5,17 @@ using namespace std;
 int main()
 {
     vector<int> v;
+    v.push_back(2);
     v.push_back(3);
     v.push_back(5);
     v.push_back(6);
     v.push_back(8);
     v.push_back(9);
+    v.push_back(10);
 
     cout << "finding 6--> " << binary_search(v.begin(), v.end(), 6) << endl;
-    cout << "lower bound -->" << lower_bound(v.begin(), v.end(), 6) - v.begin() << endl;
-    cout << "lower bound -->" << upper_bound(v.begin(), v.end(), 4) - v.begin() << endl;
+    cout << "lower bound -->" << lower_bound(v.begin(), v.end(), 7) - v.begin() << endl;
+    cout << "lower bound -->" << upper_bound(v.begin(), v.end(), 4) - v.end() << endl;
 
     int a = 3;
     int b = 5;
@@ -45,18 +47,18 @@ int main()
     }
     cout << endl;
 }
-/*finding 6--> 1
-lower bound -->2
-lower bound -->1
+/*finding 6--> 1   
+lower bound -->4 
+lower bound -->-5
 max 8
 min 3
 a-->5
 reverse is i9jxkkj dcba
 after rotate one position
-5 6 8 9 3
+3 5 6 8 9 10 2
 sorted the vector
-3 5 6 8 9
-PS C:\Users\DELL\OneDrive\Desktop\dsa in c++\STL>*/
+2 3 5 6 8 9 10
+PS D:\question\STL> */
 
 //    ################### range based loop in c++ ######################################
 /*
