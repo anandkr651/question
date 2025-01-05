@@ -1,53 +1,53 @@
-#include <iostream>
-using namespace std;
-#include <vector>
-int houserobber(vector<int> &nums, int a)
-{
-    if (a < 0)
-    {
-        return 0;
-    }
-    int inclu = houserobber(nums, a - 2) + nums[a];
-    int exclu = houserobber(nums, a - 1) + 0;
-    int ans = max(inclu, exclu);
-    return ans;
-}
-int solve(vector<int> &x)
-{
-    int n = x.size();
-    if (n == 1)
-    {
-        return x[0];
-    }
-    vector<int> first, second;
-    for (int i = 0; i < n; i++)
-    {
-        if (i != n - 1)
-        {
-            first.push_back(x[i]);
-        }
-        if (i != 0)
-        {
-            second.push_back(x[i]);
-        }
-    }
-    int a = first.size() - 1;
-    int maxi = max(houserobber(first, a), houserobber(second, a));
-    return maxi;
-}
-int main()
-{
-    int p;
-    cout << "enter the size of vector ";
-    cin >> p;
-    vector<int> x(p);
-    cout << "enter the number";
-    for (int i = 0; i < p; i++)
-    {
-        cin >> x[i];
-    }
-    cout << "maximum money has been stolen by the thief " << solve(x);
-}
+// #include <iostream>
+// using namespace std;
+// #include <vector>
+// int houserobber(vector<int> &nums, int a)
+// {
+//     if (a < 0)
+//     {
+//         return 0;
+//     }
+//     int inclu = houserobber(nums, a - 2) + nums[a];
+//     int exclu = houserobber(nums, a - 1) + 0;
+//     int ans = max(inclu, exclu);
+//     return ans;
+// }
+// int solve(vector<int> &x)
+// {
+//     int n = x.size();
+//     if (n == 1)
+//     {
+//         return x[0];
+//     }
+//     vector<int> first, second;
+//     for (int i = 0; i < n; i++)
+//     {
+//         if (i != n - 1)
+//         {
+//             first.push_back(x[i]);
+//         }
+//         if (i != 0)
+//         {
+//             second.push_back(x[i]);
+//         }
+//     }
+//     int a = first.size() - 1;
+//     int maxi = max(houserobber(first, a), houserobber(second, a));
+//     return maxi;
+// }
+// int main()
+// {
+//     int p;
+//     cout << "enter the size of vector ";
+//     cin >> p;
+//     vector<int> x(p);
+//     cout << "enter the number";
+//     for (int i = 0; i < p; i++)
+//     {
+//         cin >> x[i];
+//     }
+//     cout << "maximum money has been stolen by the thief " << solve(x);
+// }
 /*enter the size of vector 4
 enter the number1
 2
@@ -69,7 +69,7 @@ using namespace std;
 #include <vector>
 int houserobber(vector<int> &nums, int a, vector<int> &dp)
 {
-    if (a < 0)
+    if (a >= nums.size())
     {
         return 0;
     }
@@ -77,11 +77,9 @@ int houserobber(vector<int> &nums, int a, vector<int> &dp)
     {
         return dp[a];
     }
-    int inclu = houserobber(nums, a - 2, dp) + nums[a];
-    int exclu = houserobber(nums, a - 1, dp) + 0;
-    int ans = max(inclu, exclu);
-    dp[a] = ans;
-    return dp[a];
+    int inclu = houserobber(nums, a + 2, dp) + nums[a];
+    int exclu = houserobber(nums, a + 1, dp) + 0;
+    return dp[a] = max(inclu, exclu);
 }
 int solve(vector<int> &x)
 {
@@ -102,9 +100,8 @@ int solve(vector<int> &x)
             second.push_back(x[i]);
         }
     }
-    int a = first.size() - 1;
-    vector<int> dp(a + 1, -1);
-    int maxi = max(houserobber(first, a, dp), houserobber(second, a, dp));
+    vector<int> dp(n, -1);
+    int maxi = max(houserobber(first, 0, dp), houserobber(second, 0, dp));
     return maxi;
 }
 int main()

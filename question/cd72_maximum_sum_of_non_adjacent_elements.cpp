@@ -16,6 +16,18 @@ int solve(vector<int>&num,int n)
    int ans=max(inclu,exclu);
    return ans;
 }
+
+//OR
+
+int solve(vector<int>&num,int n){
+    if(n>=num.size()){
+       return 0;
+    }
+    int inclu=solve(num,n+2)+num[n];
+    int exclu=solve(num,n+1)+0;
+    int ans=max(inclu,exclu);
+    return ans;
+}
 int main()
 {
     int p;
@@ -28,6 +40,8 @@ int main()
         cin>>num[i];
     }
     cout<<"sum of non adjacent elements "<<solve(num,p);
+    //OR
+    cout<<"sum of non adjacent elements "<<solve(num,0);
 }
 /*enter the size of vector 4
 enter the number 9
@@ -37,16 +51,20 @@ enter the number 9
 sum of non adjacent elements 17
 PS C:\Users\DELL\OneDrive\Desktop\question\question>*/
 
+/*enter the size of vector 4
+enter the number 3
+2
+7
+10
+sum of non adjacent elements 13
+PS D:\question\question>*/
+
 #include<iostream>
 using namespace std;
 #include<vector>
 int solve(vector<int>&num,int n,vector<int>&dp)
 {
-   if(n==0)
-   {
-    return num[0];
-   }
-   if(n<0)
+   if(n>=num.size())
    {
     return 0;
    }
@@ -54,11 +72,9 @@ int solve(vector<int>&num,int n,vector<int>&dp)
    {
     return dp[n];
    }
-   int inclu=solve(num,n-2,dp)+num[n];
-   int exclu=solve(num,n-1,dp)+0;
-   int ans=max(inclu,exclu);
-   dp[n]=ans;
-   return dp[n];
+   int inclu=solve(num,n+2,dp)+num[n];
+   int exclu=solve(num,n+1,dp)+0;
+   return dp[n]=max(inclu,exclu);
 }
 int main()
 {
@@ -72,7 +88,7 @@ int main()
         cin>>num[i];
     }
     vector<int>dp(p,-1);
-    cout<<"sum of non adjacent elements "<<solve(num,p,dp);
+    cout<<"sum of non adjacent elements "<<solve(num,0,dp);
 }
 /*enter the size of vector 4
 enter the number 9

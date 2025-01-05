@@ -23,7 +23,7 @@ class solution
 public:
     vector<string> subsequences(string &str)
     {
-        //    string output="";
+        // string output="";
         vector<string> ans;
         int index = 0;
         solve(ans, index, str);

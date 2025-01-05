@@ -11,10 +11,10 @@ void solve(vector<string> &ans,string output,int index,string str)
         }
         return ;
     }
-    solve(ans,output,index+1,str);
+    solve(ans,output,index+1,str); //exclude
     int element=str[index];
     output.push_back(element);
-    solve(ans,output,index+1,str);
+    solve(ans,output,index+1,str); //include
 }
 vector<string> subsequences(string str)
 {

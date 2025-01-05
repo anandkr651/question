@@ -19,6 +19,7 @@ vector<int> smallerelement(vector<int> &arr, int n)
     }
     return ans;
 }
+
 int main()
 {
     vector<int> s(4);
@@ -27,7 +28,7 @@ int main()
     {
         cin >> s[i];
     }
-    vector<int> ans = smallerelement(s, 3);
+    vector<int> ans = smallerelement(s, 4);
     for (int i : ans)
     {
         cout << i << " ";
@@ -40,3 +41,4 @@ int main()
 3
 1 -1 3 -1
 PS C:\Users\DELL\OneDrive\Desktop\question\question> */
+// 3 3 1 1 -->1 1 -1 -1
