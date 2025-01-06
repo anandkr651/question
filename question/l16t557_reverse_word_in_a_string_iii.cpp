@@ -15,7 +15,7 @@ public:
                 {
                 }
                 reverse(s.begin() + i, s.begin() + j);
-                i = j - 1;
+                i = j;
             }
         }
         return s;

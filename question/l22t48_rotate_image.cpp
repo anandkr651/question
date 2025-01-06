@@ -8,6 +8,13 @@ public:
     void rotate(vector<vector<int>> &s)
     {
         reverse(s.begin(), s.end());
+        cout<<"reverse the data"<<endl;
+        for(auto i:s){
+            for(auto n:i){
+                cout<<n<<" ";
+            }
+            cout<<endl;
+        }
         for (int i = 0; i < s.size(); i++)
         {
             for (int j = i + 1; j < s[0].size(); j++)
@@ -62,8 +69,12 @@ display data
 1 2 3
 4 5 6
 7 8 9
+reverse the data
+7 8 9
+4 5 6
+1 2 3
 hello
 7 4 1
 8 5 2
-9 6 3
-PS C:\Users\DELL\OneDrive\Desktop\question\question>*/
+9 6 3 
+PS D:\question\question>*/

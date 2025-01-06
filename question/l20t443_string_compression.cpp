@@ -12,7 +12,7 @@ public:
         while (i < n)
         {
             int j = i + 1;
-            while (s[i] == s[j])
+            while (j<n && s[i] == s[j])
             {
                 j++;
             }

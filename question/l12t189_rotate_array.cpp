@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include<bits/stdc++.h>
 using namespace std;
 class solution
 {
@@ -28,7 +29,7 @@ int main()
     vector<int> s;
     int p, r;
     cout << "enter the number" << endl;
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < 1; i++)
     {
         cin >> p;
         s.push_back(p);

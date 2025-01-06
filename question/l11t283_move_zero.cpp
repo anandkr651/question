@@ -9,16 +9,30 @@ private:
 public:
     void movezero(vector<int> &num)
     {
-        for (i = 0; i < num.size(); i++)
+        // for (i = 0; i < num.size(); i++)
+        // {
+        //     for (j = 0; j < num.size() - 1; j++)
+        //     {
+        //         if (num[j] == 0)
+        //         {
+        //             swap(num[j], num[j + 1]);
+        //         }
+        //     }
+        // }
+
+        vector<int> ans;
+        for (int i = 0; i < num.size(); i++)
         {
-            for (j = 0; j < num.size() - 1; j++)
+            if (num[i] != 0)
             {
-                if (num[j] == 0)
-                {
-                    swap(num[j], num[j + 1]);
-                }
+                ans.push_back(num[i]);
             }
         }
+        for (int i = ans.size(); i < num.size(); i++)
+        {
+            ans.push_back(0);
+        }
+        num = ans;
     }
 };
 int main()

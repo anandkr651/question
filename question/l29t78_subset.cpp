@@ -2,16 +2,31 @@
 #include <vector>
 using namespace std;
 
+// void backtrack(vector<int> &nums, int start, vector<int> &path, vector<vector<int>> &result)
+// {
+//     result.push_back(path);
+//     for (int i = start; i < nums.size(); ++i)
+//     {
+//         path.push_back(nums[i]);
+//         backtrack(nums, i + 1, path, result);
+//         path.pop_back();
+//     }
+// }
+
+//OR
 void backtrack(vector<int> &nums, int start, vector<int> &path, vector<vector<int>> &result)
 {
-    result.push_back(path);
-    for (int i = start; i < nums.size(); ++i)
-    {
-        path.push_back(nums[i]);
-        backtrack(nums, i + 1, path, result);
-        path.pop_back();
+    if(start>=nums.size()){
+        result.push_back(path);
+        return;
     }
+    backtrack(nums,start+1,path,result);
+    int element = nums[start];
+    path.push_back(element);
+    backtrack(nums,start+1,path,result);
+    path.pop_back();
 }
+
 
 vector<vector<int>> subsets(vector<int> &nums)
 {
@@ -25,18 +40,19 @@ int main()
 {
     vector<int> nums = {1, 2, 3};
     vector<vector<int>> subsetsResult = subsets(nums);
-
-    // Output the subsets
-    for (const auto &subset : subsetsResult)
-    {
+    int z=0;
+    for(auto i:subsetsResult){
         cout << "[";
-        for (int i = 0; i < subset.size(); ++i)
-        {
-            cout << subset[i];
-            if (i != subset.size() - 1)
-                cout << ",";
+        for(auto j:i){
+            cout<<j;
+            if(z<i.size()-1){
+                cout<<",";
+                z++;
+            }
         }
-        cout << "]" << endl;
+        cout <<"]";
+        z=0;
+        cout<<endl;
     }
     return 0;
 }
