@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include<bits/stdc++.h>
 using namespace std;
 void reversearry(vector<int> &ans, int m)
 {
@@ -24,6 +25,10 @@ int main()
     cin >> p;
     ans.push_back(p);
   }
+  // reverse(ans.begin()+m+1,ans.end());
+
+  //OR
+
   reversearry(ans, m);
   for (int i : ans)
   {

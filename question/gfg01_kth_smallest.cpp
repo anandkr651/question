@@ -23,6 +23,12 @@ int main(){
     cout<<"enter the kth smallest element ";
     cin>>k;
     int ans=kthSmallest(arr,k,5);
+    //OR
+    // sort(arr.begin(),arr.end());
+    // rotate(arr.begin(),arr.begin()+k,arr.end());
+    // int ans=arr.at(arr.size()-1);
+    // arr.pop_back();
+
     cout<<"the kth smallest element is "<<ans;
 }
 /*enter the data 7

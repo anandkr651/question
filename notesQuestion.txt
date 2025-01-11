@@ -4,3 +4,6 @@ but in vector sort(a.begin(),a.end());
 
 3/1/25
 "gfg01_kth_smallest" in this problem we can not use sort method so we can use this "priority queue" but we also use the sorting algo is use like bubble,selection,insertion sort. priority queue sort the data in the non-decending order.
+
+11/1/25
+STL->algo when we can rotate any vector let suppose k then we can use rotate(a.begin(),a.begin()+k,a.end()) whereas "a" is the vector.
