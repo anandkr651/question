@@ -1,8 +1,6 @@
-23/11/24 = cd13,cd14,cd26,l18t,l21t samaj mai nahi aaya.
-cd25 tak dekh liye hai
-lt21 tak dekh liye hai
+C++ is an object-oriented programming language developed to address the limitations of the C programming language. By "object-oriented," we refer to its use of key principles such as polymorphism, inheritance, abstraction, encapsulation, objects, and classes.
 
-27/11/24
+‘std’ is also known as Standard or it can be interpreted as a namespace. The command “using namespace std” informs the compiler to add everything under the std namespace and inculcate them in the global namespace. This all inculcation of global namespace benefits us to use “cout” and “cin” without using “std::_operator_”.
 
 Variables is a name given to a memory location. It is the basic unit of storage in a program.The value stored in a variable can be changed during program execution.A variable is only a name given to a memory location, all the operations done on the variable effects that memory location.all the variables must be declared before use.
 
@@ -41,9 +39,17 @@ A Function is a block of code or program segment that is defined to perform a sp
 2. Array
 An Array is a collection of similar types of items stored at continuous memory locations. The idea of array is to represent many instances in one variable.
 3. Pointers
-an identifier preceded with * symbol is called pointer.it is a variable which hold the address of another variable.
+it is a variable which hold the address of another variable.an identifier preceded with * symbol is called pointer.
 4. Reference
 When a variable is declared as reference, it becomes an alternative name for an existing variable. A variable can be declared as reference by putting ‘&’ in the declaration.
+
+difference between reference and pointer:
+It cannot work with arrays
+It can work with arrays
+To access the members of class/struct it uses a ‘ . ‘	
+To access the members of class/struct it uses a ‘ -> ‘ 
+It is referring to another variable.
+It is storing the address of the variable.
 
 1. Class
 It is a user-defined data type, which holds its own data members and member functions, which can be accessed and used by creating an instance of that class. A class is like a blueprint for an object.
@@ -253,8 +259,62 @@ Runtime Polymorphism -- A. Function Overriding B. Virtual Function
 A. Function Overloading
 When there are multiple functions with the same name but different parameters, then the functions are said to be overloaded, hence this is known as Function Overloading.
 
+#include <iostream>
+using namespace std;
+class s{
+    public:
+    // Function overloading example
+void greet() {
+    cout << "Hello!" << endl;
+}
+void greet(string name) {
+    cout << "Hello, " << name << "!" << endl;
+}
+void greet(string name, int age) {
+    cout << "Hello, " << name << "! You are " << age << " years old." << endl;
+}
+};
+int main() {
+    // Calling the overloaded functions
+    s anand;
+    anand.greet();                       // Output: Hello!
+    anand.greet("Alice");                // Output: Hello, Alice!
+    anand.greet("Bob", 25);              // Output: Hello, Bob! You are 25 years old.
+    return 0;
+}
+
+
 B. Operator Overloading
-C++ has the ability to provide the operators with a special meaning for a data type, this ability is known as operator overloading.Operator overloading is when you define or change the behavior of an operator (like +, -, *, etc.) for a custom data type or class in programming.
+Operator overloading is when you define or change the behavior of an operator (like +, -, *, etc.) for a custom data type or class in programming. C++ has the ability to provide the operators with a special meaning for a data type, this ability is known as operator overloading.
+#include<iostream>
+using namespace std;
+class complex{
+    private:
+    int real,imag;
+    public:
+    complex(int x,int y){
+        real=x;
+        imag=y;
+    }
+    void display(){
+        cout<<real<<" + "<<imag<<"i";
+    }
+    complex(){}
+    complex operator+ (complex &y){
+        complex t;
+        t.real=real * y.real;
+        t.imag=imag * y.imag;
+        return t;
+    }
+};
+int main(){
+    complex c1(2,4),c2(3,9);
+    complex c3=c1+c2;
+    c3.display();
+}
+/*6 + 36i
+PS D:\cpp\friend function> */
+
 
 A. Function Overriding
 Function Overriding occurs when a derived class has a definition for one of the member functions of the base class. That base function is said to be overridden.
@@ -262,30 +322,84 @@ Function Overriding occurs when a derived class has a definition for one of the 
 #include <bits/stdc++.h>
 using namespace std;
 
-//  base class declaration.
-class Animal {
-public:
-    string color = "Black";
-};
-
-// inheriting Animal class.
-class Dog : public Animal {
-public:
-    string color = "Grey";
-};
-
-// Driver code
-int main(void)
+class base
 {
-    Animal d = Dog(); // accessing the field by reference
-                      // variable which refers to derived
-    cout << d.color;
+public:
+    virtual void print()
+    {
+        cout << "i am print base class" << endl;
+    }
+   virtual void display()
+    {
+        cout << "i am display base class" << endl;
+    }
+};
+class derive : public base
+{
+public:
+    void print()
+    {
+        cout << "i am print derive class" << endl;
+    }
+    void display()
+    {
+        cout << "i am display derive class" << endl;
+    }
+};
+int main()
+{
+    base *ptr;
+    derive der;
+    ptr = &der;
+    ptr->display();
+    ptr->print();
+    return 0;
 }
-Output
-Black
+/*i am display derive class
+i am print derive class  
+PS D:\cpp\polymorphism>*/
 
 B. Virtual Function
 A virtual function is a member function that is declared in the base class using the keyword virtual and is re-defined (Overridden) in the derived class.
+#include <bits/stdc++.h>
+using namespace std;
+
+class base
+{
+public:
+    void print()
+    {
+        cout << "i am print base class" << endl;
+    }
+    void display()
+    {
+        cout << "i am display base class" << endl;
+    }
+};
+class derive : public base
+{
+public:
+    void print()
+    {
+        cout << "i am print derive class" << endl;
+    }
+    void display()
+    {
+        cout << "i am display derive class" << endl;
+    }
+};
+int main()
+{
+    base *ptr;
+    derive der;
+    ptr = &der;
+    ptr->display();
+    ptr->print();
+    return 0;
+}
+/*i am display base class
+i am print base class  
+PS D:\cpp\polymorphism>*/
 
 Difference between Inheritance and Polymorphism:
 
@@ -298,8 +412,6 @@ Polymorphism allows the object to decide which form of the function to implement
 Inheritance can be single, hybrid, multiple, hierarchical and multilevel inheritance.
 Whereas it can be compiled-time polymorphism (overload) as well as run-time polymorphism (overriding).
 
-Vectors are a dynamic array-like data structure that stores elements of the same data type in a contiguous fashion that can resize itself automatically unlike arrays which mean vectors can grow when an element is inserted or shrink when an element is deleted.
-
 Types of Inheritance:
 
 Single Inheritance: When a derived class inherits the properties of a single base class, it is known as Single Inheritance.
@@ -307,3 +419,73 @@ Multiple Inheritance: When a derived class inherits the properties of multiple b
 Multilevel Inheritance: When a derived class inherits the properties of another derived class, it is known as Multilevel Inheritance.
 Hierarchical Inheritance: When more than one derived class inherits the properties of a single base class, it is known as Hierarchical Inheritance.
 Hybrid (Virtual) Inheritance: When we combine more than one type of inheritance, it is known as Hybrid (Virtual) Inheritance. Example: Combining Multilevel and Hierarchical inheritance.
+
+new vs malloc()
+#include<iostream>
+using namespace std;
+int main()
+{
+	// Initialization with new()
+	int *n = new int(10); 
+	cout << *n;
+	return 0;
+}
+Output: 
+10
+
+size is calculated by compiler	
+size is calculated manually
+It is an operator	
+It is a function
+calls constructor	
+does not calls constructors              
+Returns exact data type	
+Returns void *
+on failure, Throws bad_alloc exception 
+On failure, returns NULL
+
+Difference Between Class And Object:
+Class is used as a template for declaring and creating the objects.
+An object is an instance of a class.
+When a class is created, no memory is allocated.
+Objects are allocated memory space whenever they are created.
+The class has to be declared first and only once.	
+An object is created many times as per requirement.
+A class is a logical entity.	
+An object is a physical entity.
+It is declared with the class keyword	
+It is created with a class name in C++ 
+Syntax: Declaring Class in C++ is as follows: 
+
+class Student {
+   public:
+      void put(){
+          cout<<“Function Called”<<endl;
+      }
+};   // The class is declared here
+
+int main(){
+         Student s1;   // Object created
+         s1.put();
+}
+Example: Bike	Example: Ducati, Suzuki, Kawasaki
+
+Difference Between class and structure in C++
+Members of a class are private by default.
+Members of a structure are public by default.
+It is declared using the class keyword.
+It is declared using the struct keyword.
+It is normally used for data abstraction and inheritance.
+It is normally used for the grouping of different datatypes.
+Memory is allocated on the stack.
+Memory is allocated on the heap.
+
+STL stands for Standard template library and is the collection of some most commonly used algorithms and data structures such as vectors, maps, etc. It is a generalized library that works for all data types. STL has 4 components.
+
+C++ gives a feature that allows functions and classes to operate with generic types in the form of templates. We only have to write the code of a function or a class once and it will be able to operate on different data types.
+
+The Containers in STL are class templates using which we implement data structures like a queue, stack, etc. These containers act similarly to their corresponding data structure, manage the storage space for its elements and provide member functions to access them.
+
+Algorithms in STL is a library that contains some commonly used methods predefined as function templates. 
+
+Vectors are a dynamic array-like data structure that stores elements of the same data type in a contiguous fashion that can resize itself automatically unlike arrays which mean vectors can grow when an element is inserted or shrink when an element is deleted.

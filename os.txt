@@ -60,3 +60,35 @@ Multiprogramming refers to the capability of a computer system to run multiple p
 Multitasking refers to the ability of an operating system to execute multiple tasks (processes or threads) seemingly at the same time by rapidly switching between them. This creates the illusion of parallelism on a single CPU.
 
 device driver -- a driver provider a software interface to hardware device enabling o.s and other computer program to access hardware function without knowing the precise details about the hardware being used.
+
+The OSI (Open Systems Interconnection) Model is a set of rules that explains how different computer systems communicate over a network.
+there are seven layers
+1.application layer - closest to the end user, this layer interact with software application. (HTTP,SMTP,DNS)
+2.presentation layer - this layer ensure the data is in readable formate, data encryption and data decryption.
+3.session layer - this layer maintained the connection between application.
+4.transport layer - provide reliable data transfer through tcp and udp protocal
+5.network layer - it makes sure that the ip packets are routed by the router.
+6.data link layer - handle error detection and error correction under the frame level.
+7.physical layer - physical transfer of data happen over the network.
+
+Differences between TCP(transfer control protocol) and UDP(user Datagram protocal)
+TCP is a connection-oriented protocol. Connection orientation means that the communicating devices should establish a connection before transmitting data and should close the connection after transmitting the data.
+UDP is the Datagram-oriented protocol. This is because there is no overhead for opening a connection, maintaining a connection, or terminating a connection. UDP is efficient for broadcast and multicast types of network transmission
+TCP provides extensive error-checking mechanisms. It is because it provides flow control and acknowledgment of data.
+UDP has only the basic error-checking mechanism using checksums.
+TCP is comparatively slower than UDP.
+UDP is faster, simpler, and more efficient than TCP.
+TCP doesn’t support Broadcasting.
+UDP supports Broadcasting.
+This protocol is primarily utilized in situations when a safe and trustworthy communication procedure is necessary, such as in email, on the web surfing, and in military services.
+This protocol is used in situations where quick communication is necessary but where dependability is not a concern, such as VoIP, game streaming, video, and music streaming, etc
+
+difference between MAC Address and IP Address: 
+MAC Address stands for Media Access Control Address.
+IP Address stands for Internet Protocol Address.
+MAC Address is a six byte hexadecimal address.
+IP Address is either a four-byte (IPv4) or a sixteen-byte (IPv6) address.
+NIC Card’s Manufacturer provides the MAC Address.
+Internet Service Provider provides IP Address.
+MAC address is hardware oriented.
+IP address is software oriented

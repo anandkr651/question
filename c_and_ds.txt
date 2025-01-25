@@ -1,0 +1,115 @@
+Dynamic Memory Management
+Dynamic memory management allows the programmer to allocate the memory at the program’s runtime. The C language provides four <stdlib.h> functions for dynamic memory management which are malloc(), calloc(), realloc() and free().
+
+Difference Between malloc() and calloc()
+malloc() only takes one argument
+calloc() takes two arguments.
+malloc() is faster than calloc.
+calloc() is slower than malloc()
+Syntax : void* malloc(size_t size);
+Syntax : void* calloc(size_t num, size_t size);
+malloc() does not initialize the memory to zero
+calloc() initializes the memory to zero
+malloc() is used to indicate memory allocation
+calloc() is used to indicate contiguous memory allocation
+
+C is a middle-level language because it binds the gap between machine level language and high-level language.It can be used for both, system programming (like as operating system) As well as application programming (like as spreadsheet, Transaction Management Systems).
+ Here are the key features of C:
+
+The syntax of C is simple and easy to understand, making it a good starting point for learning programming.
+C programs are highly portable, meaning they can be run on different machines with little or no modification, provided a suitable compiler is available
+C supports structured programming concepts like functions, loops, and conditional statements, allowing programs to be modular and easier to debug.
+C provides functions like malloc(), calloc(), realloc(), and free() for dynamic memory allocation and deallocation.
+C supports recursion, allowing functions to call themselves, which is useful for tasks like solving mathematical problems and implementing algorithms.
+
+Difference Between Call by Value and Call by Reference in C
+While calling a function, we pass the values of variables to it. Such functions are known as “Call By Values”.	
+While calling a function, instead of passing the values of variables, we pass the address of variables(location of variables) to the function known as “Call By References.
+In this method, the value of each variable in the calling function is copied into corresponding dummy variables of the called function.	
+In this method, the address of actual variables in the calling function is copied into the dummy variables of the called function.
+With this method, the changes made to the dummy variables in the called function have no effect on the values of actual variables in the calling function.	
+With this method, using addresses we would have access to the actual variables and hence we would be able to manipulate them.
+In call-by-values, we cannot alter the values of actual variables through function calls.	
+In call by reference, we can alter the values of variables through function calls.
+Values of variables are passed by the Simple technique.	
+Pointer variables are necessary to define to store the address values of variables.
+
+A variable can be of the following types:
+Local Variable
+Global Variable
+Static Variable
+Extern Variable
+Auto Variable
+Register Variable
+
+Local Variables:
+Local variables are declared within a specific block of code, such as within a function or a loop.
+They are only accessible within the block in which they are declared.
+Once the block of code in which they are declared exits, the memory allocated to these variables is released, and they are no longer accessible.
+Local variables can have the same name as variables in other blocks without conflict because their scope is limited to the block in which they are declared.
+They are typically used for temporary storage or only relevant data within a specific context.
+
+Global Variables:
+Global variables are declared outside of any function or block of code, usually at the top of a program or in a separate file.
+They are accessible from any part of the program, including within functions, loops, or other blocks of code.
+Global variables retain their value throughout the lifetime of the program unless explicitly modified or reset.
+Due to their accessibility from anywhere in the program, global variables can introduce unintended side effects and make it harder to understand and debug code, especially in larger programs.
+They are typically used for values that need to be accessed and modified by multiple parts of the program.
+
+The size of these basic data types can be modified using data type modifiers which are:
+short
+long
+signed
+unsigned
+
+There are different types of pointers :--
+Double Pointers
+Function Pointers
+Structure Pointers
+NULL Pointers
+Dangling Pointers
+Wild Pointers
+
+Type of Function
+A function can be of 4 types based on return value and parameters:
+
+Function with no return value and no parameters.
+Function with no return value and parameters.
+Function with return value and no parameters.
+Function with return value and parameters.
+
+Storage Classes are used to describe the features of a variable/function. These features basically include the scope, visibility, and lifetime which help us to trace the existence of a particular variable during the runtime of a program.
+
+1. auto
+This is the default storage class for all the variables declared inside a function or a block. Hence, the keyword auto is rarely used while writing programs in C language. Auto variables can be only accessed within the block/function they have been declared and not outside them (which defines their scope). Of course, these can be accessed within nested blocks within the parent block/function in which the auto variable was declared.
+
+2. register
+This storage class declares register variables that have the same functionality as that of the auto variables. The only difference is that the compiler tries to store these variables in the register of the microprocessor if a free register is available. This makes the use of register variables to be much faster than that of the variables stored in the memory during the runtime of the program.
+
+3. static
+This storage class is used to declare static variables which are popularly used while writing programs in C language. Static variables have the property of preserving their value even after they are out of their scope! Hence, static variables preserve the value of their last use in their scope. So we can say that they are initialized only once and exist till the termination of the program. Thus, no new memory is allocated because they are not re-declared.
+
+4. extern
+Extern storage class simply tells us that the variable is defined elsewhere and not within the same block where it is used. Basically, the value is assigned to it in a different block and this can be overwritten/changed in a different block as well. The main purpose of using extern variables is that they can be accessed between two different files which are part of a large program.
+
+Loops in programming are used to repeat a block of code until the specified condition is met. A loop statement allows programmers to execute a statement or group of statements multiple times without repetition of code.
+
+recursive :
+The process in which a function calls itself is called recursion and the corresponding function is called a recursive function.
+A recursive algorithm takes one step toward solution and then recursively call itself to further move. The algorithm stops once we reach the solution.
+Since called function may further call itself, this process might continue forever. So it is essential to provide a base case to terminate this recursion process.
+
+difference between an array and a linked list
+An array is a static data structure, while a linked list is a dynamic data structure. Arrays have a fixed size, and elements are stored consecutively in memory, while linked lists can grow and do not require contiguous memory allocation.
+
+A linked list is a linear data structure consisting of a sequence of elements, where each element points to the next one, forming a chain.
+
+binary tree --> allmost two child
+binary search tree --> node < root node <= node
+strictly binary tree --> each node has no child or two child
+complete binary tree --> all leaf nodes are places a same level
+extended binary tree --> by adding some additional node
+threaded binary tree --> implement the concept of thread
+expression tree --> represent the arithmetic expression
+heap tree --> a complete binary tree in which each node has either greater value from its child node or less value from its child node. i. max heap ii.min heap.
+avl tree --> an optimal binary search tree,the difference between the height of left sub tree and right sub tree is 1,0,-1.

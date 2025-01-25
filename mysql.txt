@@ -1,0 +1,76 @@
+MySQL is a popular open-source Relational Database Management System (RDBMS) that uses SQL (Structured Query Language) for database operations. While MySQL is a specific database system accessible for free and supports various programming languages.it was developed by Oracle Corporation.MySQL is widely used for various applications, from small websites to large-scale enterprise systems.
+
+Difference Between MySQL and SQL
+
+MySQL is a Relational Database Management System (RDBMS) that uses SQL (Structured Query Language).	
+SQL (Structured Query Language) is a standard language used for communicating with relational databases.
+MySQL is open source and accessible to any and everyone for free. 
+It is not an open-source language.
+MySQL supports basic programming languages like C, C++, Python, Ruby, etc.
+SQL is in itself a Query language used for database systems.
+MySQL available only in the English language.
+SQL is available in different languages.
+MySQL doesn’t support user-defined functions and XML.
+SQL supports user-defined functions and XML.
+
+What is MySQL and How does it differ from other relational databases?
+MySQL is an open-source relational database management system (RDBMS) that is widely used for managing structured data. It utilizes SQL (Structured Query Language) for querying and managing data. MySQL is known for its reliability, scalability, and performance, making it a popular choice for various applications
+
+3306 is MySQL server‘s default port.
+
+What are the differences between CHAR and VARCHAR data types in MySQL?
+Storage and retrieval have been different for CHAR and VARCHAR.
+Column length is fixed in CHAR but VARCHAR length is variable.
+CHAR is faster than VARCHAR.
+CHAR datatype can hold a maximum of 255 characters while VARCHAR can store up to 4000 characters.
+
+Explain the difference between having and where clause in MySQL.
+WHERE statement is used to filter rows but HAVING statement is used to filter groups.
+GROUP BY is not used with WHERE. HAVING clause is used with GROUP BY.
+
+What is the difference between DELETE and TRUNCATE commands in MySQL?
+DELETE Command is used to delete rows from the table depending on given the condition. TRUNCATE command is used to DELETE all rows from the table. DELETE command is a Data Manipulation Language command. TRUNCATE command is a Data Definition Language command.
+
+What is a view? How to create a view?
+A database object that has no value is called view. Rows and columns exist in a view. A view is virtual table. it is created by combining one or more tables. The difference of a view and a table is that views are definition that build on other tables. If the underlying table changes, the View will also reflect those same changes.
+
+
+What is MongoDB?
+As we already explain that, MongoDB is a document-oriented NoSQL database system that provides high scalability, flexibility, and performance. Unlike standard relational databases, MongoDB stores data in a JSON document structure form. This makes it easy to operate with dynamic and unstructured data and MongoDB is an open-source and cross-platform database System.
+
+Database
+Database is a container for collections.
+Each database gets its own set of files.
+A single MongoDB server can has multiple databases.
+Collection
+Collection is a group of documents.
+Collection is equivalent to RDBMS table.
+A collection consist inside a single database.
+Collections do not enforce a schema.
+A Collection can have different fields within a Documents.
+
+
+1. What is MongoDB, and How Does It Differ from Traditional SQL Databases?
+MongoDB is a NoSQL database which means it does not use the traditional table-based relational database structure. Instead of it uses a flexible and document-oriented data model that stores data in BSON (Binary JSON) format.
+
+Unlike SQL databases that use rows and columns, MongoDB stores data as JSON-like documents, making it easier to handle unstructured data and providing greater flexibility in terms of schema design.
+
+What are Collections And Databases In MongoDB?
+In MongoDB, a database is a container for collections, and a collection is a group of MongoDB documents. Collections are equivalent to tables in SQL databases, but they do not enforce a schema allowing for flexibility in the structure of the documents they contain. For example, you might have a users collection in a mydatabase database.
+
+What are the Advantages of Using MongoDB Over Other Databases?
+Flexibility: MongoDB's document-oriented model allows for dynamic schemas.
+Scalability: Built-in sharding enables horizontal scaling.
+High Availability: Replica sets provide redundancy and automatic failover.
+Performance: Efficient storage and retrieval with BSON format.
+Ease of Use: JSON-like documents make it easier for developers to interact with data
+
+What are MongoDB Aggregation Pipelines and How are They Used?
+The aggregation pipeline is a framework for data aggregation, modeled on the concept of data processing pipelines. Documents enter a multi-stage pipeline that transforms the documents into aggregated results.
+
+Each stage performs an operation on the input documents and passes the results to the next stage.
+
+Describe the Aggregation Framework in MongoDB
+The Aggregation Framework in MongoDB is a powerful tool for performing data processing and transformation on documents within a collection. It works by passing documents through a multi-stage pipeline, where each stage performs a specific operation on the data, such as filtering, grouping, sorting, reshaping and computing aggregations.
+
+This framework is particularly useful for creating complex data transformations and analytics directly within the database.

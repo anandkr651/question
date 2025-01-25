@@ -1,0 +1,20 @@
+Q Tell me about yourself ?
+Thank you for giving me this opportunity to introduce myself. My name is Anand Kumar, and I am from Bihar. I am currently pursuing a Bachelor's degree in Computer Science at Patliputra University, Patna.
+I secured 81% in my 12th standard and 84% in my 10th standard. My technical skills include programming in C and C++, database management, and web development. I have utilized these skills to work on projects like a shopping cart, a book-list, and a receipt list.
+I consider myself a focused individual who works efficiently toward achieving goals. I am a team player, optimistic even in tough situations, and always open to learning and growth.
+Beyond academics, I have a strong interest in coding, which allows me to stay creative and maintain a balanced perspective. This combination of determination, adaptability, and enthusiasm defines me."
+That’s all about me.
+
+Q what is your short & long term goals
+My short-term goal is to secure a position in a reputable company where I can enhance my technical expertise and gain valuable experience.
+My long-term goal is to build a successful career in the IT field, contributing meaningfully to both my growth and the organization's success.
+
+Q what is the strength and weekness of you 
+My strengths include being hardworking, having strong problem-solving abilities, and good time management skills.
+As for my weakness, I feel nervous when it comes to public speaking. I get nervous when I need to give a presentation in front of many people.
+
+Q Why should I hire you?
+I am a fresher.I need a platform to prove myself and enhance my skills. If you hire me, I will do my best effort for the development of the company because it will give me the opportunity to improve myself and gain more knowledge.
+
+Q Why do you want to work at our company ?
+Because everybody wants to start their career with the best company and as a fresher, I would like to join your company because your company is the fastest-growing company in the industry and if I join it will be a great opportunity for increasing my knowledge and upgrading my experience and my skills.
