@@ -23,3 +23,10 @@ int main(){
         cout<<i<<" ";
     }
 }
+/*enter the size of an array 4
+enter the element 1
+2
+3
+4
+4 1 2 3 
+PS D:\question\tcs question>*/

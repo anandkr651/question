@@ -36,12 +36,13 @@ A database object that has no value is called view. Rows and columns exist in a 
 
 
 What is MongoDB?
-As we already explain that, MongoDB is a document-oriented NoSQL database system that provides high scalability, flexibility, and performance. Unlike standard relational databases, MongoDB stores data in a JSON document structure form. This makes it easy to operate with dynamic and unstructured data and MongoDB is an open-source and cross-platform database System.
+MongoDB is a document-oriented NoSQL database system that provides high scalability, flexibility, and performance. Unlike standard relational databases, MongoDB stores data in a JSON document structure form. This makes it easy to operate with dynamic and unstructured data and MongoDB is an open-source and cross-platform database System.
 
 Database
 Database is a container for collections.
 Each database gets its own set of files.
 A single MongoDB server can has multiple databases.
+ 
 Collection
 Collection is a group of documents.
 Collection is equivalent to RDBMS table.
@@ -52,7 +53,6 @@ A Collection can have different fields within a Documents.
 
 1. What is MongoDB, and How Does It Differ from Traditional SQL Databases?
 MongoDB is a NoSQL database which means it does not use the traditional table-based relational database structure. Instead of it uses a flexible and document-oriented data model that stores data in BSON (Binary JSON) format.
-
 Unlike SQL databases that use rows and columns, MongoDB stores data as JSON-like documents, making it easier to handle unstructured data and providing greater flexibility in terms of schema design.
 
 What are Collections And Databases In MongoDB?
@@ -67,7 +67,6 @@ Ease of Use: JSON-like documents make it easier for developers to interact with 
 
 What are MongoDB Aggregation Pipelines and How are They Used?
 The aggregation pipeline is a framework for data aggregation, modeled on the concept of data processing pipelines. Documents enter a multi-stage pipeline that transforms the documents into aggregated results.
-
 Each stage performs an operation on the input documents and passes the results to the next stage.
 
 Describe the Aggregation Framework in MongoDB

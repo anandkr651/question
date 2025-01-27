@@ -32,3 +32,5 @@ int main()
     int n = longestPrefixSuffix(s);
     cout << "answer is " << n;
 }
+/*answer is 0
+PS D:\question\tcs question> */
