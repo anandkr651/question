@@ -7,3 +7,6 @@ but in vector sort(a.begin(),a.end());
 
 11/1/25
 STL->algo when we can rotate any vector let suppose k then we can use rotate(a.begin(),a.begin()+k,a.end()) whereas "a" is the vector.
+
+29/1/25
+tcs question -->08_program_to_add_two_fraction mi hcf and lcm.
