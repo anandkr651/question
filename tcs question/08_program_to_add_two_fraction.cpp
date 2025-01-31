@@ -5,23 +5,8 @@ using namespace std;
 void addFraction(int num1, int den1, int num2, int den2)
 {
     int small1, small2;
-    if (num1 > den1)
-    {
-        small1 = den1;
-    }
-    else
-    {
-        small1 = num1;
-    }
-
-    if (num2 > den2)
-    {
-        small2 = den2;
-    }
-    else
-    {
-        small2 = num2;
-    }
+    small1=min(num1,den1);
+    small2=min(num2,den2);
     while (small1 != 1)
     {
         for (int i = 2; i <= small1; i++)
