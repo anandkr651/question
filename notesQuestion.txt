@@ -10,3 +10,7 @@ STL->algo when we can rotate any vector let suppose k then we can use rotate(a.b
 
 29/1/25
 tcs question -->08_program_to_add_two_fraction mi hcf and lcm.
+
+2/2/25
+tcs question --> 22_find_common_characters in this file something new use(npos)
+tcs question --> 23_uncommon_words_from_two_sentences in this file something new use(stringstream)

@@ -45,3 +45,32 @@ int main()
 the sky is blue
 blue is sky the
 PS C:\Users\DELL\OneDrive\Desktop\question\question>*/
+
+#include<bits/stdc++.h>
+using namespace std;
+string reverseword(string s){
+    stringstream ss1(s);
+    string word;
+    vector<string>ans;
+    while(ss1>>word){
+      ans.push_back(word);
+      ans.push_back(" ");
+    }
+    ans.pop_back();
+    string p;
+    for(auto x:ans){
+       p=x+p;
+    }
+    return p;
+}
+int main()
+{
+    string s;
+    cout << "enter the string " << endl;
+    getline(cin, s);
+    cout <<reverseword(s);
+}
+/*enter the string 
+the sky is blue
+blue is sky the
+PS D:\question\question>*/
