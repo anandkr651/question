@@ -1,4 +1,4 @@
-//A stringstream associates a string object with a stream allowing you to read from the string as if it were a stream (like cin).
+// A stringstream associates a string object with a stream allowing you to read from the string as if it were a stream (like cin).
 #include <bits/stdc++.h>
 using namespace std;
 vector<string> uncommonFromSentences(string s1, string s2)
@@ -14,7 +14,7 @@ vector<string> uncommonFromSentences(string s1, string s2)
     {
         mp[word2]++;
     }
-    ss2<<"anand";
+    ss2 << "anand";
     vector<string> ans;
     for (auto x : mp)
     {
@@ -47,37 +47,35 @@ enter the second string banana
 banana
 PS D:\question\tcs question>*/
 
-
-// C++ program to count words in  
+// C++ program to count words in
 // a string using stringstream.
 #include <iostream>
 #include <sstream>
-#include<string>
+#include <string>
 using namespace std;
 
 int countWords(string str)
 {
-    // Breaking input into word 
+    // Breaking input into word
     // using string stream
-  
+
     // Used for breaking words
-    stringstream s(str); 
-  
+    stringstream s(str);
+
     // To store individual words
-    string word; 
+    string word;
 
     int count = 0;
     while (s >> word)
         count++;
     return count;
-
-    
 }
 
 // Driver code
 int main()
 {
-    string s = "geeks for geeks geeks " "contribution placements";
+    string s = "geeks for geeks geeks "
+               "contribution placements";
     cout << " Number of words are: " << countWords(s);
     return 0;
 }
