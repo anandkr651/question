@@ -7,17 +7,18 @@ int main()
     int n;
     cout << "enter the number";
     cin >> n;
-    int ans = 0;
-    int i = 0;
+    string ans = "";
     while (n != 0)
     {
-        int bit = n & 1;
-        ans = (bit * pow(10, i)) + ans;
-        n = n >> 1;
-        i++;
+        int res = n % 2;
+        ans=to_string(res)+ans;
+        n = n / 2;
     }
     cout << ans;
 }
 /*enter the number5
 101
 PS C:\Users\DELL\OneDrive\Desktop\question\question> */
+/*enter the number13
+1101
+PS D:\question\question>*/

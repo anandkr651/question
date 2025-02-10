@@ -30,7 +30,7 @@ vector<int> sortFrequency(vector<int> arr)
                     ans.push_back(x.first);
                     x.second--;
                 }
-                mp[x.first] = 0;
+                mp[x.second] = 0;
                 break;
             }
         }

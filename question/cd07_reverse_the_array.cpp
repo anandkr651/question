@@ -18,7 +18,7 @@ void reversearry(vector<int> &ans, int m)
 int main()
 {
   vector<int> ans;
-  int p, m = 3; // HERE M IS THE INDEX NUMBER WHERE HAS BEEN NUMBER BEEN REVERSE.
+  int p, m = 3; // HERE M IS THE INDEX NUMBER WHERE HAS BEEN NUMBER BEEN REVERSE IN THE QUESTION.
   cout << "enter the number ";
   for (int i = 0; i < 10; i++)
   {
@@ -26,9 +26,7 @@ int main()
     ans.push_back(p);
   }
   // reverse(ans.begin()+m+1,ans.end());
-
   //OR
-
   reversearry(ans, m);
   for (int i : ans)
   {

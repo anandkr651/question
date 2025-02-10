@@ -16,6 +16,15 @@ tcs question --> 22_find_common_characters -->in this file something new use(npo
 tcs question --> 23_uncommon_words_from_two_sentences -->in this file something new use(stringstream)
 
 5/2/25
-tcs question --> 24_excel_sheet_column_number -->in this file new use string convert in to the to ascii value -->(int)s
 -->string converted in to interger --> stoi(s);
 -->integer converted in to string --> to_string(s);
+
+10/2/25
+question --> cd09
+isalpha()  -->  check if the given character is an alphabet or not
+isdigit()  -->  check if the passed character is a digit or not
+isalnum()  -->  check the input is either an alphabet or number
+
+tcs question --> 33 decimal to binary
+tcs question --> 34 binary to decimal
+tcs question --> 21 count in the set we use is just similar to find

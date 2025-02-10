@@ -73,7 +73,7 @@ int main()
 {
     int arr[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     int s = 1, start = 0;
-    int end = 9;
+    int end = sizeof(arr)/sizeof(arr[0])-1;
     bool ans = bsearch(arr, s, start, end);
     if (ans == 1)
     {

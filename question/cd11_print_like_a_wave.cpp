@@ -6,6 +6,7 @@ vector<int> waveprint(vector<vector<int>> &arr)
     vector<int> ans;
     int g = arr.size();
     int h = arr[0].size();
+    // cout<<g<<" "<<h<<endl; //3 4
     for (int col = 0; col < h; col++)
     {
         // if (col & 1)    OR

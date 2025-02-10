@@ -94,6 +94,7 @@ sorted array
 0011112222
 PS C:\Users\DELL\OneDrive\Desktop\dsa in c++\question>*/
 
+//sort in the array
 #include<bits/stdc++.h>
 using namespace std;
 int main()

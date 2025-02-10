@@ -1,21 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-// int findUnion(vector<int> &a, vector<int> &b)
-// {
-//     int m = a.size(), n = b.size(), j = 0, count = 1;
-//     a.insert(a.end(), b.begin(), b.end());
-//     sort(a.begin(), a.end());
-//     for (int i = 0; i < m + n - 1; i++)
-//     {
-//         if (a[i] != a[i + 1])
-//         {
-//             count++;
-//         }
-//     }
-//     return count;
-// }
-
-//  ***************** OR ************
 int findUnion(vector<int> &a, vector<int> &b){
     set<int> unionSet;
     for(auto num:a){

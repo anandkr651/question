@@ -57,8 +57,9 @@ PS C:\Users\DELL\OneDrive\Desktop\question\question>*/
 {{{{
 2
 PS C:\Users\DELL\OneDrive\Desktop\question\question>*/
+//this case give no output because in line no 19 we can first check the stack of top then we can check the stack is empty so it give no any output.
 /*enter the curly braces {}
-}}}{{{             //******** this case give no output because in line no 19 we can first check the stack of top then we can check the stack is empty so it give no any output.
+}}}{{{
 4
 PS C:\Users\DELL\OneDrive\Desktop\question\question>*/
 

@@ -19,3 +19,6 @@ int main(){
 /*enter the number of person 5
 arrange N person around a circular table 24
 PS D:\question\tcs question>*/
+/*enter the number of person 4
+arrange N person around a circular table 6
+PS D:\question\tcs question>*/

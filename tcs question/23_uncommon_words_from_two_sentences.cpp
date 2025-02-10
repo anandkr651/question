@@ -14,7 +14,6 @@ vector<string> uncommonFromSentences(string s1, string s2)
     {
         mp[word2]++;
     }
-    ss2 << "anand";
     vector<string> ans;
     for (auto x : mp)
     {

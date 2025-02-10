@@ -9,15 +9,12 @@ string solve(int n)
 
     string ans = "";
     char arr[16] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'};
-    while (ourNum / 16 != 0)
+    while (ourNum != 0)
     {
         int rem = ourNum % 16;
         ans = arr[rem] + ans;
         ourNum = ourNum / 16;
     }
-    int rem = ourNum % 16;
-    ;
-    ans = arr[rem] + ans;
     return ans;
 }
 int main()
