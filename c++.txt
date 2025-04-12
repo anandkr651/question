@@ -2,6 +2,9 @@ C++ is an object-oriented programming language developed to address the limitati
 
 ‘std’ is also known as Standard or it can be interpreted as a namespace. The command “using namespace std” informs the compiler to add everything under the std namespace and inculcate them in the global namespace. This all inculcation of global namespace benefits us to use “cout” and “cin” without using “std::_operator_”.
 
+In C++ after the header files, we often use ‘using namespace std;‘. The reason behind it is that all of the standard library definitions are inside the namespace std. As the library functions are not defined at global scope, so in order to use them we use namespace std. So, that we don’t need to write STD:: at every line (eg. STD::cout etc.).
+insertion operator(<<)  extraction operator(>>)
+
 Variables is a name given to a memory location. It is the basic unit of storage in a program.The value stored in a variable can be changed during program execution.A variable is only a name given to a memory location, all the operations done on the variable effects that memory location.all the variables must be declared before use.
 
 All variables use data type during declaration to restrict the type of data to be stored. Therefore, we can say that data types are used to tell the variables the type of data they can store. the compiler allocates some memory for that variable based on the data type with which it is declared. Every data type requires a different amount of memory. 
@@ -78,9 +81,6 @@ int main()
 	return 0; 
 }
 An operator is a symbol that operates on a value to perform specific mathematical or logical computations. 
-
-In C++ after the header files, we often use ‘using namespace std;‘. The reason behind it is that all of the standard library definitions are inside the namespace std. As the library functions are not defined at global scope, so in order to use them we use namespace std. So, that we don’t need to write STD:: at every line (eg. STD::cout etc.).
-insertion operator(<<)  extraction operator(>>)
 
 // C++ Program to demonstrate strings
 #include <iostream>
@@ -455,6 +455,7 @@ A class is a logical entity.
 An object is a physical entity.
 It is declared with the class keyword	
 It is created with a class name in C++ 
+
 Syntax: Declaring Class in C++ is as follows: 
 
 class Student {

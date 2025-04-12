@@ -14,7 +14,7 @@ malloc() is used to indicate memory allocation
 calloc() is used to indicate contiguous memory allocation
 
 C is a middle-level language because it binds the gap between machine level language and high-level language.It can be used for both, system programming (like as operating system) As well as application programming (like as spreadsheet, Transaction Management Systems).
- Here are the key features of C:
+Here are the key features of C:
 
 The syntax of C is simple and easy to understand, making it a good starting point for learning programming.
 C programs are highly portable, meaning they can be run on different machines with little or no modification, provided a suitable compiler is available
@@ -95,14 +95,20 @@ Extern storage class simply tells us that the variable is defined elsewhere and 
 Loops in programming are used to repeat a block of code until the specified condition is met. A loop statement allows programmers to execute a statement or group of statements multiple times without repetition of code.
 
 recursive :
-The process in which a function calls itself is called recursion and the corresponding function is called a recursive function.
-A recursive algorithm takes one step toward solution and then recursively call itself to further move. The algorithm stops once we reach the solution.
-Since called function may further call itself, this process might continue forever. So it is essential to provide a base case to terminate this recursion process.
+The process in which a function calls itself is called recursion and the corresponding function is called a recursive function. Since called function may further call itself, this process might continue forever. So it is essential to provide a base case to terminate this recursion process.
 
 difference between an array and a linked list
 An array is a static data structure, while a linked list is a dynamic data structure. Arrays have a fixed size, and elements are stored consecutively in memory, while linked lists can grow and do not require contiguous memory allocation.
 
 A linked list is a linear data structure consisting of a sequence of elements, where each element points to the next one, forming a chain.
+
+A stack is a linear data structure that follows the Last-In-First-Out (LIFO) principle.The common operations on a stack are push (insert an element), pop (remove the top element), and peek (view the top element).
+
+A queue is a linear data structure that follows the First-In-First-Out (FIFO) principle, where elements are added at the rear (enqueue) and removed from the front (dequeue).
+
+A tree is a non-linear data structure consisting of nodes connected by edges. Each node contains data and references to its child nodes. It has one special node called the root, with no parent, and leaf nodes with no children.
+
+A heap is a complete binary tree that satisfies the heap property: each node’s value is greater than or equal to its children’s values. Max-heap and min-heap. In a max-heap, the root node has the maximum value, while in a min-heap, the root node has the minimum value.
 
 binary tree --> allmost two child
 binary search tree --> node < root node <= node
@@ -113,3 +119,8 @@ threaded binary tree --> implement the concept of thread
 expression tree --> represent the arithmetic expression
 heap tree --> a complete binary tree in which each node has either greater value from its child node or less value from its child node. i. max heap ii.min heap.
 avl tree --> an optimal binary search tree,the difference between the height of left sub tree and right sub tree is 1,0,-1.
+
+Preorder: Visit root, then left subtree, then right subtree.
+Inorder: Visit left subtree, then root, then right subtree.
+Postorder: Visit left subtree, then right subtree, then root.
+Each traversal method has different purposes. Inorder is useful for printing sorted elements in a binary search tree, while preorder might be used for copying tree structure.

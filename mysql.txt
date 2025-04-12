@@ -14,15 +14,9 @@ MySQL doesn’t support user-defined functions and XML.
 SQL supports user-defined functions and XML.
 
 What is MySQL and How does it differ from other relational databases?
-MySQL is an open-source relational database management system (RDBMS) that is widely used for managing structured data. It utilizes SQL (Structured Query Language) for querying and managing data. MySQL is known for its reliability, scalability, and performance, making it a popular choice for various applications
+MySQL is an open-source relational database management system (RDBMS) that is widely used for managing structured data. It utilizes SQL (Structured Query Language) for querying and managing data. MySQL is known for its reliability, scalability, and performance, making it a popular choice for various applications.MySQL and PostgreSQL both are open source but Oracle and MS SQL Server is not open source. 
 
 3306 is MySQL server‘s default port.
-
-What are the differences between CHAR and VARCHAR data types in MySQL?
-Storage and retrieval have been different for CHAR and VARCHAR.
-Column length is fixed in CHAR but VARCHAR length is variable.
-CHAR is faster than VARCHAR.
-CHAR datatype can hold a maximum of 255 characters while VARCHAR can store up to 4000 characters.
 
 Explain the difference between having and where clause in MySQL.
 WHERE statement is used to filter rows but HAVING statement is used to filter groups.
@@ -73,3 +67,24 @@ Describe the Aggregation Framework in MongoDB
 The Aggregation Framework in MongoDB is a powerful tool for performing data processing and transformation on documents within a collection. It works by passing documents through a multi-stage pipeline, where each stage performs a specific operation on the data, such as filtering, grouping, sorting, reshaping and computing aggregations.
 
 This framework is particularly useful for creating complex data transformations and analytics directly within the database.
+
+A schema is a blueprint that defines how data is organized, structured, and accessed. It's a framework for managing data effectively. 
+
+What does a schema include? 
+Table names: The names of tables in the database
+Fields: The names of fields in the database
+Data types: The types of data in the database
+Relationships: How tables relate to each other
+Constraints: The rules that apply to maintain data integrity
+
+It divides the database into three different levels: Internal Schema (Physical Level) Conceptual Schema (Logical Level) External Schema (View Level)
+
+A physical schema defines how data is stored in the storage system, including the arrangement of files, indices and other storage structures. It specifies the actual code and syntax needed to create the database structure. Essentially, it determines where and how the data is stored in the physical storage medium.
+
+A logical schema defines the logical structure of the data, including tables, views, relationships, and integrity constraints. It describes how data is organized in tables and how the attributes of these tables are connected. The logical schema ensures that the data is stored in an organized manner, while maintaining data integrity.
+Using Entity-Relationship (ER) modeling, the logical schema outlines the relationships between different data components. It also defines integrity constraints to ensure the quality of data during insertion and updates.
+
+The view schema is the highest level of abstraction in a database, focusing on how users interact with the database. It defines the interface through which users can access and manipulate data, without needing to understand the underlying storage mechanisms.
+A database can have multiple view schemas, also known as subschemas, each providing a different perspective of the data. These schemas describe only a part of the database.
+
+A Data Model is the concept of tools that are developed to summarize the description of the database. Data Models provide us with a transparent picture of data which helps us in creating an actual database. It shows us from the design of the data to its proper implementation of data.
