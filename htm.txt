@@ -4,14 +4,14 @@ html is the standard markup language for creating a web page. html elements tell
 2.inline and block element
 inline element just take up the space that is absolute necessary
 eg:- <span> <a> <strong> <img> <button> <em> <select> <abbr> <label> <sub>
-block element start on a new line and consume the full width of the page availabel.
+block element start on a new line and consume the full width of the page available.
 eg:- <div> <p> <header> <footer> <h1...h6> <form> <tabel> <video> <blockQuote> <pre> <ul> <ol> <figCaption> <figure> <hr> <article> <section>
 
 DOCTYPE(document type) declaration specifies the version of html. DOCTYPE tells the browser which version of html it is and how to interpret the code.
 
 meta tags in html are element used to provide metatags or additional information about a web page.
 
-semantic element in html are element that provide meaning to the content they contain 
+semantic element in html are element that provide meaning to the content they contain such as header,nav bar, section, main etc.
 
 what are selector in css? how many types of selector are there?
 selector are pattern that are used to select and style html elements
@@ -32,8 +32,8 @@ The let and const Keywords
 Variables defined with let and const are hoisted to the top of the block, but not initialized.
 Meaning: The block of code is aware of the variable, but it cannot be used until it has been declared.
 
-event bubbling --> a propagation mde where events are handeled from the innermost elements to the outermost.
-event capturing --> a propagation mde where events are handeled from the outermost elements to the innermost.
+event bubbling --> a propagation mode where events are handeled from the innermost elements to the outermost.
+event capturing -->a propagation mode where events are handeled from the outermost elements to the innermost.
 
 lexical scope --> when a child function can access the parent variable then it said to be lexical scope.
 function outer() {
@@ -81,3 +81,5 @@ ticket.then((data)=>{
 
 async --> declaring a function with async makes it return a promise.
 await --> it pauses the execution of the code until the promise it is wating for it resolve then return the resolved value.
+
+react is developed by jordan walke. react is a popular JavaScript library used for building powerful user interface.its key strength lies in its ability to create component based architecture which allow developer to create reusable UI component. additional react is a virtual dom is able to create a copy of the real dom that minimizes direct dom manipulations which significantly boosts performance.

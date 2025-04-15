@@ -1,5 +1,7 @@
 Dynamic Memory Management
 Dynamic memory management allows the programmer to allocate the memory at the program’s runtime. The C language provides four <stdlib.h> functions for dynamic memory management which are malloc(), calloc(), realloc() and free().
+malloc --> malloc can allocate the single block of Memory.
+calloc --> calloc can allocate the multiple block of memory.
 
 Difference Between malloc() and calloc()
 malloc() only takes one argument

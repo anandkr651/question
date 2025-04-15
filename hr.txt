@@ -11,10 +11,14 @@ My long-term goal is to build a successful career in the IT field, contributing 
 
 Q what is the strength and weekness of you 
 My strengths include being hardworking, having strong problem-solving abilities, and good time management skills.
-As for my weakness, I feel nervous when it comes to public speaking. I get nervous when I need to give a presentation in front of many people.
+
+One of my weaknesses is that I feel nervous when it comes to public speaking, and I’m still working on improving my communication skills. However, I’m actively trying to overcome this by taking small opportunities to speak in front of others. For example, when a teacher is absent, I volunteer to help my department head by taking junior classes. These experiences are helping me build confidence and become more comfortable speaking in front of groups.
 
 Q Why should I hire you?
 I am a fresher.I need a platform to prove myself and enhance my skills. If you hire me, I will do my best effort for the development of the company because it will give me the opportunity to improve myself and gain more knowledge.
 
 Q Why do you want to work at our company ?
-Because everybody wants to start their career with the best company and as a fresher, I would like to join your company because your company is the fastest-growing company in the industry and if I join it will be a great opportunity for increasing my knowledge and upgrading my experience and my skills.
+I want to work at your company because every fresher dreams of starting their career with a top and trusted organization. TCS is a well-known multinational brand with a strong reputation for work-life balance, employee growth, and job security. Being part of a company that has been around for over 150 years gives me confidence that I’ll be in a stable and supportive environment where I can learn and grow.
+
+Q How about this one: "Can you describe a challenging situation you faced and how you handled it?"
+In a project where I was developing a chat application, I faced a problem with Socket.IO not connecting properly. Initially, I debugged the code and checked all functions to ensure they were correct. When I couldn’t resolve the issue, I consulted a senior and also searched online resources. I watched tutorials and reached out to a YouTuber who specializes in Socket.IO issues. Despite not finding an immediate solution from the online resources, I continued to analyze the code. After thoroughly debugging and testing, I eventually found a minor configuration error that was causing the issue. By fixing this, I was able to resolve the problem and ensure the application worked as expected. This experience taught me the value of persistence and utilizing multiple resources to solve complex problems.
