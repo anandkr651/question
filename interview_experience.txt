@@ -1,0 +1,26 @@
+after qualifing the aptitude test.
+my first interview was in kolkata 17/04/2025 for tcs smart hiring with a package of 1.8 lpa.
+interviewer asked the question.
+
+1.Is there anything that's not mentioned in your resume ?
+My father is a businessman, and growing up in that environment, I’ve learned how to stay calm under pressure and think practically. These skills really help me when I’m working on real-world projects—like debugging issues or solving problems in a team setting.
+
+2.what is friend functions in c++?
+3.what is oops and says about the four pillars of oops in details ?
+4.why you can learn c++ rather then java ??
+5.what is inheritance and types ?
+6.what is polymorphism and types ?
+7.what is function overloading and if the method name is same and the number of argument is same and change only in return types then it give error or not ??
+8.friend function voilate the oops concept ?
+9.what is different between abstraction and encapulation ?
+10.why should i hire you ?
+11.Why do you want to join us ?
+i can say that every fresher start their carrier with the multiple national company. in tcs has a work-life balance and job security
+
+12.what is work-life balance?
+13.what is job security?
+14.would you read book and what is writer name?
+15.what is your passion?
+My passion is to become a software developer. I enjoy solving problems and building things that people can actually use. Whenever I work on projects—like my eCommerce app—I feel excited to bring ideas to life through code. It’s something I genuinely enjoy doing, and I’m always eager to learn new technologies and improve my skills.
+
+16.who is ceo and founder of tcs ?
