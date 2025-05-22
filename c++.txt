@@ -5,7 +5,7 @@ C++ is an object-oriented programming language developed to address the limitati
 In C++ after the header files, we often use ‘using namespace std;‘. The reason behind it is that all of the standard library definitions are inside the namespace std. As the library functions are not defined at global scope, so in order to use them we use namespace std. So, that we don’t need to write STD:: at every line (eg. STD::cout etc.).
 insertion operator(<<)  extraction operator(>>)
 
-Variables is a name given to a memory location. It is the basic unit of storage in a program.The value stored in a variable can be changed during program execution.A variable is only a name given to a memory location, all the operations done on the variable effects that memory location.all the variables must be declared before use.
+Variables is a name given to a memory location. It is the basic unit of storage in a program.The value stored in a variable can be changed during program execution.all the operations done on the variable effects that memory location.all the variables must be declared before use.
 
 All variables use data type during declaration to restrict the type of data to be stored. Therefore, we can say that data types are used to tell the variables the type of data they can store. the compiler allocates some memory for that variable based on the data type with which it is declared. Every data type requires a different amount of memory. 
 C++ supports the following data types:
@@ -158,7 +158,6 @@ Encapsulation is defined as binding together the data and the functions that man
 Abstraction
 providing only essential information about the data to the outside world, hiding the background details or implementation
 
-
 #include <iostream>
 using namespace std;
 
@@ -219,8 +218,8 @@ Destructor release memory space occupied by the objects created by the construct
 In destructor, objects are destroyed in the reverse of an object creation.
 
 Why do we give semicolons at the end of class?
-Many people might say that it’s a basic syntax and we should give a semicolon at the end of the class as its rule defines in cpp. But the main reason why semi-colons are there at the end of the class is compiler checks if the user is trying to create an instance of the class at the end of it. 
-Yes just like structure and union, we can also create the instance of a class at the end just before the semicolon. As a result, once execution reaches at that line, it creates a class and allocates memory to your instance.
+compiler checks if the user is trying to create an instance of the class at the end of it. 
+just like structure and union, we can also create the instance of a class at the end just before the semicolon. As a result, once execution reaches at that line, it creates a class and allocates memory to your instance.
 
 Features of Encapsulation
 Below are the features of encapsulation:
@@ -257,7 +256,7 @@ Types of Polymorphism
 Compile-time Polymorphism --A. Function Overloading  B. Operator Overloading
 Runtime Polymorphism -- A. Function Overriding B. Virtual Function
 A. Function Overloading
-When there are multiple functions with the same name but different parameters, then the functions are said to be overloaded, hence this is known as Function Overloading.
+When there are multiple functions with the same name but different parameters and type, then the functions are said to be overloaded, hence this is known as Function Overloading.
 
 #include <iostream>
 using namespace std;
@@ -321,49 +320,6 @@ Function Overriding occurs when a derived class has a definition for one of the 
 // C++ program for function overriding with data members
 #include <bits/stdc++.h>
 using namespace std;
-
-class base
-{
-public:
-    virtual void print()
-    {
-        cout << "i am print base class" << endl;
-    }
-   virtual void display()
-    {
-        cout << "i am display base class" << endl;
-    }
-};
-class derive : public base
-{
-public:
-    void print()
-    {
-        cout << "i am print derive class" << endl;
-    }
-    void display()
-    {
-        cout << "i am display derive class" << endl;
-    }
-};
-int main()
-{
-    base *ptr;
-    derive der;
-    ptr = &der;
-    ptr->display();
-    ptr->print();
-    return 0;
-}
-/*i am display derive class
-i am print derive class  
-PS D:\cpp\polymorphism>*/
-
-B. Virtual Function
-A virtual function is a member function that is declared in the base class using the keyword virtual and is re-defined (Overridden) in the derived class.
-#include <bits/stdc++.h>
-using namespace std;
-
 class base
 {
 public:
@@ -401,6 +357,47 @@ int main()
 i am print base class  
 PS D:\cpp\polymorphism>*/
 
+B. Virtual Function
+A virtual function is a member function that is declared in the base class using the keyword virtual and is re-defined (Overridden) in the derived class.
+#include <bits/stdc++.h>
+using namespace std;
+class base
+{
+public:
+    virtual void print()
+    {
+        cout << "i am print base class" << endl;
+    }
+   virtual void display()
+    {
+        cout << "i am display base class" << endl;
+    }
+};
+class derive : public base
+{
+public:
+    void print()
+    {
+        cout << "i am print derive class" << endl;
+    }
+    void display()
+    {
+        cout << "i am display derive class" << endl;
+    }
+};
+int main()
+{
+    base *ptr;
+    derive der;
+    ptr = &der;
+    ptr->display();
+    ptr->print();
+    return 0;
+}
+/*i am display derive class
+i am print derive class  
+PS D:\cpp\polymorphism>*/
+
 Difference between Inheritance and Polymorphism:
 
 Inheritance is one in which a new class is created (derived class) that inherits the features from the already existing class(Base class).
@@ -415,7 +412,107 @@ Whereas it can be compiled-time polymorphism (overload) as well as run-time poly
 Types of Inheritance:
 
 Single Inheritance: When a derived class inherits the properties of a single base class, it is known as Single Inheritance.
+
+#include <iostream>
+using namespace std;
+class Ex
+{
+public:
+    void fun()
+    {
+        cout << "Inside Ex - fun()" << endl;
+    }
+    void save()
+    {
+        cout << "Inside Ex - save()" << endl;
+    }
+};
+class NewEx : public Ex
+{
+public:
+    void save()
+    {
+        cout << "Inside NewEx - save()" << endl;
+    }
+};
+int main()
+{
+    NewEx e;
+    e.fun();
+    e.save();//member function is define in both the base class and derived class.but they can access the derive class method .
+}
+/*Inside Ex - fun()
+Inside NewEx - save()
+PS C:\Users\DELL\OneDrive\Desktop\c++>*/
+
 Multiple Inheritance: When a derived class inherits the properties of multiple base classes, it is known as Multiple Inheritance.
+
+/*Your C++ code is a nice demonstration of multiple inheritance, but it currently has a classic issue: diamond problem due to inheriting from the same base class student via two different paths (test and sport). Let's break it down and see what's happening:
+
+❗ Problem: Diamond Inheritance
+Both test and sport inherit from student.
+
+result inherits from both test and sport.
+
+So result ends up with two copies of student: one via test, one via sport.
+
+But which set_number() is being called? Since both test and sport have inherited set_number() (and sport overrides it), there's ambiguity.
+/*
+      student
+      /     \
+   test     sport
+      \     /
+      result
+
+*/
+
+#include <iostream>
+using namespace std;
+
+class student
+{
+public:
+    int a = 5;
+    void add()
+    {
+        cout << "i am adding in the student class\n";
+    }
+};
+class test : virtual public student
+{
+public:
+    int b = 6;
+    void sub()
+    {
+        cout << "i am subtract in the test class\n";
+    }
+};
+class sport : virtual public student
+{
+public:
+    int c = 7;
+    void div()
+    {
+        cout << "i am div in the sport class" << endl;
+    }
+};
+class result : public test, public sport
+{
+public:
+    void mul()
+    {
+        cout << "i am multiple in the result class\n"<< a;
+    }
+};
+int main()
+{
+    result harry;
+    harry.mul();
+}
+/*i am multiple in the result class
+5
+PS D:\question> */
+
 Multilevel Inheritance: When a derived class inherits the properties of another derived class, it is known as Multilevel Inheritance.
 Hierarchical Inheritance: When more than one derived class inherits the properties of a single base class, it is known as Hierarchical Inheritance.
 Hybrid (Virtual) Inheritance: When we combine more than one type of inheritance, it is known as Hybrid (Virtual) Inheritance. Example: Combining Multilevel and Hierarchical inheritance.
@@ -448,7 +545,7 @@ Difference Between Class And Object:
 Class is used as a template for declaring and creating the objects.
 An object is an instance of a class.
 When a class is created, no memory is allocated.
-Objects are allocated memory space whenever they are created.
+When a object is created, memory is allocated.
 The class has to be declared first and only once.	
 An object is created many times as per requirement.
 A class is a logical entity.	
@@ -456,30 +553,19 @@ An object is a physical entity.
 It is declared with the class keyword	
 It is created with a class name in C++ 
 
-Syntax: Declaring Class in C++ is as follows: 
-
-class Student {
-   public:
-      void put(){
-          cout<<“Function Called”<<endl;
-      }
-};   // The class is declared here
-
-int main(){
-         Student s1;   // Object created
-         s1.put();
-}
-Example: Bike	Example: Ducati, Suzuki, Kawasaki
-
 Difference Between class and structure in C++
 Members of a class are private by default.
 Members of a structure are public by default.
 It is declared using the class keyword.
 It is declared using the struct keyword.
-It is normally used for data abstraction and inheritance.
-It is normally used for the grouping of different datatypes.
-Memory is allocated on the stack.
-Memory is allocated on the heap.
+class is combination of data member and member function.
+structure have only variable.
+
+unsigned int range --> 0 to (2 pe power 32) - 1
+signed int range --> -(2 pe power 31) to +(2 pe power 31) - 1
+int range --> -32768 to +32767 -(2 pe power 15) to +(2 pe power 15) - 1
+
+a friend function is declared outside the class but has the right to access the class's private and protected member. it is declared within the class definition using the friend keyword.
 
 STL stands for Standard template library and is the collection of some most commonly used algorithms and data structures such as vectors, maps, etc. It is a generalized library that works for all data types. STL has 4 components.
 

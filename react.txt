@@ -1,0 +1,124 @@
+react is developed by jordan walke. react is a popular JavaScript library used for building powerful user interface. its ability to create component based architecture which allow developer to create reusable UI component. react is a virtual dom is able to create a copy of the real dom that minimizes direct dom manipulations which significantly boosts performance.
+
+Important Features of React:
+Virtual DOM: React uses a virtual DOM to efficiently update and render components, ensuring fast performance by minimizing direct DOM manipulations.
+Component-Based Architecture: React builds UI using reusable, isolated components, making code more modular, maintainable, and scalable.
+Hooks: React Hooks allow functional components to manage state and side effects, making them powerful and more flexible.
+Server-Side Rendering (SSR): React can be used for server-side rendering, where HTML content is generated on the server and sent to the client. This improves the app’s performance, especially for SEO.
+React Router: React Router enables navigation in a React application. It allows you to define different routes for different views in a single-page application (SPA).
+
+Explain the building blocks of React.
+The five main building blocks of React are :-
+Components: These are reusable blocks of code that return HTML.
+JSX: It stands for JavaScript and XML and allows you to write HTML in React.
+Props and State: props are like function parameters and State is similar to variables.
+Context: This allows data to be passed through components as props in a hierarchy.
+Virtual DOM: It is a lightweight copy of the actual DOM which makes DOM manipulation easier.
+
+Explain props and state in React with differences
+Props are used to pass data from one component to another.
+The state is local data storage that is local to the component only and cannot be passed to other components.
+It is Immutable (cannot be modified).
+It is Mutable ( can be modified).
+Props are read-only.	
+The state is both read and write.
+Props can be used with state and functional components.	
+The state can be used only with the state components/class component (Before 16.0).
+
+What is virtual DOM in React?
+The Virtual DOM in React is an in-memory representation of the actual DOM. It helps React efficiently update and render the user interface by comparing the current and previous virtual DOM states using a process called diffing.
+
+How Virtual DOM Works
+
+Efficient Rendering: The Virtual DOM is an in-memory representation of the actual DOM that React uses to optimize the process of updating and rendering UI changes.
+Diffing Algorithm: React compares the current and previous versions of the Virtual DOM using a diffing algorithm,  identifying the minimal set of changes required to update the real DOM.
+Batch Updates: Instead of updating the real DOM immediately, React batches multiple changes to reduce unnecessary re-renders, improving performance.
+Faster Updates: Since updating the real DOM is slow, React minimizes direct DOM manipulations by only making updates where necessary after comparing the Virtual DOM.
+Declarative UI: With the Virtual DOM, React allows developers to write code in a declarative style, letting React handle when and how to efficiently update the UI.
+
+What is JSX?
+JSX is basically a syntax extension of regular JavaScript and is used to create React elements. These elements are then rendered to the React DOM. All the React components are written in JSX. To embed any JavaScript expression in a piece of code written in JSX we will have to wrap that expression in curly braces {}.
+
+What are components and their type in React?
+These are reusable blocks of code that return HTML. A Component is one of the core building blocks of React. we can say that every application you will develop in React will be made up of pieces called components. Components make the task of building UIs much easier. 
+
+In React, we mainly have two types of components: 
+Functional Components: Functional components are simply JavaScript functions. We can create a functional component in React by writing a JavaScript function. 
+Class Components: The class components are a little more complex than the functional components. The functional components are not aware of the other components in your program whereas the class components can work with each other. We can pass data from one class component to another class component.
+
+How do browsers read JSX?
+In general, browsers are not capable of reading JSX and only can read pure JavaScript. The web browsers read JSX with the help of a transpiler. Transpilers are used to convert JSX into JavaScript. The transpiler used is called Babel.
+
+How to create an event in React?
+To create an event in React, attach an event handler like onClick, onChange, etc., to a JSX element. Define the handler function to specify the action when the event is triggered, such as updating state or executing logic.
+
+Explain the creation of a List in React?
+Lists are very useful when it comes to developing the UI of any website. Lists are mainly used for displaying menus on a website. To create a list in React use the map method of array
+
+What is a key in React?
+A key is a special string attribute you need to include when creating lists of elements in React. Keys are used in React to identify which items in the list are changed, updated, or deleted. In other words, we can say that keys are used to give an identity to the elements in the lists.
+
+Explain the use of render method in React?
+React renders HTML to the web page by using a function called render(). The purpose of the function is to display the specified HTML code inside the specified HTML element. In the render() method, we can read props and state and return our JSX code to the root component of our app.
+
+What is Context API in React?
+The Context API is a way to share data (such as theme, language preference, etc.) across components without having to pass props down manually at every level. It provides a Provider component to set the value and a Consumer component or useContext() hook to access it.
+
+What is conditional rendering in React?
+Conditional rendering in React involves selectively rendering components based on specified conditions. By evaluating these conditions, developers can control which components are displayed, allowing for dynamic and responsive user interfaces in React applications.
+
+What is react router?
+React Router is a standard library for routing in React. It enables the navigation among views of various components in a React Application, allows changing the browser URL, and keeps the UI in sync with the URL.
+
+Explain the components of a react-router.
+The main components of a react-router are:
+
+Router(usually imported as BrowserRouter):  It is the parent component that is used to store all of the other components. Everything within this will be part of the routing functionality
+Switch: The switch component is used to render only the first route that matches the location rather than rendering all matching routes.
+Route: This component checks the current URL and displays the component associated with that exact path. All routes are placed within the switch components.
+Link: The Link component is used to create links to different routes.
+
+What are hooks in React?
+Hooks are a new addition in React 16.8. They let developers use state and other React features without writing a class. Hooks doesn’t violate any existing React concepts. Instead, Hooks provide a direct API to react concepts such as props, state, context, refs and life-cycle
+
+Explain the useState hook in React?
+Using this hook we can declare a state variable inside a function but only one state variable can be declared using a single useState() hook. Whenever the useState() hook is used, the value of the state variable is changed and the new variable is stored in a new cell in the stack.
+
+state: The current state value.
+setState: A function used to update the state value.
+initialState: The initial value of the state.
+
+What is React Fragments?
+when we are trying to render more than one root element we have to put the entire content inside the ‘div’ tag which is not loved by many developers. So since React 16.2 version, Fragments were introduced, and we use them instead of the extraneous ‘div’ tag. The following syntax is used to create fragment in react.
+
+What is a react developer tool?
+React Developer Tools is a Chrome DevTools extension for the React JavaScript library. A very useful tool, if you are working on React applications. This extension adds React debugging tools to the Chrome Developer Tools. It helps you to inspect and edit the React component tree that builds the page, and for each component, one can check the props, the state, hooks, etc.
+
+What is prop drilling and its disadvantages?
+Prop drilling is basically a situation when the same data is being sent at almost every level due to requirements in the final level. The problem with Prop Drilling is that whenever data from the Parent component will be needed, it would have to come from each level, Regardless of the fact that it is not needed there and simply needed in last.
+
+What is react-redux?
+React-redux is a state management tool which makes it easier to pass these states from one component to another irrespective of their position in the component tree and hence prevents the complexity of the application. As the number of components in our application increases it becomes difficult to pass state as props to multiple components. To overcome this situation we use react-redux
+
+What are benefits of using react-redux?
+They are several benfits of using react-redux such as:
+
+It provides centralized state management i.e. a single store for whole application
+It optimizes performance as it prevents re-rendering of component
+Makes the process of debugging easier
+Since it offers persistent state management therefore storing data for long times become easier
+
+Explain the core components of react-redux?
+There are four fundamental concepts of redux in react which decide how the data will flow through components
+
+Redux Store: It is an object that holds the application state
+Action Creators: These are functions that return actions (objects).
+Actions: Actions are simple objects which conventionally have two properties- type and payload 
+Reducers: Reducers are pure functions that update the state of the application in response to actions
+
+Explain CORS in React?
+In ReactJS, Cross-Origin Resource Sharing (CORS) refers to the method that allows you to make requests to the server deployed at a different domain. As a reference, if the frontend and backend are at two different domains, we need CORS there.
+
+We can setup CORS evironment in frontend using two methods:
+axios
+fetch

@@ -1,6 +1,6 @@
 Q Tell me about yourself ?
 Thank you for giving me this opportunity to introduce myself. My name is Anand Kumar, and I am from Bihar. I am currently pursuing a Bachelor's degree in Computer Science at Patliputra University, Patna.
-My technical skills include programming in C and C++, database management, and web development. I have utilized these skills to work on projects like a shopping cart, ecommerse website, chat applications.
+My technical skills include programming in C and C++, database management, and web development. I have utilized these skills to work on projects like a ecommerse website, chat applications.
 I consider myself a focused individual who works efficiently toward achieving goals. I am a team player, optimistic even in tough situations, and always open to learning and growth.
 Beyond academics, I have a strong interest in coding, which allows me to stay creative and maintain a balanced perspective. This combination of determination, adaptability, and enthusiasm defines me."
 That’s all about me.
@@ -22,3 +22,6 @@ I want to work at your company because every fresher dreams of starting their ca
 
 Q How about this one: "Can you describe a challenging situation you faced and how you handled it?"
 In a project where I was developing a chat application, I faced a problem with Socket.IO not connecting properly. Initially, I debugged the code and checked all functions to ensure they were correct. When I couldn’t resolve the issue, I consulted a senior and also searched online resources. I watched tutorials and reached out to a YouTuber who specializes in Socket.IO issues. Despite not finding an immediate solution from the online resources, I continued to analyze the code. After thoroughly debugging and testing, I eventually found a minor configuration error that was causing the issue. By fixing this, I was able to resolve the problem and ensure the application worked as expected. This experience taught me the value of persistence and utilizing multiple resources to solve complex problems.
+
+Q Is there anything that's not mentioned in your resume ?
+My father is a businessman, and growing up in that environment, I’ve learned how to stay calm under pressure and think practically. These skills really help me when I’m working on real-world projects—like debugging issues or solving problems in a team setting.

@@ -7,10 +7,13 @@ My father is a businessman, and growing up in that environment, I’ve learned h
 
 2.what is friend functions in c++?
 3.what is oops and says about the four pillars of oops in details ?
-4.why you can learn c++ rather then java ??
+4.why you can't learn java ?
 5.what is inheritance and types ?
 6.what is polymorphism and types ?
-7.what is function overloading and if the method name is same and the number of argument is same and change only in return types then it give error or not ??
+
+7.what is function overloading and if the method name is same and the number of argument is same and change only in return types then it give error or not ?
+when the method name is same but have different number of parameters and type then is said to function overloading. if the same method and same number of argument and same type of argument then it give an error. 
+
 8.friend function voilate the oops concept ?
 9.what is different between abstraction and encapulation ?
 10.why should i hire you ?
@@ -24,3 +27,8 @@ i can say that every fresher start their carrier with the multiple national comp
 My passion is to become a software developer. I enjoy solving problems and building things that people can actually use. Whenever I work on projects—like my eCommerce app—I feel excited to bring ideas to life through code. It’s something I genuinely enjoy doing, and I’m always eager to learn new technologies and improve my skills.
 
 16.who is ceo and founder of tcs ?
+17.who developed the c language and where and which year?
+18.what is access modefier in c++ and explain the types?
+19.what is function signature in c++ ?
+20.what is diamond problems in c++ ? 
+21.where are you from?

@@ -1,0 +1,394 @@
+1.what is html
+html is the standard markup language for creating a web page. html elements tell the browser how to display the content. an html element is defined by a start tag, some content and an end tag.
+
+2.inline and block element
+inline element just take up the space that is absolute necessary
+eg:- <span> <a> <strong> <img> <button> <em> <select> <abbr> <label> <sub>
+block element start on a new line and consume the full width of the page available.
+eg:- <div> <p> <header> <footer> <h1...h6> <form> <tabel> <video> <blockQuote> <pre> <ul> <ol> <figCaption> <figure> <hr> <article> <section>
+
+DOCTYPE(document type) declaration specifies the version of html. DOCTYPE tells the browser which version of html it is and how to interpret the code.
+
+meta tags in html are element used to provide metatags or additional information about a web page.
+
+semantic element in html are element that provide meaning to the content they contain such as header,nav bar, section, main etc.
+
+what are selector in css? how many types of selector are there?
+selector are pattern that are used to select and style html elements
+id selector(#)
+class selector(.)
+universal selector(*)
+child selector(>)
+descendant selector
+element selector
+
+javascript --> javascript is a high level programming Language. that is widely used to create interactive effect within a web browser. a highlevel language is a human understandable language it is commonly used for developing both web and mobile applications.
+
+Is JavaScript a Dynamic or Static language?
+Javascript is a Dynamic language. It does not ask you to declare the types of the variables. In JavaScript, variables can hold different data types at different times. The variables are assigned a type during runtime depending on what value it is storing at that particular time.
+
+let x = 111;<br> Here ‘x’ has data type of Number
+x = “Intellipaat”;<br> Here ‘x’ has data type of String<br>
+
+Is JavaScript synchronous or asynchronous?
+JavaScript is synchronous and single-threaded by default. It becomes asynchronous when using asynchronous operations like making HTTP requests, using timers, etc, or using web workers.
+
+single-threaded --> JavaScript runs in one thread at a time — there's only one "call stack" and one piece of code runs at any given moment. It can’t do multiple things simultaneously (like parallel threads in Java or C++).
+
+What are the different data types available in JS?
+JavaScript has the following data types:
+
+Number – Stores integer and floating-point values.
+let sum = 555;<br>
+let share = 55.55;
+
+BigInt – Introduced in ES11(ECMAScript 2020). It handles values which have an exceed maximum safe integer value.
+let bigNumber = 8938123748264892374749279272187847874899n;<br>
+
+String – Stores textual data.
+let company = “Intellipaat”;
+
+Boolean – Can store only two values: true or false
+let boolValue = false;
+
+Undefined – Undefined data type is given to a variable that has been declared but has not been given a value to hold.
+let myValue;
+
+Null – Null is for specifying that the given variable does not hold any value but null.
+let noValue = null;
+
+Symbol – This was introduced in ES6. It deals with creating unique values.
+let uniqueValue = Symbol(“unique”);
+
+Object – Objects in JavaScript are like key-value pairs.
+let company = { name: “Intellipaat”, employees: 200 };
+
+State the difference between var, let, and const.
+Scope	--> Function or Global Scoped   Block-scoped 	Block-scoped
+Redeclaration(in the same scope)	Yes 	  No            N0
+Reassignable	                    Yes 	  Yes	        No
+Hoisting	                        Yes	      Yes	        Yes
+Syntax	                    var x = 10;	  let x = 10;	  const x = 10;
+Current Usage	        Not used much	      Used a lot    Used a lot
+
+Hoisting is JavaScript's default behavior of moving all declarations to the top of the current scope (to the top of the current script or the current function).
+The let and const Keywords
+Variables defined with let and const are hoisted to the top of the block, but not initialized.
+Meaning: The block of code is aware of the variable, but it cannot be used until it has been declared.
+
+What are higher-order functions in JavaScript?
+Higher order functions are defined as the functions that take one or more functions as arguments, and/or functions that return a function as its value.
+Example: Let’s look at some examples, of JavaScript inbuilt functions like map() and filter() are higher-order functions.
+
+What are JavaScript Arrays?
+JavaScript Array is a type of object that is used to store a collection of values. The array can store values of any data type. Ex: string, number, boolean, or array of objects
+
+What is the JavaScript DOM?
+The Document Object Model is a map of a webpage that can be modified by using JavaScript. It represents the webpage as a tree of parts like headings, paragraphs, and links. Each part is a “node” in the tree. With JavaScript, you can find these parts using methods like getElementById and change their content, style, or structure.
+
+What are Template Literals in JavaScript?
+Template Literals denoted with “(backticks) were introduced in ES6. By using Template Literals we can easily concatenate strings. All we have to do is put the expression inside ‘${}’. This will help get rid of using the ‘+’ operator.
+
+What are errors in JavaScript?
+There are three types of errors in JavaScript:
+
+Syntax error: Syntax error is a type of error that comes when an individual is typing some strings of characters or tokens in some particular programming language.
+
+Logical error:  A logical error is a type of tool flaw that makes its execution wrong and its operation incomplete.  
+
+Runtime Error: A runtime is an error that is usually encountered when the program is in the process of executing.
+
+What are JavaScript modules?
+JavaScript modules are used in order to divide the JavaScript code into certain components. They are applied in order to load several variables, functions, or objects in a file and to send several variables, functions, or objects in another file. The keywords import and export are used to read the files and export write into other files respectively.
+
+event bubbling --> a propagation mode where events are handeled from the innermost elements to the outermost.
+event capturing -->a propagation mode where events are handeled from the outermost elements to the innermost.
+
+lexical scope --> when a child function can access the parent variable then it said to be lexical scope.
+function outer() {
+  let outerVar = "I'm from outer!";
+  function inner() {
+    console.log(outerVar); // ✅ Can access outerVar because of lexical scope
+  }
+  inner();
+}
+outer();
+
+
+Closure scope --> A function that "remembers" variables from its outer (lexical) scope, even after that outer function is gone.
+function outer() {
+  let counter = 0;
+  return function inner() {
+    counter++;
+    console.log(counter);
+  }
+}
+const count = outer(); // outer() returns inner()
+count(); // 1
+count(); // 2
+count(); // 3
+
+setTimeOut --> used to execute a function once after a specificed delay.
+setInterval -->used to execute a function repeatedly at specified interval.
+
+promises --> promises handled asynchronous tasks in js by providing a more readable and structure approach than callback for handling outputs.
+const ticket = new promise(function(resolve,rejected){
+    let isboarding = false
+    if(isboarding){
+        resolve("you are in flight")
+    }else{
+        rejected("you are not in flight)
+    }
+})
+ticket.then((data)=>{
+    console.log("wooo",data)
+}).catch((data)=>{
+    console.log("ohhhh",data)
+}).finally(()=>{
+    console.log("i always executed")
+})
+
+async --> declaring a function with async makes it return a promise.
+await --> it pauses the execution of the code until the promise it is wating for it resolve then return the resolved value.
+
+What is debouncing?
+Debouncing is a programming technique used to improve the performance of web applications by limiting the rate at which a function is executed. This is especially useful for event-driven actions like resizing the window, searching as you type, or scrolling, where rapid firing of events can negatively impact performance.
+
+Throttling
+Idea: Execute the action at regular intervals, no matter how many times it’s triggered.
+How: It ensures a function is called at most once every set time (e.g., once every 100ms).
+Use case: Scroll events, window resizing (very frequent events).
+Example:Even if you scroll like crazy, the scroll handler will fire once every 100ms, not more often.
+
+What is the use of Object.freeze?
+Object.freeze is used if we want to freeze or fix the values of an object so that it cannot be changed or modified.
+
+What is ‘this’ object in JavaScript?
+In JavaScript ‘this’ stores the current context or reference of the current object from where it is called.
+
+What do you understand about Mutable and Immutable in the context of JavaScript?
+Mutable means that the value of such variables can be changed directly after their creation. Example – Arrays and Objects.
+Immutable means their value cannot be changed after their creation. Examples – numbers, and strings.
+
+What are Spread Operators in JavaScript?
+Spread Operators (. . .) in JavaScript are used to “spread” the elements of an array or in JavaScript. By using Spread Operators we can copy output array/object values, merge them, pass these values to a function efficiently, etc.
+
+How to convert an array into an object and vice-versa?
+To convert an array into an object we can use a method named ‘fromEntries()’.
+Example – 
+const entries = [["name", "Intellipaat"], ["employees", 200]];
+const newObject = Object.fromEntries(entries);
+console.log(newObject);
+Output- { name: ‘Intellipaat’, employees: 200 }
+
+To convert an Object to an Array we can use a method named ‘entries()’.
+Example – 
+const user = {
+name: "Intellipaat",
+employees: 200<br>
+};
+const newArray = Object.entries(user);<br>
+console.log(newArray);<br>
+Output-
+[ [‘name’, ‘Intellipaat’], [’employees’, 200] ]
+
+How to convert the string of any base to integer in JavaScript?
+In JavaScript, parseInt() function is used to convert the string to an integer.
+
+the join() method return an array as a string.
+the join() method does not change the original array.
+any seperator can be specified. the default is comma(,).
+
+What is An Event Loop in JavaScript?
+JavaScript that enables asynchronous programming by handling tasks efficiently. Since JavaScript is single-threaded, it uses the event loop to manage the execution of multiple tasks without blocking the main thread.
+
+console.log("Start");
+
+setTimeout(() => {
+    console.log("setTimeout Callback");
+}, 0);
+
+Promise.resolve().then(() => {
+    console.log("Promise Resolved");
+});
+
+console.log("End");
+
+Output :-
+Start
+End
+Promise Resolved
+setTimeout Callback
+
+In this example
+console.log(“Start”) executes first.
+setTimeout schedules its callback but does not execute it immediately.
+Promise.resolve().then() is placed in the microtask queue and executes before the callback queue.
+Promise Resolved appears before setTimeout Callback due to microtask priority.
+JavaScript executes code synchronously in a single thread. However, it can handle asynchronous operations such as fetching data from an API, handling user events, or setting timeouts without pausing execution. This is made possible by the event loop.
+
+How the Event Loop Works
+The event loop continuously checks whether the call stack is empty and whether there are pending tasks in the callback queue or microtask queue.
+Call Stack: JavaScript has a call stack where function execution is managed in a Last-In, First-Out (LIFO) order.
+Web APIs (or Background Tasks): These include setTimeout, setInterval, fetch, DOM events, and other non-blocking operations.
+Callback Queue (Task Queue): When an asynchronous operation is completed, its callback is pushed into the task queue.
+Microtask Queue: Promises and other microtasks go into the microtask queue, which is processed before the task queue.
+Event Loop: It continuously checks the call stack and, if empty, moves tasks from the queue to the stack for execution.
+
+what is critical rendering path?
+The Critical Rendering Path (CRP) is the sequence of steps a browser follows to convert your HTML, CSS, and JavaScript into pixels on the screen.
+Main steps in Critical Rendering Path:
+
+HTML Parsing
+→ Browser reads HTML and builds the DOM (Document Object Model).
+CSS Parsing
+→ Browser reads CSS and builds the CSSOM (CSS Object Model).
+Render Tree Construction
+→ Combines DOM + CSSOM → creates the Render Tree (what needs to be painted).
+Layout
+→ Figures out where each element goes (position, size, etc.).
+Painting
+→ Actually draws pixels to the screen.
+
+Where JavaScript fits in:
+When HTML is loading, if the browser sees a <script> without defer or async, it stops building the DOM to download and run the JavaScript.
+
+That's why JS can delay the critical rendering path!
+
+Blocking (Synchronous)
+When a task is blocking, it stops the execution of other tasks until it’s completed. In the context of JavaScript, it means that the browser halts rendering of the page or does not continue parsing HTML until the script finishes.
+If you include the script without async or defer, the browser will block the page from rendering while it downloads and runs that script, making the page feel slower to the user. This is blocking behavior.
+
+Example:
+<script src="script.js"></script>
+The browser will stop parsing HTML and wait for script.js to download and execute before continuing to parse the rest of the HTML.
+This results in a delay in page rendering, especially if the script is large or slow to download.
+
+Non-blocking (Asynchronous)
+A non-blocking task does not stop the execution of other tasks. The browser can continue rendering the page or executing other JavaScript while it loads or runs a non-blocking task.
+If you use async or defer, the browser will continue to render the page and execute the script only when it's ready — this is non-blocking behavior, and it improves the perceived performance of your page.
+
+Example:
+<script src="script.js" async></script>
+The browser downloads script.js in parallel while continuing to parse the HTML.
+The script will run immediately once it finishes downloading, without blocking the HTML parsing or rendering.
+It doesn’t wait for other scripts to load, so the order of execution might be different.
+
+Blocking vs Non-blocking in JavaScript:
+Stops execution of further tasks until done	
+Continues execution of tasks without waiting
+Slows down rendering (e.g., halts until script runs)	
+Doesn't block page rendering
+<script src="script.js"></script>	
+<script src="script.js" async></script>
+
+async (Asynchronous Script Loading)
+The browser will download the JavaScript file while parsing HTML. Once the script is fully downloaded, it executes immediately, without waiting for the HTML to finish parsing.
+When to use :-- This is ideal for independent scripts that do not depend on the DOM or other scripts, such as analytics or ad scripts.
+Key characteristic:-- scripts with async don’t maintain order. They run as soon as they are ready, which could be out of order in the script tags.
+Example:
+<script src="analytics.js" async></script>
+<script src="ads.js" async></script>
+analytics.js and ads.js will both load in parallel, but whichever script loads first will execute first.
+
+2. defer (Deferred Script Loading)
+The browser will download the JavaScript file while parsing HTML, but it waits to execute the script until the HTML is fully parsed. Scripts with defer maintain the order in which they are declared.
+When to use :-- This is perfect for scripts that depend on the DOM being fully loaded (e.g., event listeners, DOM manipulations) and need to execute in a specific order.
+Key characteristic :-- Scripts with defer execute in the order they are written and only after the entire HTML document has been parsed.
+Example:
+<script src="main.js" defer></script>
+<script src="utils.js" defer></script>
+main.js will run first, followed by utils.js, only after the entire HTML is parsed.
+
+3. Lazy Load (Delay Load)
+What it does :-- Lazy loading delays the loading of resources (like images, videos, or even JavaScript) until they are needed, typically when they enter the viewport (visible area of the screen).
+When to use :-- It's commonly used for images, videos, or heavy JavaScript files that aren't immediately necessary on page load. It’s great for improving page load speed and reducing initial data transfer.
+Example (for images):
+<img src="image.jpg" loading="lazy" alt="A lazy-loaded image">
+The image will only load when it comes into view as the user scrolls down the page.
+
+Functional programming is a declarative paradigm emphasizing the application of functions and the avoidance of changing state and mutable data. In JavaScript, functional programming can enhance code readability, testability, and maintainability.
+
+Pure Functions
+These functions produce the same output for the same input and have no side effects, meaning they do not alter any state outside their scope.
+const add = (a, b) => a + b;
+
+Immutability
+Data should not be modified after creation. Instead, operations should return new copies of data with the desired changes.
+const originalArray = [1, 2, 3];
+const newArray = [...originalArray, 4]; // Creates a new array
+
+Higher-Order Functions
+These functions can accept other functions as arguments or return them.
+const applyOperation = (func, value) => func(value);
+const multiplyByTwo = (x) => x * 2;
+applyOperation(multiplyByTwo, 5); // Returns 10
+
+Common Functional Methods
+JavaScript provides built-in methods that facilitate functional programming:
+map(): Transforms each element in an array.
+filter(): Selects elements that meet a condition.
+reduce(): Aggregates values in an array into a single result.
+JavaScript
+
+const numbers = [1, 2, 3, 4, 5];
+const squaredNumbers = numbers.map(num => num * num);
+const evenNumbers = numbers.filter(num => num % 2 === 0);
+const sum = numbers.reduce((acc, num) => acc + num, 0);
+
+bind ->
+let nameObj = {
+    name: "Tony"
+}
+
+let PrintName = {
+    name: "steve",
+    sayHi: function () {
+        // Here "this" points to nameObj
+        console.log(this.name); 
+    }
+}
+
+let HiFun = PrintName.sayHi.bind(nameObj);
+HiFun();
+
+Output:
+Tony
+
+call ->
+let nameObj = {
+    name: "Tony"
+}
+
+let PrintName = {
+    name: "steve",
+    sayHi: function (age) {
+        console.log(this.name + " age is " + age);
+    }
+}
+
+PrintName.sayHi.call(nameObj, 42);
+Output:
+Tony age is 42
+
+apply ->
+let nameObj = {
+    name: "Tony"
+}
+
+let PrintName = {
+    name: "steve",
+    sayHi: function (...age) {
+        console.log(this.name + " age is " + age);
+    }
+}
+PrintName.sayHi.apply(nameObj, [42]);
+Output: 
+
+Tony age is 42
+
+What is event delegation in JavaScript?
+What is memoization in JavaScript?
+
+What is callback hell?
+Callback hell occurs in JavaScript when numerous nested callbacks create a complex, deeply indented code structure, commonly known as the “pyramid of doom.” This makes the code hard to read, debug, and maintain, ultimately resulting in reduced code quality and challenges with scalability.

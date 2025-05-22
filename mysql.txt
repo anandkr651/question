@@ -1,3 +1,72 @@
+data - data is an individual fact and figure that contain raw and unprocessed material which do not carry any specific meaning.
+
+information - information is a group of data that collectively carries a logical meaning
+
+database - a database is the collection of related data organised in a way that data can be easily accessed, managed and updates. it also organize the data in the form of a table.
+
+DBMS - a DBMS is a software package that allows creation, definition and manipulation of database, allowing user to store, process and analyse data easily.
+
+types of databases/database model - a set of rules and standard that define how the database organize data is called database model.
+hierarchical databases
+network databases
+relational databases
+
+hierarchical databases - in a hierarchical database model data is organized in a tree-like structure. data is stored hierarchical (top down or bottom up) format. data is represented using a parent-child relationship. in hierarchical DBMS parent may leave many children have only one parent.
+
+network database - the network database model allows each child to have multiple parent. it helps us to address the need to model more complex relationship like as the order/part many-to-many relationship. in this model entities in a grap which can accessed through several paths.
+
+relational database - the database is based on the relation data model, which store data in the form of row (tuple) and column (attributes), and together forms a table (relation). a relational database uses SQL for storing, manipulate as well as maintaining the data. E.F codd invent the database in 1970.
+
+table - the RDBMS databases uses table to store data. a table is a collection of related data entries and contains rows and column to store data. a table is the simplest example of data storage in RDBMS.
+
+fields - field is a smaller entity of the table which contain specific information about every record in the table.
+
+row - a row of a table is also called record. it contain the specific information of each individual entry in the table. it is a horizontal entity in the table.
+
+null values - the NULL value of the table specific that the field has been left blank during record creation.
+
+primary key - a primary key is a column of a table or a set of column that help to identify every record present in that table uniquely.
+
+foreign key - a foreign key is the one that is used to link two table together via the primary key.
+super key - super key is combination of all possible attributes or a set of an attribute which can uniquely identify a tuple.
+candidate key - candidate key is a subset of super key.
+
+domain - a domain is a set of permitted values for an attribute in table.for example, a domain of month-of-year can accept january,february... december as a value, a domain can accept all apossible valid dates etc. we spicify domain of attribute while creating a table that means size, type and validation.
+
+entity relationship  diagram - er diagram stand for entity relationship diagram also known as ERD is a diagram that display the relationship of entity sets stored in a database. in other word er diagram help to explain the logical structure of databases. ER diagram are created based on three concept: entities, attributes and relationship.
+
+entities - a real world thing either living or non-living that is easily recognizable and non-recognizable. it is anything that is to be represented in our database. it may be a physical thing or simply a fact or an event that happen in the real world.
+an entity can be place, person, object, event or a concept which stores data in the database. the characterstics of entities are must have an attribute, and a unique key. entity is made up of some 'attributes' which represent that entity.
+
+attribute - an attribute is a property or characterstics of an entity. an entity may contain any number of attribute. one of the attribute is considered as the primary key.
+
+relationship - a relationship is used to describe the relation between entities.
+
+there are three types
+one-to-one relationship - when only one instance of an entity is associated with the relationship, then is known as one-to-one relationship.example: person related to passport.
+one-to-many relationship - when only one instance of the entity on the left, and more than one instance of an entity on the right associated with the relationship then this is known as a one-to-many relationship. example: person related to bank.
+many-to-one Relationship - when more than instance of the entity on the left, and only one instance of an entity on the right associated with the relationship then it is known as a many-to-one relationship. example:student related to course.
+
+many-to-many Relational - when more than instance of the entity on the left, and more than one instance of an entity on the right associated with the relationship then it is known as a many-to-many relationship. example: employees related to project.
+
+types of database language :-
+DDL (data defination language) - create, alter, drop, rename
+DML (data manipulate language) - select, insert, update, delete
+DCL (data control language) - grant, revoke
+TCL (transmission control language) - commit, rollback, savePoint
+
+Normalization - Normalization is a method to breaking down a large complex table into smaller related tables and define relationship between them.
+it reduce the redendency of data in a table also remove inconsistency problem and unwanted risk.
+1NF - data must be stored in a table with rows and column and each column should contain individual values.
+2NF - all non-key attribute should be fully depend on the primary key.
+3NF - non-key attribute should not depend on other non-key attribute.
+BCNF - if a table contain more than one composite key attribute and should be possible the one attribute of both composite key are matched.
+4NF - we must ensure there are no multi valued dependencies on another independent of other attributes.
+5NF - it is also called project join normal form (PJNF). if we decompose table further to eliminate redency and when we join the decompose table it means candidate key we should not be lossing the original data.
+
+when we use RDBMS and NOSQL database in your application ?
+when we use security purpose then use RDBMS and for high speed and large storage then use NOSQL database.
+
 MySQL is a popular open-source Relational Database Management System (RDBMS) that uses SQL (Structured Query Language) for database operations. While MySQL is a specific database system accessible for free and supports various programming languages.it was developed by Oracle Corporation.MySQL is widely used for various applications, from small websites to large-scale enterprise systems.
 
 Difference Between MySQL and SQL
@@ -22,8 +91,11 @@ Explain the difference between having and where clause in MySQL.
 WHERE statement is used to filter rows but HAVING statement is used to filter groups.
 GROUP BY is not used with WHERE. HAVING clause is used with GROUP BY.
 
-What is the difference between DELETE and TRUNCATE commands in MySQL?
-DELETE Command is used to delete rows from the table depending on given the condition. TRUNCATE command is used to DELETE all rows from the table. DELETE command is a Data Manipulation Language command. TRUNCATE command is a Data Definition Language command.
+What is the difference between DELETE, TRUNCATE, DROP, ALTER commands in MySQL?
+DELETE Command is used to delete rows from the table depending on given the condition. DELETE command is a Data Manipulation Language command.
+TRUNCATE command is used to DELETE all rows from the table. TRUNCATE command is a Data Definition Language command.
+DROP command removes a table from a database
+ALTER table is used to add or delete or modify column in a existing table.
 
 What is a view? How to create a view?
 A database object that has no value is called view. Rows and columns exist in a view. A view is virtual table. it is created by combining one or more tables. The difference of a view and a table is that views are definition that build on other tables. If the underlying table changes, the View will also reflect those same changes.
@@ -44,8 +116,7 @@ A collection consist inside a single database.
 Collections do not enforce a schema.
 A Collection can have different fields within a Documents.
 
-
-1. What is MongoDB, and How Does It Differ from Traditional SQL Databases?
+What is MongoDB, and How Does It Differ from Traditional SQL Databases?
 MongoDB is a NoSQL database which means it does not use the traditional table-based relational database structure. Instead of it uses a flexible and document-oriented data model that stores data in BSON (Binary JSON) format.
 Unlike SQL databases that use rows and columns, MongoDB stores data as JSON-like documents, making it easier to handle unstructured data and providing greater flexibility in terms of schema design.
 
@@ -67,6 +138,9 @@ Describe the Aggregation Framework in MongoDB
 The Aggregation Framework in MongoDB is a powerful tool for performing data processing and transformation on documents within a collection. It works by passing documents through a multi-stage pipeline, where each stage performs a specific operation on the data, such as filtering, grouping, sorting, reshaping and computing aggregations.
 
 This framework is particularly useful for creating complex data transformations and analytics directly within the database.
+
+what is the role of schema in mongoose? how do define it?
+a schema in mongoose define the structure, validation, rules and behavior of MongoDB document, ensuring data consistency and integrity.
 
 A schema is a blueprint that defines how data is organized, structured, and accessed. It's a framework for managing data effectively. 
 

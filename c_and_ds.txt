@@ -12,8 +12,6 @@ Syntax : void* malloc(size_t size);
 Syntax : void* calloc(size_t num, size_t size);
 malloc() does not initialize the memory to zero
 calloc() initializes the memory to zero
-malloc() is used to indicate memory allocation
-calloc() is used to indicate contiguous memory allocation
 
 C is a middle-level language because it binds the gap between machine level language and high-level language.It can be used for both, system programming (like as operating system) As well as application programming (like as spreadsheet, Transaction Management Systems).
 Here are the key features of C:
@@ -65,12 +63,10 @@ signed
 unsigned
 
 There are different types of pointers :--
-Double Pointers
-Function Pointers
-Structure Pointers
-NULL Pointers
-Dangling Pointers
-Wild Pointers
+void pointer --> general purpose pointer can point to any types of data.
+NULL Pointers --> do not point to a valid location initialize as NULL.
+Dangling Pointers --> a pointer that point to a memory location that has been deallocates or free meaning the memory it point to is no longer valid.
+Wild Pointers --> a pointer that point to an uninitilized or invalid memory location.
 
 Type of Function
 A function can be of 4 types based on return value and parameters:
@@ -96,8 +92,7 @@ Extern storage class simply tells us that the variable is defined elsewhere and 
 
 Loops in programming are used to repeat a block of code until the specified condition is met. A loop statement allows programmers to execute a statement or group of statements multiple times without repetition of code.
 
-recursive :
-The process in which a function calls itself is called recursion and the corresponding function is called a recursive function. Since called function may further call itself, this process might continue forever. So it is essential to provide a base case to terminate this recursion process.
+recursive : The process in which a function calls itself is called recursion and the corresponding function is called a recursive function. Since called function may further call itself, this process might continue forever. So it is essential to provide a base case to terminate this recursion process.
 
 difference between an array and a linked list
 An array is a static data structure, while a linked list is a dynamic data structure. Arrays have a fixed size, and elements are stored consecutively in memory, while linked lists can grow and do not require contiguous memory allocation.
@@ -126,3 +121,19 @@ Preorder: Visit root, then left subtree, then right subtree.
 Inorder: Visit left subtree, then root, then right subtree.
 Postorder: Visit left subtree, then right subtree, then root.
 Each traversal method has different purposes. Inorder is useful for printing sorted elements in a binary search tree, while preorder might be used for copying tree structure.
+
+string converted in to int --> atoi()
+int converted in to string --> itoa()
+
+when we increse the pointer variable by one then what happen??
+#include<stdio.h>
+int main(){
+    int a[]={3,6,8,9,1};
+    int *ptr;
+    ptr=&a;
+    printf("%d",*ptr++); -->3
+    printf("%d",*ptr); -->6
+    printf("%d",(*ptr)++); -->7
+    printf("%d",*ptr); --> 6
+    return 0;
+}
