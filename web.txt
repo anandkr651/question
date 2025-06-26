@@ -65,7 +65,7 @@ let company = { name: “Intellipaat”, employees: 200 };
 
 State the difference between var, let, and const.
 Scope	--> Function or Global Scoped   Block-scoped 	Block-scoped
-Redeclaration(in the same scope)	Yes 	  No            N0
+Redeclaration(in the same scope)	Yes 	  No            No
 Reassignable	                    Yes 	  Yes	        No
 Hoisting	                        Yes	      Yes	        Yes
 Syntax	                    var x = 10;	  let x = 10;	  const x = 10;
@@ -229,7 +229,7 @@ JavaScript executes code synchronously in a single thread. However, it can handl
 
 How the Event Loop Works
 The event loop continuously checks whether the call stack is empty and whether there are pending tasks in the callback queue or microtask queue.
-Call Stack: JavaScript has a call stack where function execution is managed in a Last-In, First-Out (LIFO) order.
+Call Stack: JavaScript has a call stack where function execution is managed in a First-In, First-Out (FIFO) order.
 Web APIs (or Background Tasks): These include setTimeout, setInterval, fetch, DOM events, and other non-blocking operations.
 Callback Queue (Task Queue): When an asynchronous operation is completed, its callback is pushed into the task queue.
 Microtask Queue: Promises and other microtasks go into the microtask queue, which is processed before the task queue.
@@ -252,7 +252,6 @@ Painting
 
 Where JavaScript fits in:
 When HTML is loading, if the browser sees a <script> without defer or async, it stops building the DOM to download and run the JavaScript.
-
 That's why JS can delay the critical rendering path!
 
 Blocking (Synchronous)

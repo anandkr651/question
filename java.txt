@@ -1,0 +1,323 @@
+What is Java?
+Java is a high-level, object-oriented programming language known for its portability across platforms due to the Java Virtual Machine (JVM). it was created in 1995 by james gosling and his team at sun Microsystem. now owned by oracle. Used to develop mobile applications, desktop applications, web applications, web server, games, database connection. 53 keyword in java.
+
+Difference between JVM, JRE, and JDK.
+JVM: JVM also known as Java Virtual Machine is a part of JRE. JVM is a type of interpreter responsible for converting bytecode into machine-readable code. JVM itself is platform dependent but it interprets the bytecode which is the platform-independent reason why Java is platform-independent. 
+
+JRE: JRE stands for Java Runtime Environment, it is an installation package that provides an environment to run the Java program or application on any machine.
+
+JDK: JDK stands for Java Development Kit which provides the environment to develop and execute Java programs. JDK is a package that includes two things Development Tools to provide an environment to develop your Java programs and, JRE to execute Java programs or applications.
+
+What are the differences between c++ and java
+C++ is Platform Dependent. Java is Platform Independent
+C++ is mainly used for System Programming. Java is Mainly used for Application Programming
+C++ is nearer to hardware. Java is not so interactive with hardware
+C++ supports global and namespace scope. Java doesn't support global scope.
+Functionality supported in C++ are:
+goto
+Pointers
+Call by reference
+Structures and Unions
+Multiple Inheritance
+Virtual Functions
+
+Functionality supported in Java are:
+thread support
+documentation comment
+unsigned right shift(>>>)
+
+C++ is an object-oriented language. It is not a single root hierarchy.
+#include <iostream>
+class Animal {
+public:
+    void speak() {
+        std::cout << "Animal speaks" << std::endl;
+    }
+};
+
+int main() {
+    Animal a;
+    a.speak();
+    // a.toString(); // ❌ No common base class like java.lang.Object
+    return 0;
+}
+
+Java is also an object-oriented language. It is a single root hierarchy as everything gets derived from a single class (java.lang.Object).
+class Animal {
+    void speak() {
+        System.out.println("Animal speaks");
+    }
+}
+public class Test {
+    public static void main(String[] args) {
+        Animal a = new Animal();
+        System.out.println(a.toString());  // toString() is inherited from Object
+    }
+}
+
+What are the main features of Java?
+- Platform-independent
+- Object-oriented
+- Robust and secure
+- Multithreaded
+- High performance
+
+Is Java Platform Independent if then how?
+Yes, Java is a Platform Independent language. Unlike many programming languages javac compiles the program to form a bytecode or .class file. This file is independent of the software or hardware running but needs a JVM(Java Virtual Machine) file preinstalled in the operating system for further execution of the bytecode.Although JVM is platform dependent, the bytecode can be created on any System and can be executed in any other system despite hardware or software being used which makes Java platform independent.
+
+Explain public static void main(String args[]) in Java.
+public: the public is the access modifier responsible for mentioning who can access the element or the method and what is the limit. It is responsible for making the main function globally available. It is made public so that JVM can invoke it from outside the class as it is not present in the current class.
+static: static is a keyword used so that we can use the element without initiating the class so to avoid the unnecessary allocation of the memory. 
+void: void is a keyword and is used to specify that a method doesn’t return anything. As the main function doesn't return anything we use void.
+main: main represents that the function declared is the main function. It helps JVM to identify that the declared function is the main function.
+String args[]: It stores Java command-line arguments and is an array of type java.lang.String class.
+
+What will happen if we don't declare the main as static?
+We can declare the main method without using static and without getting any errors. But, the main method will not be treated as the entry point to the application or the program.
+
+what are the various access specifiers in java ?
+| Access Specifier        | Description                                           | Accessible Within                                  
+| `public`                | Visible to all classes everywhere                     | Same class, same package, different package         |
+| `protected`             | Visible to classes in the same package and subclasses | Same class, same package, subclass in other package |
+| `default` (no modifier) | Visible only within the same package                  | Same class, same package                            |
+| `private`               | Visible only within the same class                    | Same class only                                     |
+
+can we overload the main() method ?
+yes we can overload the main method. the compiler will check for the parameters (String args[]) in the main method and will recognize it as the entry point into the program. JVM always calls the original main() method. it does not call the overloaded main() method.
+
+What is the difference between '==' and '.equals()' in Java?
+String s1 = new String("Hello");
+String s2 = new String("Hello");
+- '==' Compares references (i.e., memory addresses), not values.
+System.out.println(s1 == s2);      // false (different objects)
+
+- '.equals()' Compares values (content) of the objects.
+System.out.println(s1.equals(s2)); // true (same content)
+
+what is package in java ?
+a package in java is used to group related classes or it is a Collection of related classes. packages are used to avoid name conflicts between classes and it allows to write a better maintainable code.
+
+Why Packages are used?
+Packages are used in Java in order to prevent naming conflicts, control access, and make searching/locating and usage of classes, interfaces, etc easier.
+
+What are the advantages of Packages in Java?
+There are various advantages of defining packages in Java.
+Packages avoid name clashes.
+The Package provides easier access control.
+We can also have the hidden classes that are not visible outside and are used by the package.
+It is easier to locate the related classes.
+
+what are the different types of packages ?
+built in packages - java.lang, java.io, java.applet, java.awt, java.newFixedThreadPool
+user define packages - created by the user.
+
+Explain the concept of Object-Oriented Programming (OOP) in Java.
+Java follows OOP principles: Encapsulation, Inheritance, Polymorphism, and Abstraction.
+
+What is inheritance in Java?
+Inheritance allows a class to acquire properties and behaviors of another class using the 'extends' keyword.
+
+What is polymorphism in Java?
+Polymorphism allows methods to perform differently based on the object, achieved through method overloading and overriding.
+
+What is encapsulation in Java?
+Encapsulation hides internal state and requires all interaction to be performed through an object's methods.
+
+What is abstraction in Java?
+Abstraction hides complex implementation details and shows only essential features.
+
+How many Types of constructors are used in java?
+No argument constructors
+parameterized constructors
+default constructors
+
+What are exceptions in Java?
+Exceptions are events that disrupt normal program flow. They are handled using try-catch blocks.
+
+What is the difference between checked and unchecked exceptions?
+- Checked exceptions: Checked at compile-time.
+- Unchecked exceptions: Occur at runtime.
+
+What is multithreading in Java?
+Multithreading allows concurrent execution of two or more threads for maximum CPU utilization.
+
+What is the difference between ArrayList and LinkedList?
+- ArrayList: Better for storing and accessing data.
+- LinkedList: Better for manipulating data.
+
+What is the difference between HashMap and TreeMap?
+- HashMap: Unsorted, allows null keys.
+- TreeMap: Sorted, does not allow null keys.
+
+Can we declare Pointer in Java?
+No, Java doesn't provide the support of Pointer. As Java needed to be more secure because which feature of the pointer is not provided in Java.
+
+What is the Wrapper class in Java?
+a larger entity that encapsulates a smaller entity. the wrapper class is an object class that encapsulates the primitive data types. 
+The primitive data types are the ones from which further data types could be created. For example, integers can further lead to the construction of long, byte, short, etc. On the other hand, the string cannot, hence it is not primitive. 
+Getting back to the wrapper class, Java contains 8 wrapper classes. They are Boolean, Byte, Short, Integer, Character, Long, Float, and Double. Further, custom wrapper classes can also be created in Java which is similar to the concept of Structure in the C programming language. We create our own wrapper class with the required data types.
+
+Why do we need wrapper classes?
+The wrapper class is an object class that encapsulates the primitive data types, and we need them for the following reasons:
+Wrapper classes are final and immutable
+Provides methods like valueOf(), parseInt(), etc.
+It provides the feature of autoboxing and unboxing.
+
+Differentiate between instance and local variables.
+Declared outside the method, directly invoked by the method.Declared within the method.
+Has a default value. No default value
+It can be used throughout the class. The scope is limited to the method.
+
+What is the purpose of the 'final' keyword in Java?
+'final' is used to declare constants, prevent method overriding, and inheritance.
+
+What is the purpose of the 'static' keyword?
+'static' denotes that a member belongs to the class rather than instances.
+
+What is the difference between 'this' and 'super' keywords?
+- this: Refers to the current class instance.
+- super: Refers to the parent class instance.
+
+What is a Class Variable?
+a class variable (also known as a static variable) is a variable that is declared within a class but outside of any method, constructor, or block. Class variables are declared with the static keyword, and they are shared by all instances (objects) of the class as well as by the class itself. No matter how many objects are derived from a class, each class variable would only exist once.
+
+import java.io.*;
+class GFG {
+    // class variable
+    private static final double PI = 3.14159;
+    private double radius;
+    public GFG(double radius) { this.radius = radius; }
+    public double getArea() { return PI * radius * radius; }
+    public static void main(String[] args)
+    {
+        GFG obj = new GFG(5.0);
+        System.out.println("Area of circle: "+ obj.getArea());
+    }
+}
+
+Instance Variable: A class variable without the static modifier is called an instance variable. It is unique to each object (instance) of the class and is not shared between instances.
+
+import java.io.*;
+class GFG {
+    private String name;
+    public void setName(String name) { this.name = name; }
+    public String getName() { return name; }
+    public static void main(String[] args)
+    {
+        GFG obj = new GFG();
+        obj.setName("John");
+        System.out.println("Name " + obj.getName());
+    }
+}
+
+What is the difference between static (class) method and instance method?
+Static method is associated with a class rather than an object. The instance method is associated with an object rather than a class.
+Static methods can be called using the class name only without creating an instance of a class. The instance methods can be called on a specific instance of a class using the object reference.
+Static methods do not have access to this keyword. Instance methods have access to this keyword.
+Static methods can access only static members of the class. Instance methods can access both static and non-static methods of the class.
+
+What is a static variable?
+The static keyword is used to share the same variable or method of a given class. Static variables are the variables that once declared then a single copy of the variable is created and shared among all objects at the class level.
+
+What are the differences between String and StringBuffer?
+Store of a sequence of characters. Provides functionality to work with the strings.
+It is immutable. It is mutable (can be modified and other string operations could be performed on them.)
+No thread operations in a string. It is thread-safe (two threads can't call the methods of StringBuffer simultaneously) 
+
+What are the differences between StringBuffer and StringBuilder?
+StringBuffer provides functionality to work with the strings. StringBuilder is a class used to build a mutable string.
+It is thread-safe (two threads can't call the methods of StringBuffer simultaneously). It is not thread-safe (two threads can call the methods concurrently)
+Comparatively slow as it is synchronized. Being non-synchronized, implementation is faster
+
+Which among String Builder or String Buffer should be preferred when there are a lot of updates required to be done in the data?
+String is immutable, making it inefficient for scenarios requiring frequent updates. Instead, we can use StringBuilder or StringBuffer. If thread safety is required (synchronized operations), StringBuffer should be used. However, if performance is a priority in a single-threaded context, StringBuilder is the better choice since it is faster and does not incur synchronization overhead.
+
+Why is StringBuffer called mutable?
+StringBuffer class in Java is used to represent a changeable string of characters. It offers an alternative to the immutable String class by enabling you to change a string's contents without constantly creating new objects. Mutable (modifiable) strings are created with the help of the StringBuffer class. The StringBuffer class in Java is identical to the String class except that it is changeable.
+
+public class StringBufferExample {
+    public static void main(String[] args)
+    {
+        StringBuffer s = new StringBuffer();
+        s.append("Geeks");
+        s.append("for");
+        s.append("Geeks");
+        String message = s.toString();
+        System.out.println(message);
+    }
+}
+
+How is the creation of a String using new() different from that of a literal?
+String using new() is different from the literal as when we declare string it stores the elements inside the stack memory whereas when it is declared using new() it allocates a dynamic memory in the heap memory. The object gets created in the heap memory even if the same content object is present.
+Syntax: String x = new String("ABC");
+
+How is the ‘new’ operator different from the ‘newInstance()’ operator in Java?
+the new operator is used to create objects, but if we want to decide the type of object to be created at runtime, there is no way we can use the new operator. In this case, we have to use the newInstance() method.
+
+What is an Interface?
+An interface in Java is a collection of static final variables and abstract methods that define the contract or agreement for a set of linked classes. Any class that implements an interface is required to implement a specific set of methods. It specifies the behavior that a class must exhibit but not the specifics of how it should be implemented.
+
+// Java Program to demonstrate Interface
+import java.io.*;
+interface Shape {
+    double getArea();
+    double getPerimeter();
+}
+class Circle implements Shape {
+    private double radius;
+    public Circle(double radius) { this.radius = radius; }
+    public double getArea(){
+        return Math.PI * radius * radius;
+    }
+    public double getPerimeter(){
+        return 2 * Math.PI * radius;
+    }
+}
+class GFG {
+    public static void main(String[] args)
+    {
+        Circle circle = new Circle(5.0);
+        System.out.println("Area of circle is "+ circle.getArea());
+        System.out.println("Perimeter of circle is"+ circle.getPerimeter());
+    }
+}
+
+Give some features of the Interface.
+An Interface in Java programming language is defined as an abstract type used to specify the behavior of a class. An interface in Java is a blueprint of a behavior. A Java interface contains static constants and abstract methods.
+
+Features of the Interface are mentioned below:
+The interface can help to achieve total abstraction.
+Allows us to use multiple inheritances in Java.
+Any class can implement multiple interfaces even when one class can extend only one class.
+It is also used to achieve loose coupling
+
+What is a marker interface?
+An Interface is recognized as an empty interface (no field or methods) it is called a marker interface. Examples of marker interfaces are Serializable, Cloneable, and Remote interfaces. 
+
+difference between Abstract Class and Interface Class
+Both abstract and non-abstract methods may be found in an abstract class. The interface contains only abstract methods.
+Abstract Class supports Final methods. The interface class does not support Final methods.
+Multiple inheritance is not supported by the Abstract class. Multiple inheritances is supported by Interface Class.
+Abstract Keyword is used to declare Abstract class. Interface Keyword is used to declare the interface class.
+extend keyword is used to extend an Abstract Class.	implements keyword is used to implement the interface.
+Abstract Class has members like protected, private, etc. All class members are public by default.
+
+Can we override the static method?
+No, as static methods are part of the class rather than the object so we can't override them.
+
+Can we override the overloaded method?
+Yes, since the overloaded method is a completely different method in the eyes of the compiler. Overriding isn't the same thing at all. The decision as to which method to call is deferred to runtime.
+
+What is Reflection in Java?
+Reflection allows runtime inspection and modification of classes, methods, and fields. It’s often used in frameworks for dynamic behavior.
+
+Example:
+Class<?> clazz = Class.forName("com.example.MyClass");
+Method method = clazz.getDeclaredMethod("myMethod");
+method.invoke(clazz.newInstance());
+
+What is Java String Pool?
+A Java String Pool is a place in heap memory where all the strings defined in the program are stored. A separate place in a stack is there where the variable storing the string is stored. Whenever we create a new string object, JVM checks for the presence of the object in the String pool, If String is available in the pool, the same object reference is shared with the variable, else a new object is created.
+String str1="Hello";
+// "Hello" will be stored in String Pool
+// str1 will be stored in stack memory

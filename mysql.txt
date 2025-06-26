@@ -11,13 +11,15 @@ hierarchical databases
 network databases
 relational databases
 
-hierarchical databases - in a hierarchical database model data is organized in a tree-like structure. data is stored hierarchical (top down or bottom up) format. data is represented using a parent-child relationship. in hierarchical DBMS parent may leave many children have only one parent.
+A Data Model is the concept of tools that are developed to summarize the description of the database. Data Models provide us with a transparent picture of data which helps us in creating an actual database. It shows us from the design of the data to its proper implementation of data.
+
+hierarchical databases - in a hierarchical database model data is organized in a tree-like structure. data is stored hierarchical (top down or bottom up) format. data is represented using a parent-child relationship. in hierarchical DBMS parent may have many children but children have only one parent.
 
 network database - the network database model allows each child to have multiple parent. it helps us to address the need to model more complex relationship like as the order/part many-to-many relationship. in this model entities in a grap which can accessed through several paths.
 
 relational database - the database is based on the relation data model, which store data in the form of row (tuple) and column (attributes), and together forms a table (relation). a relational database uses SQL for storing, manipulate as well as maintaining the data. E.F codd invent the database in 1970.
 
-table - the RDBMS databases uses table to store data. a table is a collection of related data entries and contains rows and column to store data. a table is the simplest example of data storage in RDBMS.
+table - a table is a collection of related data entries and contains rows and column to store data. a table is the simplest example of data storage in RDBMS. the RDBMS databases uses table to store data. 
 
 fields - field is a smaller entity of the table which contain specific information about every record in the table.
 
@@ -28,12 +30,14 @@ null values - the NULL value of the table specific that the field has been left 
 primary key - a primary key is a column of a table or a set of column that help to identify every record present in that table uniquely.
 
 foreign key - a foreign key is the one that is used to link two table together via the primary key.
+
 super key - super key is combination of all possible attributes or a set of an attribute which can uniquely identify a tuple.
+
 candidate key - candidate key is a subset of super key.
 
-domain - a domain is a set of permitted values for an attribute in table.for example, a domain of month-of-year can accept january,february... december as a value, a domain can accept all apossible valid dates etc. we spicify domain of attribute while creating a table that means size, type and validation.
+domain - a domain is a set of permitted values for an attribute in table.for example, a domain of month-of-year can accept january,february... december as a value, a domain can accept all possible valid dates etc. we spicify domain of attribute while creating a table that means size, type and validation.
 
-entity relationship  diagram - er diagram stand for entity relationship diagram also known as ERD is a diagram that display the relationship of entity sets stored in a database. in other word er diagram help to explain the logical structure of databases. ER diagram are created based on three concept: entities, attributes and relationship.
+entity relationship diagram - a diagram that display the relationship of entity sets stored in a database. in other word er diagram help to explain the logical structure of databases. ER diagram are created based on three concept: entities, attributes and relationship.
 
 entities - a real world thing either living or non-living that is easily recognizable and non-recognizable. it is anything that is to be represented in our database. it may be a physical thing or simply a fact or an event that happen in the real world.
 an entity can be place, person, object, event or a concept which stores data in the database. the characterstics of entities are must have an attribute, and a unique key. entity is made up of some 'attributes' which represent that entity.
@@ -100,48 +104,6 @@ ALTER table is used to add or delete or modify column in a existing table.
 What is a view? How to create a view?
 A database object that has no value is called view. Rows and columns exist in a view. A view is virtual table. it is created by combining one or more tables. The difference of a view and a table is that views are definition that build on other tables. If the underlying table changes, the View will also reflect those same changes.
 
-
-What is MongoDB?
-MongoDB is a document-oriented NoSQL database system that provides high scalability, flexibility, and performance. Unlike standard relational databases, MongoDB stores data in a JSON document structure form. This makes it easy to operate with dynamic and unstructured data and MongoDB is an open-source and cross-platform database System.
-
-Database
-Database is a container for collections.
-Each database gets its own set of files.
-A single MongoDB server can has multiple databases.
- 
-Collection
-Collection is a group of documents.
-Collection is equivalent to RDBMS table.
-A collection consist inside a single database.
-Collections do not enforce a schema.
-A Collection can have different fields within a Documents.
-
-What is MongoDB, and How Does It Differ from Traditional SQL Databases?
-MongoDB is a NoSQL database which means it does not use the traditional table-based relational database structure. Instead of it uses a flexible and document-oriented data model that stores data in BSON (Binary JSON) format.
-Unlike SQL databases that use rows and columns, MongoDB stores data as JSON-like documents, making it easier to handle unstructured data and providing greater flexibility in terms of schema design.
-
-What are Collections And Databases In MongoDB?
-In MongoDB, a database is a container for collections, and a collection is a group of MongoDB documents. Collections are equivalent to tables in SQL databases, but they do not enforce a schema allowing for flexibility in the structure of the documents they contain. For example, you might have a users collection in a mydatabase database.
-
-What are the Advantages of Using MongoDB Over Other Databases?
-Flexibility: MongoDB's document-oriented model allows for dynamic schemas.
-Scalability: Built-in sharding enables horizontal scaling.
-High Availability: Replica sets provide redundancy and automatic failover.
-Performance: Efficient storage and retrieval with BSON format.
-Ease of Use: JSON-like documents make it easier for developers to interact with data
-
-What are MongoDB Aggregation Pipelines and How are They Used?
-The aggregation pipeline is a framework for data aggregation, modeled on the concept of data processing pipelines. Documents enter a multi-stage pipeline that transforms the documents into aggregated results.
-Each stage performs an operation on the input documents and passes the results to the next stage.
-
-Describe the Aggregation Framework in MongoDB
-The Aggregation Framework in MongoDB is a powerful tool for performing data processing and transformation on documents within a collection. It works by passing documents through a multi-stage pipeline, where each stage performs a specific operation on the data, such as filtering, grouping, sorting, reshaping and computing aggregations.
-
-This framework is particularly useful for creating complex data transformations and analytics directly within the database.
-
-what is the role of schema in mongoose? how do define it?
-a schema in mongoose define the structure, validation, rules and behavior of MongoDB document, ensuring data consistency and integrity.
-
 A schema is a blueprint that defines how data is organized, structured, and accessed. It's a framework for managing data effectively. 
 
 What does a schema include? 
@@ -161,4 +123,434 @@ Using Entity-Relationship (ER) modeling, the logical schema outlines the relatio
 The view schema is the highest level of abstraction in a database, focusing on how users interact with the database. It defines the interface through which users can access and manipulate data, without needing to understand the underlying storage mechanisms.
 A database can have multiple view schemas, also known as subschemas, each providing a different perspective of the data. These schemas describe only a part of the database.
 
-A Data Model is the concept of tools that are developed to summarize the description of the database. Data Models provide us with a transparent picture of data which helps us in creating an actual database. It shows us from the design of the data to its proper implementation of data.
+join operation is used to combine rows from two or more table based on a related column between them.
+there are four types of join :--
+cross join - every row from one table is combined with every row from another table.
+inner join - return only the row where there is a match between the specified column in both the left (or first) and right (or second) table.
+left join - return all rows from the left (or first) table and the matching rows from the right (or second) table.
+right join - return all rows from the right (or second) table and the matching rows from the left (or first) table.
+
+
+-- show databases;
+
+-- drop database mysql;
+
+-- create database first;
+-- use first;
+
+-- create table students(
+-- id int primary key auto_increment,
+-- fname varchar(20) not null,
+-- lname varchar(20) not null,
+-- class varchar(10) not null,
+-- acc_type varchar(30) default 'saving'
+-- );
+
+-- drop table students;
+
+-- desc students;
+
+-- insert into students(id,fname,lname,class,acc_type)
+-- values(101,'anand','kumar','one','current');
+
+-- select * from students;
+
+-- insert into students(fname,lname,class)
+-- values('raja','babu','two'),('dezy','kumari','three'),('khushi','kumari','one'),('suraj','wala','four'),('rajeev','bhaiya','three');
+
+-- select * from students;
+-- select fname from students;
+-- select * from students where id=103;
+-- select class from students where lname='kumari';
+
+-- update students
+-- set acc_type = 'current'
+-- where id=104;
+-- select * from students;
+
+-- delete from students
+-- where id=105;
+-- select * from students;
+
+-- select id, concat(fname,' ',lname)as Fullname from students;
+-- select id, concat_ws(':',fname,lname,class,acc_type)as Fullname from students;
+
+-- select id, substr(fname,2)as fullname from students;
+-- notes 2 start->end
+
+-- select id, substr(fname,2,4)as fullname from students;
+-- notes 2 start->count 4 to end. eg->anand-nand,khushi-hush 
+
+-- select id, substr(fname,-3)as fullname from students;
+-- notes last se count 3 eg->anand-and,khushi-shi
+
+-- select * ,replace(id,10,1000)as new_id from students;
+-- select * ,reverse(fname) from students;
+
+-- select * ,upper(fname) from students;
+-- select * ,ucase(fname) from students;
+-- select * ,lower(fname) from students;
+-- select * ,lcase(fname) from students;
+
+-- select id,fname,char_length(fname) from students;
+-- select id,fname,char_length(fname) from students where char_length(fname)>4;
+-- select insert('hello was',6,0,fname)as newString from students;
+-- select insert('hello was',6,2,fname)as newString from students;
+-- select left(fname,2)as newString from students; 
+-- notes raja->ra 
+-- select right(fname,2)as newString from students;
+-- select repeat(fname,2)as newString from students;
+-- notes anand->anandanand
+-- select trim(fname)as newString from students;
+-- notes '   anand  '->'anand'
+
+-- Q. you can print lname ka first letter -->k101
+-- select * ,concat(substr(lname,1,1),id)as new from students;
+
+-- alter table students
+-- add column 
+-- salary decimal(5,2) default 100;
+
+-- update students
+-- set salary=200
+-- where id=102;
+-- select * from students;
+
+-- select distinct salary from students; --> unique value
+-- select * from students order by salary; --> sorting order ascending order
+-- select * from students order by salary desc; --> sorting order descending order
+
+-- select * from students where lname like'k%';
+-- select * from students where class like'o__';
+-- select * from students where fname like'_____%' limit 2;
+-- select * from students where lname not like'K%';
+-- select * from students where lname in('kumari','kumar');
+-- select * from students where lname not in('kumari','kumar');
+-- select * from students where mob is null;
+
+-- select acc_type from students group by acc_type;
+-- select max(salary) from students;
+-- select min(salary) from students;
+
+-- notes subquery --> we cannot find the details of (max,min) salary 
+-- select * from students where salary = (select max(salary) from students);
+
+-- select sum(salary) from students;
+-- select avg(salary) from students;
+-- desc students;
+
+-- alter table students
+-- drop column salary;
+
+-- alter table students
+-- add column 
+-- school char(10) default 'abc';
+
+-- desc students;
+-- select * from students;
+
+-- alter table students
+-- change school sk char(10);
+
+-- select * from students;
+
+-- alter table students
+-- rename to skp;
+
+-- select * from skp;
+-- show tables;
+
+-- alter table skp
+-- rename to students;
+-- select * from students;
+-- show tables;
+
+-- desc students;
+
+-- alter table students
+-- modify sk char(20);
+-- desc students;
+
+
+-- create database d;
+-- use d;
+
+-- create table person(
+-- jd date,
+-- jt time,
+-- jdt datetime
+-- )
+
+-- insert into person(jd,jt,jdt)
+-- values(curdate(),curtime(),now());
+-- select * from person;
+
+-- select jd,dayname(jd) from person;
+-- select jd,monthname(jd) from person;
+-- select jd,year(jd) from person;
+-- select jd,dayofmonth(jd) from person;
+-- select jd,dayofweek(jd) from person;
+
+-- select jdt ,date_format(jdt,'%D %a at %T' ) from person;
+
+-- select jt,hour(jt) from person;
+-- select jt,minute(jt) from person;
+-- select jt,second(jt) from person;
+
+-- select jdt, date_add(jdt ,interval 1 day) from person;
+-- select jdt, date_sub(jdt ,interval 1 day) from person;
+-- select jdt, datediff(jdt ,now()) from person;
+-- select jdt, timediff(jdt ,now()) from person;
+
+
+-- notes database-> d table-> blogs
+-- use d;
+
+-- create table blogs(
+--   text varchar(10),
+--   created_at datetime default current_timestamp,
+--   updated_at datetime on update current_timestamp
+-- );
+
+-- desc blogs;
+-- select * from blogs;
+
+-- insert into blogs(text,created_at)
+-- values('raja',now()),('anand',now());
+-- select * from blogs;
+
+-- update blogs
+-- set text='1anand'
+-- where text='anand';
+-- select * from blogs;
+
+
+-- notes databases-> employee table-> customer
+-- use employee;
+-- show tables;
+
+-- create table customers(
+-- cust_id int primary key auto_increment,
+-- name varchar(20),
+-- email varchar(30) unique
+-- );
+-- desc customers;
+
+-- insert into customers(cust_id,name,email)
+-- values(101,'anand','anand@gmail.com');
+
+-- insert into customers(name,email)
+-- values('raja','raja@gmail.com'),('dezy','dezy@gmail.com'),('khushi','khushi@gmail.com'),('suraj','suraj@gmail.com'),('rajeev','rajeev@gmail.com');
+-- select * from customers;
+
+-- create table orders(
+-- order_id int primary key auto_increment,
+-- date date,
+-- amount decimal(10,2),
+-- customer_id int,
+-- foreign key(customer_id) references customers(cust_id)
+-- );
+-- desc orders;
+-- notes foreign key(customer_id) references customers(cust_id)-->>referenced_table_name (references--->referenced) same hona chaiya
+-- select constraint_name,column_name,referenced_table_name from information_schema.key_column_usage where table_name ='orders';
+
+-- insert into orders(date,amount,customer_id)
+-- values(curdate(),323.34,101),(curdate(),725.76,103),(curdate(),541.88,103),(curdate(),453,104),(curdate(),781,104),(curdate(),490.45,103),(curdate(),703.78,102);
+-- select * from orders;
+
+-- select * from customers,orders; -- cross join
+
+-- select * from customers
+-- inner join orders
+-- on orders.customer_id = customers.cust_id;  -- inner join
+
+-- select * from customers
+-- left join orders
+-- on orders.customer_id = customers.cust_id;  -- all data see the customers(left join)
+
+-- select * from customers
+-- right join orders
+-- on orders.customer_id = customers.cust_id; -- right join
+
+-- ALTER TABLE orders
+-- ADD CONSTRAINT fk_customer    -- fk->foreign key "Customer" indicates that this foreign key relates to the customers table.
+-- FOREIGN KEY (customer_id)
+-- REFERENCES customers(cust_id)
+-- ON DELETE CASCADE;
+
+-- desc orders;
+-- select * from orders;
+
+-- delete from customers
+-- where cust_id=103;
+-- select * from customers
+-- left join orders
+-- on orders.customer_id = customers.cust_id;
+
+
+
+
+
+-- notes database -->bookdb table-->authors,books
+-- use bookdb;
+-- show tables;
+
+-- desc authors;
+-- create table authors(
+-- author_id int primary key auto_increment,
+-- author_name varchar(20) 
+-- );
+-- insert into authors
+-- values('raju'),('sham'),('baburao'),('paul');
+
+-- select * from authors;
+
+-- desc books;
+-- create table books(
+-- book_id int primary key auto_increment,
+-- title varchar(40),
+-- rating int,
+-- au_id int,
+-- foreign key (au_id) references authors(author_id)
+-- );
+
+-- insert into books
+-- values('story of raju',5,1),('story of baburao',4,3),('raju the great man',2,1),('love story by sham',1,2);
+-- select * from books;
+
+-- select author_name,title,rating from books
+-- inner join authors
+-- on books.au_id=authors.author_id ;
+
+-- select author_name,title,rating from authors
+-- left join books
+-- on books.au_id=authors.author_id
+
+-- select author_name,ifnull(title,'NOT FOUND'),ifnull(rating,0) from books
+-- right join authors
+-- on books.au_id=authors.author_id
+
+-- select author_name,rating,
+-- case
+-- when rating>3 then'good'
+-- else 'average'
+-- end as remark
+-- from books
+-- inner join authors
+-- on books.au_id=authors.author_id
+
+
+
+-- notes database--> institution table->courses,students,students_courses
+
+-- use institution;
+-- show tables;
+
+-- desc courses;
+
+-- create table courses(
+-- id int primary key auto_increment,
+-- course_name varchar(20) not null,
+-- fee int 
+-- );
+
+-- insert into courses(id,course_name,fee)
+-- values(101,'linux',3000);
+
+-- insert into courses(course_name,fee)
+-- values('science',9000),('math',9080),('g.k',8809),('hindi',8787);
+
+-- select * from courses; 
+
+-- desc students;
+-- create table students(
+-- id int primary key auto_increment,
+-- student_name varchar(20) not null
+-- );
+
+-- insert into students
+-- values('alex'),('paul'),('baburao'),('sham');
+-- select * from students;
+
+-- desc students_courses;
+-- create table students_courses(
+-- student_id int,
+-- course_id int,
+-- foreign key (student_id) references students(id),
+-- foreign key (course_id) references courses(id)
+-- );
+
+-- insert into students_courses
+-- values(1,101),(2,105),(3,103),(2,102),(4,104),(1,103),(3,105),(1,102);
+-- select * from students_courses;
+
+-- notes many to many relationship
+
+-- select student_name,course_name from students
+-- join students_courses on
+-- students_courses.student_id=students.id
+-- join courses on 
+-- students_courses.course_id = courses.id;
+
+-- select course_name,count(student_name) from students
+-- join students_courses on
+-- students_courses.student_id=students.id
+-- join courses on 
+-- students_courses.course_id = courses.id
+-- group by course_name;
+
+-- select student_name,count(course_name) from students
+-- join students_courses on
+-- students_courses.student_id=students.id
+-- join courses on 
+-- students_courses.course_id = courses.id
+-- group by student_name;
+
+-- select student_name,sum(fee) from students
+-- join students_courses on
+-- students_courses.student_id=students.id
+-- join courses on 
+-- students_courses.course_id = courses.id
+-- group by student_name;
+
+-- notes view 
+-- create view inst_info as   
+-- select student_name,course_name,fee from students
+-- join students_courses on
+-- students_courses.student_id=students.id
+-- join courses on 
+-- students_courses.course_id = courses.id
+-- group by student_name;
+
+-- select * from inst_info;
+-- show tables;
+-- drop view inst_info;
+
+-- notes Q. you can select only student who can pay fee more than 10000????
+-- select student_name,sum(fee)as total from inst_info group by student_name;
+
+-- this is the wrong syntax because group by cannot use where clause.. 
+-- select student_name,sum(fee)as total from inst_info group by student_name where fee>10000;
+
+-- select student_name,sum(fee)as total from inst_info group by student_name having total>10000; 
+
+-- notes Q. find the total fee paid by student and an the column you can write the total with all data;
+-- select ifnull(student_name,'total')as student_name,sum(fee)as total from inst_info group by student_name with rollup; 
+
+
+
+-- use c; 
+-- desc employee;
+
+-- select * from employee;
+
+-- select * from employee order by salary; 
+-- select * from employee order by salary desc limit 2;
+
+-- select dept from employee group by dept;
+-- select * from employee;
+
+-- select dept,sum(salary) from employee group by dept ;
+-- select * from employee;
+
+select dept,sum(salary)as total from employee group by dept;

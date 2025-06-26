@@ -1,0 +1,40 @@
+What is MongoDB?
+MongoDB is a document-oriented NoSQL database system that provides high scalability, flexibility, and performance. Unlike standard relational databases, MongoDB stores data in a JSON document structure form. This makes it easy to operate with dynamic and unstructured data and MongoDB is an open-source and cross-platform database System.
+
+Database
+Database is a container for collections.
+Each database gets its own set of files.
+A single MongoDB server can has multiple databases.
+ 
+Collection
+Collection is a group of documents.
+Collection is equivalent to RDBMS table.
+A collection consist inside a single database.
+Collections do not enforce a schema.
+A Collection can have different fields within a Documents.
+
+What is MongoDB, and How Does It Differ from Traditional SQL Databases?
+MongoDB is a NoSQL database which means it does not use the traditional table-based relational database structure. Instead of it uses a flexible and document-oriented data model that stores data in BSON (Binary JSON) format.
+Unlike SQL databases that use rows and columns, MongoDB stores data as JSON-like documents, making it easier to handle unstructured data and providing greater flexibility in terms of schema design.
+
+What are Collections And Databases In MongoDB?
+In MongoDB, a database is a container for collections, and a collection is a group of MongoDB documents. Collections are equivalent to tables in SQL databases, but they do not enforce a schema allowing for flexibility in the structure of the documents they contain. For example, you might have a users collection in a mydatabase database.
+
+What are the Advantages of Using MongoDB Over Other Databases?
+Flexibility: MongoDB's document-oriented model allows for dynamic schemas.
+Scalability: Built-in sharding enables horizontal scaling.
+High Availability: Replica sets provide redundancy and automatic failover.
+Performance: Efficient storage and retrieval with BSON format.
+Ease of Use: JSON-like documents make it easier for developers to interact with data
+
+What are MongoDB Aggregation Pipelines and How are They Used?
+The aggregation pipeline is a framework for data aggregation, modeled on the concept of data processing pipelines. Documents enter a multi-stage pipeline that transforms the documents into aggregated results.
+Each stage performs an operation on the input documents and passes the results to the next stage.
+
+Describe the Aggregation Framework in MongoDB
+The Aggregation Framework in MongoDB is a powerful tool for performing data processing and transformation on documents within a collection. It works by passing documents through a multi-stage pipeline, where each stage performs a specific operation on the data, such as filtering, grouping, sorting, reshaping and computing aggregations.
+
+This framework is particularly useful for creating complex data transformations and analytics directly within the database.
+
+what is the role of schema in mongoose? how do define it?
+a schema in mongoose define the structure, validation, rules and behavior of MongoDB document, ensuring data consistency and integrity.
